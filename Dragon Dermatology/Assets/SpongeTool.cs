@@ -6,7 +6,6 @@ public class SpongeTool : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("Triggered with " + col.gameObject.name);
         Destroy(col.gameObject);
     }
 }
