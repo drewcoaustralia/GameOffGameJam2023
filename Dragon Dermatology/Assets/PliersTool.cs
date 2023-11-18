@@ -17,6 +17,8 @@ public class PliersTool : MonoBehaviour
 
     private GameObject heldObj = null;
 
+    public AudioClip snipClip;
+
     private Color tempColor;
 
     void Update()
@@ -26,6 +28,7 @@ public class PliersTool : MonoBehaviour
             animating = true;
             if (heldObj != null) heldObj = null;
             else if (nearestObject != null) heldObj = nearestObject;
+            AudioManager.Instance.PlaySFXAtPoint(snipClip, transform.position);
         }
         if (animating)
         {

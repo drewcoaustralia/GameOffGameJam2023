@@ -7,6 +7,12 @@ public class WatergunTool : MonoBehaviour
 
     public GameObject spray;
     private bool flipped = false;
+    private bool spraying = false;
+
+    private SFXObject loopingSound;
+
+    public AudioClip waterStart;
+    public AudioClip waterLoop;
 
     [Range(0f,1f)]
     public float minHeightPercentage = 0.1f;
@@ -19,6 +25,25 @@ public class WatergunTool : MonoBehaviour
 
     [Range(0f,1f)]
     public float maxWidthPercentage = 0.2f;
+
+    void Update()
+    {
+        if (Input.GetKeyDown("mouse 0"))
+        {
+            spraying = true;
+            AudioManager.Instance.PlaySFXAtPoint(waterStart, transform.position);
+            loopingSound = AudioManager.Instance.PlaySFXAtPoint(waterLoop, transform.position, /*waterStart.length*/0f, true);
+            spray.SetActive(true);
+        }
+
+        if (Input.GetKeyUp("mouse 0"))
+        {
+            spraying = false;
+            loopingSound.Stop();
+            spray.SetActive(false);
+        }
+
+    }
 
     void LateUpdate()
     {
@@ -53,7 +78,6 @@ public class WatergunTool : MonoBehaviour
             flipped = false;
         }
 
-        spray.SetActive(Input.GetKey("mouse 0"));
         StretchSpray(target);
     }
 

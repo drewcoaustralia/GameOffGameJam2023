@@ -10,6 +10,8 @@ public class MouseManager : MonoBehaviour
 
     private GameObject heldObj;
 
+    public AudioClip pickupSound;
+
     private void Awake() 
     {
         if (Instance != null && Instance != this) 
@@ -43,6 +45,7 @@ public class MouseManager : MonoBehaviour
         if (heldObj != null) heldObj.SetActive(false);
         obj.SetActive(true);
         heldObj = obj;
+        AudioManager.Instance.PlaySFXAtPoint(pickupSound, Vector3.zero);
     }
 
     void Update()
