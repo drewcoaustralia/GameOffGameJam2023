@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 public class Dragon : MonoBehaviour
 {
     public float waitingTime;
+    public bool leftBeforeClient = false; // could be stored in happiness somehow?
 
     // unity can be a bit fiddly with enums so string here is fine
     public string species; // classic, fire, water
@@ -34,6 +35,8 @@ public class Dragon : MonoBehaviour
 
     void Start()
     {
+        // DayManager.Instance.AddToQueue(this);
+        DayManager.Instance.SetCurrentClient(this);
         ResetDirtyLayer();
     }
 

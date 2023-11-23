@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ToolScript : MonoBehaviour
+public class ToolUIScript : MonoBehaviour
 {
     // public Texture2D cursor;
     public GameObject cursorObj;
@@ -20,7 +20,7 @@ public class ToolScript : MonoBehaviour
     {
         if (!hovering) return;
         // MouseManager.Instance.SetCursor(cursor);
-        MouseManager.Instance.SetHeldObject(cursorObj);
+        ToolManager.Instance.SetHeldObject(cursorObj);
         pickedup = true;
     }
 }

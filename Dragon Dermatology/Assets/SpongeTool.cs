@@ -11,7 +11,6 @@ public class SpongeTool : MonoBehaviour
     public Sprite soapy;
 
     public int scrubRadius = 25;
-    public Dragon client; //TODO: store in tools manager
 
     public Vector2 offset;
 
@@ -54,7 +53,7 @@ public class SpongeTool : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
             if (hit.collider != null)
             {
-                client.Scrub(mousePosition, scrubRadius);
+                DayManager.Instance.GetCurrentClient().Scrub(mousePosition, scrubRadius);
             }
 
             currentSoapTime -= Time.deltaTime;

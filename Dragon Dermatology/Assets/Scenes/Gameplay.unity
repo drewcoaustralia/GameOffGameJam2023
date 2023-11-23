@@ -692,7 +692,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 788159558}
-          m_TargetAssemblyTypeName: ToolScript, Assembly-CSharp
+          m_TargetAssemblyTypeName: ToolUIScript, Assembly-CSharp
           m_MethodName: SetHover
           m_Mode: 6
           m_Arguments:
@@ -708,7 +708,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 788159558}
-          m_TargetAssemblyTypeName: ToolScript, Assembly-CSharp
+          m_TargetAssemblyTypeName: ToolUIScript, Assembly-CSharp
           m_MethodName: SetHover
           m_Mode: 6
           m_Arguments:
@@ -724,7 +724,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 788159558}
-          m_TargetAssemblyTypeName: ToolScript, Assembly-CSharp
+          m_TargetAssemblyTypeName: ToolUIScript, Assembly-CSharp
           m_MethodName: Pickup
           m_Mode: 1
           m_Arguments:
@@ -1107,6 +1107,54 @@ Transform:
   - {fileID: 1474320497}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &902431812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 902431814}
+  - component: {fileID: 902431813}
+  m_Layer: 0
+  m_Name: DayManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &902431813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902431812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cee752048b6e104683e99305bc69f3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clients: []
+  currentClientIndex: -1
+  scalesCollected: []
+  coinsCollected: 0
+--- !u!4 &902431814
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902431812}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.6870885, y: -0.9595911, z: -0.10068175}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1020203672
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,7 +1532,6 @@ MonoBehaviour:
   idle: {fileID: 21300000, guid: 89d106b200a928a40a0890dcbb7ed474, type: 3}
   soapy: {fileID: 21300000, guid: b11c198051924ea4688cd885b9ecd193, type: 3}
   scrubRadius: 45
-  client: {fileID: 1651894264}
   offset: {x: 0.5, y: -0.5}
   minSoapTime: 0.5
   maxSoapTime: 1.5
@@ -2031,7 +2078,7 @@ GameObject:
   - component: {fileID: 1591265555}
   - component: {fileID: 1591265554}
   m_Layer: 0
-  m_Name: MouseManager
+  m_Name: ToolManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2046,7 +2093,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1591265553}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17ef23765b1c9aa49b1731b4a647f2b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 0fd1997452f3bf5448b167e74e7aa4cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   blank: {fileID: 2800000, guid: b1d2c0dcda5bba34ba9e354c0cf43b99, type: 3}
@@ -2115,6 +2162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitingTime: 0
+  leftBeforeClient: 0
   species: 
   scales: []
   happiness: 0
@@ -2432,3 +2480,4 @@ SceneRoots:
   - {fileID: 872613400}
   - {fileID: 1733496865}
   - {fileID: 1651894263}
+  - {fileID: 902431814}
