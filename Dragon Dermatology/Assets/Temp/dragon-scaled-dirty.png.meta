@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9fbbffde087287746b7f558008e6eccf
+guid: d25c2ea8f5cd4c24c9bfb61fcd5a4787
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3428391033546482049
-    second: dragon_0
+      213: 1135271783270260599
+    second: dragon-scaled-dirty_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -122,7 +122,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dragon_0
+      name: dragon-scaled-dirty_0
       rect:
         serializedVersion: 2
         x: 0
@@ -136,8 +136,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1812ca90b77149f20800000000000000
-      internalID: 3428391033546482049
+      spriteID: 77f19550cab41cf00800000000000000
+      internalID: 1135271783270260599
       vertices: []
       indices: 
       edges: []
@@ -153,7 +153,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      dragon_0: 3428391033546482049
+      dragon-scaled-dirty_0: 1135271783270260599
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

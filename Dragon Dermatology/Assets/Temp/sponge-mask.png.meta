@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9fbbffde087287746b7f558008e6eccf
+guid: cc1c0a369f6169941be49290faf9a585
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3428391033546482049
-    second: dragon_0
+      213: -6923313035657352598
+    second: sponge-mask_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -24,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -122,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dragon_0
+      name: sponge-mask_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 700
-        height: 699
+        x: 7
+        y: 52
+        width: 455
+        height: 453
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,8 +136,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1812ca90b77149f20800000000000000
-      internalID: 3428391033546482049
+      spriteID: a6aefc0b9737bef90800000000000000
+      internalID: -6923313035657352598
       vertices: []
       indices: 
       edges: []
@@ -153,7 +153,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      dragon_0: 3428391033546482049
+      sponge-mask_0: -6923313035657352598
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
