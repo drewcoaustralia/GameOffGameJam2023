@@ -34,6 +34,11 @@ public class AudioManager : MonoBehaviour
         _musicSource.Play();
     }
 
+    public void StopSFX(SFXObject obj)
+    {
+        obj.Stop();
+    }
+
     public SFXObject PlaySFXAtPoint(AudioClip clip, Vector3 point, float delay=0f, bool loop=false, float volume=1f)
     {
         AudioSource source = Instantiate(tempSFXObject, point, Quaternion.identity);
