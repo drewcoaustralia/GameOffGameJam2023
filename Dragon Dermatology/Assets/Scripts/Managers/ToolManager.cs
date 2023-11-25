@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ToolManager : MonoBehaviour
 {
     public static ToolManager Instance { get; private set; }
-    public Texture2D blank;
-    public Texture2D hover;
 
-    private GameObject heldObj;
+    public EmptyHandTool emptyHand;
+
+    private Tool heldTool = null;
+    private SFXObject playingSound;
 
     public AudioClip pickupSound;
 
@@ -24,19 +26,45 @@ public class ToolManager : MonoBehaviour
         } 
     }
 
-    public void SetHeldObject(GameObject obj)
+    void Start()
     {
-        if (heldObj != null) heldObj.SetActive(false);
-        obj.SetActive(true);
-        heldObj = obj;
+        Cursor.visible = false;
+    }
+
+    public void SetHeldTool(Tool tool)
+    {
+        if (heldTool != null) heldTool.gameObject.SetActive(false);
+        // obj.SetActive(true);
+        heldTool = tool;
         AudioManager.Instance.PlaySFXAtPoint(pickupSound, Vector3.zero);
     }
 
     void Update()
     {
-        if (heldObj == null) return;
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = Camera.main.nearClipPlane;
-        heldObj.transform.position = Camera.main.ScreenToWorldPoint(mousePos); // plus offset
+        emptyHand.transform.position = Camera.main.ScreenToWorldPoint(mousePos); // plus offset
+        if (heldTool != null) heldTool.transform.position = Camera.main.ScreenToWorldPoint(mousePos); // plus offset
+    }
+
+    public void SetHover(bool hover)
+    {
+        emptyHand.SetHover(hover);
+        if (hover)
+        {
+            if (heldTool != null)
+            {
+                heldTool.gameObject.SetActive(false);
+                emptyHand.gameObject.SetActive(true);
+            }
+        }
+        else
+        {
+            if (heldTool != null)
+            {
+                heldTool.gameObject.SetActive(true);
+                emptyHand.gameObject.SetActive(false);
+            }
+        }
     }
 }

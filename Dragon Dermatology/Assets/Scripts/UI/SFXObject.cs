@@ -30,8 +30,8 @@ public class SFXObject : MonoBehaviour
 
     private void StopActual()
     {
-        source.Stop();
-        Destroy(gameObject);
+        if (source != null) source.Stop();
+        if (gameObject != null) Destroy(gameObject);
     }
 
     public void Play(float delay=0f)

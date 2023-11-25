@@ -5,10 +5,10 @@ using UnityEngine;
 public abstract class Tool : MonoBehaviour
 {
     public GameObject visualsObject;
-    private SpriteRenderer visualsRenderer;
-    public bool inUse { get; protected set; } = false;
+    protected SpriteRenderer visualsRenderer;
+    public bool inUse = false;
     public AudioClip sfx;
-    private SFXObject loopingSound; // TODO: Do we need this?
+    protected SFXObject loopingSound; // TODO: Do we need this?
     public Sprite idleSprite;
     public Sprite inUseSprite;
 
@@ -31,11 +31,17 @@ public abstract class Tool : MonoBehaviour
         if (Input.GetKeyUp("mouse 0"))
         {
             inUse = false;
-            loopingSound.Stop();
+            if (loopingSound != null) loopingSound.Stop();
         }
 
         visualsRenderer.sprite = inUse ? inUseSprite : idleSprite;
 
         if (inUse) PerformAction();
+    }
+
+    public virtual void OnDisable()
+    {
+        inUse = false;
+        if (loopingSound != null) loopingSound.Stop();
     }
 }
