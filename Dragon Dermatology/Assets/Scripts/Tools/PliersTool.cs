@@ -2,54 +2,58 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PliersTool : MonoBehaviour
+public class PliersTool : Tool
 {
     public GameObject top;
     public GameObject bot;
 
     private bool animating = false;
-    public float offset = 15f;
+    public float animationOffset = 15f;
     [SerializeField]private float progress = 0f;
-    public float speed = 60f;
+    public float animationSpeed = 60f;
 
     [SerializeField]private GameObject nearestObject = null;
     [SerializeField]private float nearestObjectDistance = 0f;
 
     private GameObject heldObj = null;
 
-    public AudioClip snipClip;
-
     private Color tempColor;
 
-    void Update()
+    public override void Start()
     {
+        base.Start();
+    }
+
+    public override void Update()
+    {
+        // base.Update(); // TODO: Pliers hold down instead of click? change loop audio. add audio to tool manager
         if (!animating && Input.GetKeyDown("mouse 0"))
         {
             animating = true;
             if (heldObj != null) heldObj = null;
             else if (nearestObject != null) heldObj = nearestObject;
-            AudioManager.Instance.PlaySFXAtPoint(snipClip, transform.position);
+            AudioManager.Instance.PlaySFXAtPoint(sfx, transform.position);
         }
         if (animating)
         {
-            if (progress <= offset) //closing
+            if (progress <= animationOffset) //closing
             {
-                top.transform.localEulerAngles += new Vector3(0,0,speed * Time.deltaTime);
-                bot.transform.localEulerAngles -= new Vector3(0,0,speed * Time.deltaTime);
-                progress += speed * Time.deltaTime;
+                top.transform.localEulerAngles += new Vector3(0,0,animationSpeed * Time.deltaTime);
+                bot.transform.localEulerAngles -= new Vector3(0,0,animationSpeed * Time.deltaTime);
+                progress += animationSpeed * Time.deltaTime;
             }
             else //opening
             {
-                if (progress >= 2*offset)
+                if (progress >= 2*animationOffset)
                 {
                     animating = false;
                     progress = 0;
                 }
                 else
                 {
-                    top.transform.localEulerAngles -= new Vector3(0,0,speed * Time.deltaTime);
-                    bot.transform.localEulerAngles += new Vector3(0,0,speed * Time.deltaTime);
-                    progress += speed * Time.deltaTime;
+                    top.transform.localEulerAngles -= new Vector3(0,0,animationSpeed * Time.deltaTime);
+                    bot.transform.localEulerAngles += new Vector3(0,0,animationSpeed * Time.deltaTime);
+                    progress += animationSpeed * Time.deltaTime;
                 }
             }
         }

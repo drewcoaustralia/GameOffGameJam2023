@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Environment
+    uniqueID: 1976190905
+    locked: 0
+  - name: Dragon
+    uniqueID: 2217604863
+    locked: 0
+  - name: Tools
+    uniqueID: 3843548903
+    locked: 0
+  - name: UI
+    uniqueID: 1099581515
+    locked: 0
