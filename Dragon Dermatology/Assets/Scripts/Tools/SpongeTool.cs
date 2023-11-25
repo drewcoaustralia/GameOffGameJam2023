@@ -28,7 +28,10 @@ public class SpongeTool : Tool
         RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
         if (hit.collider != null)
         {
-            DayManager.Instance.GetCurrentClient().Scrub(mousePosition, scrubRadius);
+            if (hit.collider == DayManager.Instance.GetCurrentClient().dirtySpriteMaskCollider)
+            {
+                DayManager.Instance.GetCurrentClient().Scrub(mousePosition, scrubRadius);
+            }
         }
 
         currentSoapTime -= Time.deltaTime;
