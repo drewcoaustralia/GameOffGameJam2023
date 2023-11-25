@@ -6,11 +6,30 @@ public class DayManager : MonoBehaviour
 {
     public static DayManager Instance { get; private set; }
 
-    public List<Dragon> clients;
-    public int currentClientIndex = -1;
+    ///////////////////////////////////////////////
+    // Settings
+    ///////////////////////////////////////////////
 
-    public List<DragonScale> scalesCollected;
-    public int coinsCollected;
+    public GameObject dragonPrefab;
+
+    [Tooltip("The lowest amount of time it might take for a dragon to show up")]
+    public float minArrivalTime;
+
+    [Tooltip("The highest amount of time it might take for a dragon to show up")]
+    public float maxArrivalTime;
+
+    ///////////////////////////////////////////////
+    // State
+    ///////////////////////////////////////////////
+
+    private Dragon currentDragon = null;
+    private List<Dragon> queue = new List<Dragon>();
+    private List<DragonScale> scalesCollected = new List<DragonScale>();
+    private int coinsCollected = 0;
+
+    ///////////////////////////////////////////////
+    // Behaviour
+    ///////////////////////////////////////////////
 
     private void Awake() 
     {
@@ -24,33 +43,30 @@ public class DayManager : MonoBehaviour
         } 
     }
 
-    public void AddToQueue(Dragon dragon)
+    private void Start()
     {
-        // check if dragon in queue already
-        clients.Add(dragon);
+        StartCoroutine(QueueRoutine());
     }
 
-    public bool SetCurrentClient(Dragon dragon)
+    public void SetCurrentClient(Dragon dragon)
     {
-        if (IsClientIndexValid(currentClientIndex)) return false;
-
-        // check if dragon is already in queue first then change index
-        // temporary fix just adding the dragon passed
-        clients.Add(dragon);
-        currentClientIndex = clients.Count - 1;
-        return true;
-    }
-
-    public bool IsClientIndexValid(int index)
-    {
-        return currentClientIndex >= 0 && currentClientIndex < clients.Count;
+        currentDragon = dragon;
     }
 
     public Dragon GetCurrentClient()
     {
-        if (IsClientIndexValid(currentClientIndex))
-            return clients[currentClientIndex];
-        else
-            return null;
+        return currentDragon;
+    }
+
+    private IEnumerator QueueRoutine()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(Random.Range(minArrivalTime, maxArrivalTime));
+            var dragonObject = Instantiate(dragonPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+            Dragon dragon = dragonObject.GetComponent<Dragon>();
+            queue.Add(dragon);
+            Debug.Log($"New dragon queued: {dragon}");
+        }
     }
 }

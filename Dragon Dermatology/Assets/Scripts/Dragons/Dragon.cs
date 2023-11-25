@@ -5,24 +5,12 @@ using UnityEngine.UIElements;
 
 public class Dragon : MonoBehaviour
 {
-    public float waitingTime;
-    public bool leftBeforeClient = false; // could be stored in happiness somehow?
+    ///////////////////////////////////////////////
+    // Settings
+    ///////////////////////////////////////////////
 
     // unity can be a bit fiddly with enums so string here is fine
     public string species; // classic, fire, water
-
-    public List<DragonScale> scales;
-
-    [Range(0f,1f)]
-    public float happiness;
-
-    [Range(0f,1f)]
-    public float stealth; // placeholder for now
-
-    [Range(0f,1f)]
-    public float cleanliness; // placeholder for now
-
-    public int coins;
 
     // collection of sprites may need to change when we have rigged skeletons
     public SpriteRenderer cleanSpriteRend;
@@ -32,6 +20,22 @@ public class Dragon : MonoBehaviour
     private Color[] maskColors;
     private int maskWidth;
     private int maskHeight;
+
+    ///////////////////////////////////////////////
+    // State
+    ///////////////////////////////////////////////
+
+    private float waitingTime;
+    private List<DragonScale> scales;
+    private float happiness;
+    private float stealth; // placeholder for now
+    private float cleanliness; // placeholder for now
+    private int coins;
+    private bool leftBeforeClient = false; // could be stored in happiness somehow?
+
+    ///////////////////////////////////////////////
+    // Behaviour
+    ///////////////////////////////////////////////
 
     void Start()
     {
