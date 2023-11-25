@@ -23,7 +23,7 @@ public class DayManager : MonoBehaviour
     ///////////////////////////////////////////////
 
     private Dragon currentDragon = null;
-    private List<Dragon> queue = new List<Dragon>();
+    private List<QueuedDragon> queue = new List<QueuedDragon>();
     private List<DragonScale> scalesCollected = new List<DragonScale>();
     private int coinsCollected = 0;
 
@@ -64,9 +64,8 @@ public class DayManager : MonoBehaviour
         {
             yield return new WaitForSeconds(Random.Range(minArrivalTime, maxArrivalTime));
             var dragonObject = Instantiate(dragonPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-            Dragon dragon = dragonObject.GetComponent<Dragon>();
+            QueuedDragon dragon = dragonObject.GetComponent<QueuedDragon>();
             queue.Add(dragon);
-            Debug.Log($"New dragon queued: {dragon}");
         }
     }
 }

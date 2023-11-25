@@ -6,32 +6,35 @@ using UnityEngine.UIElements;
 public class Dragon : MonoBehaviour
 {
     ///////////////////////////////////////////////
+    // Component references
+    ///////////////////////////////////////////////
+
+    // collection of sprites may need to change when we have rigged skeletons
+    public SpriteRenderer cleanSpriteRend;
+    public SpriteRenderer dirtySpriteRend;
+    public SpriteMask dirtySpriteMask;
+
+    ///////////////////////////////////////////////
     // Settings
     ///////////////////////////////////////////////
 
     // unity can be a bit fiddly with enums so string here is fine
     public string species; // classic, fire, water
 
-    // collection of sprites may need to change when we have rigged skeletons
-    public SpriteRenderer cleanSpriteRend;
-    public SpriteRenderer dirtySpriteRend;
-    public SpriteMask dirtySpriteMask;
     public BoxCollider2D dirtySpriteMaskCollider; // does it need this or can we calc from sprite size?
-    private Color[] maskColors;
-    private int maskWidth;
-    private int maskHeight;
 
     ///////////////////////////////////////////////
     // State
     ///////////////////////////////////////////////
 
-    private float waitingTime;
+    private Color[] maskColors;
+    private int maskWidth;
+    private int maskHeight;
     private List<DragonScale> scales;
     private float happiness;
     private float stealth; // placeholder for now
     private float cleanliness; // placeholder for now
     private int coins;
-    private bool leftBeforeClient = false; // could be stored in happiness somehow?
 
     ///////////////////////////////////////////////
     // Behaviour
@@ -39,9 +42,29 @@ public class Dragon : MonoBehaviour
 
     void Start()
     {
-        // DayManager.Instance.AddToQueue(this);
         DayManager.Instance.SetCurrentClient(this);
-        ResetDirtyLayer();
+
+        if (enabled) {
+            ResetDirtyLayer();
+        }
+    }
+
+    void OnEnable()
+    {
+        Debug.Log("Enable");
+        cleanSpriteRend.GetComponent<Renderer>().enabled = true;
+        dirtySpriteRend.GetComponent<Renderer>().enabled = true;
+        dirtySpriteMask.enabled = true;
+        dirtySpriteMaskCollider.enabled = true;
+    }
+
+    void OnDisable()
+    {
+        Debug.Log("Disable");
+        cleanSpriteRend.GetComponent<Renderer>().enabled = false;
+        dirtySpriteRend.GetComponent<Renderer>().enabled = false;
+        dirtySpriteMask.enabled = false;
+        dirtySpriteMaskCollider.enabled = false;
     }
 
     void ResetDirtyLayer()
