@@ -44,8 +44,17 @@ TagManager:
   - name: Environment
     uniqueID: 1976190905
     locked: 0
+  - name: Trees
+    uniqueID: 2060564511
+    locked: 0
+  - name: Mushrooms
+    uniqueID: 1798968991
+    locked: 0
   - name: Dragon
     uniqueID: 2217604863
+    locked: 0
+  - name: Scales
+    uniqueID: 72647271
     locked: 0
   - name: Tools
     uniqueID: 3843548903
