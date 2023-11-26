@@ -25,12 +25,18 @@ public class SpongeTool : Tool
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0;
-        RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
-        if (hit.collider != null)
+        RaycastHit2D[] hits = Physics2D.RaycastAll(mousePosition, Vector2.zero);
+        if (hits != null && hits.Length != 0)
         {
-            if (hit.collider == DayManager.Instance.GetCurrentClient().dirtySpriteMaskCollider)
+            foreach (RaycastHit2D hit in hits)
             {
-                DayManager.Instance.GetCurrentClient().Scrub(mousePosition, scrubRadius);
+                if (hit.collider != null)
+                {
+                    if (hit.collider.GetComponent<ScrubbableSpriteMask>() != null)
+                    {
+                        hit.collider.GetComponent<ScrubbableSpriteMask>().Scrub(mousePosition, scrubRadius);
+                    }
+                }
             }
         }
 

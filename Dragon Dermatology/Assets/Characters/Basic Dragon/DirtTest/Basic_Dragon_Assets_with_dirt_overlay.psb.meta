@@ -1,0 +1,929 @@
+fileFormatVersion: 2
+guid: 1b4ebd539cb594549980681f5c74cf92
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: b188553ca4ffb2f478f011a2f2d210e2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  multiSpriteImportData: []
+  layeredSpriteImportData:
+  - name: Basic Dragon Happy Eyes
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1797
+      y: 7633
+      width: 181
+      height: 156
+    spriteID: bfa13cc00c3616f49b1fe608430af939
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1797, y: 7633}
+    spritePosition: {x: 871, y: 1513}
+  - name: Basic Dragon Angery Eyes
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1613
+      y: 7799
+      width: 99
+      height: 98
+    spriteID: 6395da1262058824b8845182abce2b70
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1613, y: 7799}
+    spritePosition: {x: 886, y: 1552}
+  - name: Basic Dragon Nutral Eyes Dirty Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1556
+      y: 6970
+      width: 189
+      height: 109
+    spriteID: 97327666c88b1f540bbedd75c5d704f4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1556, y: 6970}
+    spritePosition: {x: 869, y: 1563}
+  - name: Basic Dragon Head Dirty Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1294
+      y: 7094
+      width: 495
+      height: 697
+    spriteID: c026f0057a1c22d4db435de4b06bed91
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1294, y: 7094}
+    spritePosition: {x: 740, y: 1388}
+  - name: Basic Dragon Jaw Dirty Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1294
+      y: 7799
+      width: 311
+      height: 164
+    spriteID: 9fbb933ce8cf7da4ab5f183aa854246e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1294, y: 7799}
+    spritePosition: {x: 775, y: 1395}
+  - name: Basic Dragon Front Wing Dirty Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 2215
+      height: 1239
+    spriteID: 6f9e481111d2f6444a770e711446d1e0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 1286, y: 652}
+  - name: Basic Dragon Front HindLeg Dirty Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 7094
+      width: 637
+      height: 805
+    spriteID: 4c950bc4ac9c13649881e0906adaf583
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 7094}
+    spritePosition: {x: 1736, y: 90}
+  - name: Basic Dragon Front Foreleg Dirty Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1363
+      y: 2498
+      width: 704
+      height: 1060
+    spriteID: 6a33dd5e2a8dc67428ddd2bfa30f148f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1363, y: 2498}
+    spritePosition: {x: 874, y: 105}
+  - name: Basic Dragon Body Dirty Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2498
+      width: 1351
+      height: 1293
+    spriteID: 0d4377fea81d08348bcc79b4511b3763
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2498}
+    spritePosition: {x: 882, y: 562}
+  - name: Basic Dragon Back Wing Dirty Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2227
+      y: 4
+      width: 1673
+      height: 660
+    spriteID: a64ec04c98744334f8007f7af1687383
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2227, y: 4}
+    spritePosition: {x: 709, y: 1001}
+  - name: Basic Dragon Back Foreleg Dirty Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1685
+      y: 5100
+      width: 474
+      height: 580
+    spriteID: c38b8b2103122d244af98f279418e187
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1685, y: 5100}
+    spritePosition: {x: 809, y: 239}
+  - name: Basic Dragon Back Hindleg Dirty Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1556
+      y: 6431
+      width: 420
+      height: 531
+    spriteID: 07b99c58143163a4f8025b5e77e18d46
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1556, y: 6431}
+    spritePosition: {x: 1537, y: 218}
+  - name: Basic Dragon Tail Dirty Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 5768
+      width: 1544
+      height: 655
+    spriteID: 262cd2c94ef234849b9a0cec996ec237
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 5768}
+    spritePosition: {x: 2004, y: 269}
+  - name: Basic Dragon Nutral Eyes
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1753
+      y: 6970
+      width: 189
+      height: 109
+    spriteID: f1c2231772a81aa478e16c297259a456
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1753, y: 6970}
+    spritePosition: {x: 869, y: 1563}
+  - name: Basic Dragon Head
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2227
+      y: 1251
+      width: 495
+      height: 697
+    spriteID: 671a813bf5ace9945869a98f18917dfd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2227, y: 1251}
+    spritePosition: {x: 740, y: 1388}
+  - name: Basic Dragon Jaw
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1294
+      y: 7971
+      width: 311
+      height: 164
+    spriteID: a476cdcf25c80424f94fa8ac172eb92a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1294, y: 7971}
+    spritePosition: {x: 775, y: 1395}
+  - name: Basic Dragon Front Wing
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1251
+      width: 2215
+      height: 1239
+    spriteID: d91bdbf338a609747852b43cfdeb78d3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1251}
+    spritePosition: {x: 1286, y: 652}
+  - name: Basic Dragon Front HindLeg
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 649
+      y: 7094
+      width: 637
+      height: 805
+    spriteID: 46c9426d6f226e94989673a7d0939c77
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 649, y: 7094}
+    spritePosition: {x: 1736, y: 90}
+  - name: Basic Dragon Front Foreleg
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1363
+      y: 3799
+      width: 704
+      height: 1060
+    spriteID: af831a3fb53874d48972e789b59867e7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1363, y: 3799}
+    spritePosition: {x: 874, y: 105}
+  - name: Basic Dragon Body
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3799
+      width: 1351
+      height: 1293
+    spriteID: 053265d0a4e470e4bbee64eb722c7e36
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 3799}
+    spritePosition: {x: 882, y: 562}
+  - name: Basic Dragon Back Wing
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 5100
+      width: 1673
+      height: 660
+    spriteID: 7cbfcae87db1e6341b6d60c48065d0aa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 5100}
+    spritePosition: {x: 709, y: 1001}
+  - name: Basic Dragon Back Foreleg
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1556
+      y: 5768
+      width: 474
+      height: 580
+    spriteID: 6e90dd800cb167d43993919c0f250a06
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1556, y: 5768}
+    spritePosition: {x: 809, y: 239}
+  - name: Basic Dragon Back Hindleg
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1797
+      y: 7094
+      width: 420
+      height: 531
+    spriteID: cbb35190bcb8cdc459f83fb45265216c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1797, y: 7094}
+    spritePosition: {x: 1537, y: 218}
+  - name: Basic Dragon Tail
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 6431
+      width: 1544
+      height: 655
+    spriteID: fee1890bea60a7d4284ae0465f051428
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 6431}
+    spritePosition: {x: 2004, y: 269}
+  spriteImportData: []
+  rigSpriteImportData: []
+  sharedRigSpriteImportData: []
+  mosaicSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  padding: 4
+  spriteSizeExpand: 0
+  skeletonAssetReferenceID: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  pSDLayerImportSetting: []
+  psdLayers:
+  - name: Basic Dragon Happy
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 0abb3317bdec2ae4c944db5156c8cb6f
+    layerID: 0
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Basic Dragon Happy Eyes
+    spriteName: Basic Dragon Happy Eyes
+    isGroup: 0
+    parentIndex: 0
+    spriteID: bfa13cc00c3616f49b1fe608430af939
+    layerID: 1139811257
+    mosaicPosition: {x: 1797, y: 7633}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Basic Dragon Angery
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 68c4beca6873d664795d1dbe46cc9bcd
+    layerID: 1561518937
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Basic Dragon Angery Eyes
+    spriteName: Basic Dragon Angery Eyes
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 6395da1262058824b8845182abce2b70
+    layerID: 1408664183
+    mosaicPosition: {x: 1613, y: 7799}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Basic Dragon Dirty Copy
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 5f2f0791fc89c814da388ceebda976f8
+    layerID: 279193064
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Basic Dragon Nutral Eyes Dirty Copy
+    spriteName: Basic Dragon Nutral Eyes Dirty Copy
+    isGroup: 0
+    parentIndex: 4
+    spriteID: 97327666c88b1f540bbedd75c5d704f4
+    layerID: -1148814044
+    mosaicPosition: {x: 1556, y: 6970}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Basic Dragon Head Dirty Copy
+    spriteName: Basic Dragon Head Dirty Copy
+    isGroup: 0
+    parentIndex: 4
+    spriteID: c026f0057a1c22d4db435de4b06bed91
+    layerID: 814285444
+    mosaicPosition: {x: 1294, y: 7094}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Basic Dragon Jaw Dirty Copy
+    spriteName: Basic Dragon Jaw Dirty Copy
+    isGroup: 0
+    parentIndex: 4
+    spriteID: 9fbb933ce8cf7da4ab5f183aa854246e
+    layerID: -289550454
+    mosaicPosition: {x: 1294, y: 7799}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Basic Dragon Front Wing Dirty Copy
+    spriteName: Basic Dragon Front Wing Dirty Copy
+    isGroup: 0
+    parentIndex: 4
+    spriteID: 6f9e481111d2f6444a770e711446d1e0
+    layerID: 1765753648
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Basic Dragon Front HindLeg Dirty Copy
+    spriteName: Basic Dragon Front HindLeg Dirty Copy
+    isGroup: 0
+    parentIndex: 4
+    spriteID: 4c950bc4ac9c13649881e0906adaf583
+    layerID: -1374882812
+    mosaicPosition: {x: 4, y: 7094}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Basic Dragon Front Foreleg Dirty Copy
+    spriteName: Basic Dragon Front Foreleg Dirty Copy
+    isGroup: 0
+    parentIndex: 4
+    spriteID: 6a33dd5e2a8dc67428ddd2bfa30f148f
+    layerID: -1824535187
+    mosaicPosition: {x: 1363, y: 2498}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Basic Dragon Body Dirty Copy
+    spriteName: Basic Dragon Body Dirty Copy
+    isGroup: 0
+    parentIndex: 4
+    spriteID: 0d4377fea81d08348bcc79b4511b3763
+    layerID: 1330674238
+    mosaicPosition: {x: 4, y: 2498}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Basic Dragon Back Wing Dirty Copy
+    spriteName: Basic Dragon Back Wing Dirty Copy
+    isGroup: 0
+    parentIndex: 4
+    spriteID: a64ec04c98744334f8007f7af1687383
+    layerID: -1921995170
+    mosaicPosition: {x: 2227, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Basic Dragon Back Foreleg Dirty Copy
+    spriteName: Basic Dragon Back Foreleg Dirty Copy
+    isGroup: 0
+    parentIndex: 4
+    spriteID: c38b8b2103122d244af98f279418e187
+    layerID: -1057617805
+    mosaicPosition: {x: 1685, y: 5100}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Basic Dragon Back Hindleg Dirty Copy
+    spriteName: Basic Dragon Back Hindleg Dirty Copy
+    isGroup: 0
+    parentIndex: 4
+    spriteID: 07b99c58143163a4f8025b5e77e18d46
+    layerID: -792700374
+    mosaicPosition: {x: 1556, y: 6431}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Basic Dragon Tail Dirty Copy
+    spriteName: Basic Dragon Tail Dirty Copy
+    isGroup: 0
+    parentIndex: 4
+    spriteID: 262cd2c94ef234849b9a0cec996ec237
+    layerID: -2017519316
+    mosaicPosition: {x: 4, y: 5768}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Basic Dragon Nutral
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 8fba60c26ec3b2e4594a1de02b528acb
+    layerID: -58797833
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Basic Dragon Nutral Eyes
+    spriteName: Basic Dragon Nutral Eyes
+    isGroup: 0
+    parentIndex: 16
+    spriteID: f1c2231772a81aa478e16c297259a456
+    layerID: -740591303
+    mosaicPosition: {x: 1753, y: 6970}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Basic Dragon Head
+    spriteName: Basic Dragon Head
+    isGroup: 0
+    parentIndex: 16
+    spriteID: 671a813bf5ace9945869a98f18917dfd
+    layerID: 1574215511
+    mosaicPosition: {x: 2227, y: 1251}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Basic Dragon Jaw
+    spriteName: Basic Dragon Jaw
+    isGroup: 0
+    parentIndex: 16
+    spriteID: a476cdcf25c80424f94fa8ac172eb92a
+    layerID: -1821166381
+    mosaicPosition: {x: 1294, y: 7971}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Basic Dragon Front Wing
+    spriteName: Basic Dragon Front Wing
+    isGroup: 0
+    parentIndex: 16
+    spriteID: d91bdbf338a609747852b43cfdeb78d3
+    layerID: -796918167
+    mosaicPosition: {x: 4, y: 1251}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Basic Dragon Front HindLeg
+    spriteName: Basic Dragon Front HindLeg
+    isGroup: 0
+    parentIndex: 16
+    spriteID: 46c9426d6f226e94989673a7d0939c77
+    layerID: 1817257799
+    mosaicPosition: {x: 649, y: 7094}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Basic Dragon Front Foreleg
+    spriteName: Basic Dragon Front Foreleg
+    isGroup: 0
+    parentIndex: 16
+    spriteID: af831a3fb53874d48972e789b59867e7
+    layerID: 18990354
+    mosaicPosition: {x: 1363, y: 3799}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Basic Dragon Body
+    spriteName: Basic Dragon Body
+    isGroup: 0
+    parentIndex: 16
+    spriteID: 053265d0a4e470e4bbee64eb722c7e36
+    layerID: -1968143525
+    mosaicPosition: {x: 4, y: 3799}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Basic Dragon Back Wing
+    spriteName: Basic Dragon Back Wing
+    isGroup: 0
+    parentIndex: 16
+    spriteID: 7cbfcae87db1e6341b6d60c48065d0aa
+    layerID: -1997161397
+    mosaicPosition: {x: 4, y: 5100}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Basic Dragon Back Foreleg
+    spriteName: Basic Dragon Back Foreleg
+    isGroup: 0
+    parentIndex: 16
+    spriteID: 6e90dd800cb167d43993919c0f250a06
+    layerID: 493457600
+    mosaicPosition: {x: 1556, y: 5768}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Basic Dragon Back Hindleg
+    spriteName: Basic Dragon Back Hindleg
+    isGroup: 0
+    parentIndex: 16
+    spriteID: cbb35190bcb8cdc459f83fb45265216c
+    layerID: -2075932555
+    mosaicPosition: {x: 1797, y: 7094}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Basic Dragon Tail
+    spriteName: Basic Dragon Tail
+    isGroup: 0
+    parentIndex: 16
+    spriteID: fee1890bea60a7d4284ae0465f051428
+    layerID: 1560402535
+    mosaicPosition: {x: 4, y: 6431}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  mosaicPSDLayers: []
+  rigPSDLayers: []
+  sharedRigPSDLayers: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
