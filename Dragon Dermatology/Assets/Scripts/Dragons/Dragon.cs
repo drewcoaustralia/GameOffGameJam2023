@@ -1,40 +1,57 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
+
+public enum Species {
+    Regular,
+    Fire,
+    Water
+}
+
+public enum Mode {
+    Queued,
+    InSalon,
+    Left
+}
 
 public class Dragon : MonoBehaviour
 {
     ///////////////////////////////////////////////
-    // Component references
-    ///////////////////////////////////////////////
-
-    // collection of sprites may need to change when we have rigged skeletons
-    public SpriteRenderer cleanSpriteRend;
-    public SpriteRenderer dirtySpriteRend;
-    public SpriteMask dirtySpriteMask;
-
-    ///////////////////////////////////////////////
     // Settings
     ///////////////////////////////////////////////
 
-    // unity can be a bit fiddly with enums so string here is fine
-    public string species; // classic, fire, water
+    [Tooltip("The kind of dragon.")]
+    public Species species;
 
-    public BoxCollider2D dirtySpriteMaskCollider; // does it need this or can we calc from sprite size?
+    [Tooltip("Indicates where the dragon is within the salon building.")]
+    public Mode initialMode;
+
+    [Tooltip("The desired cleanliness as a percentage between 0-1.")]
+    public float desiredCleanliness;
+
+    [Tooltip("Reference to the child object which renders the queued dragon.")]
+    public GameObject queueRenderObject;
+
+    [Tooltip("Reference to the child object which renders the in-salon dragon.")]
+    public GameObject salonRenderObject;
 
     ///////////////////////////////////////////////
     // State
     ///////////////////////////////////////////////
 
-    private Color[] maskColors;
-    private int maskWidth;
-    private int maskHeight;
-    private List<DragonScale> scales;
-    private float happiness;
-    private float stealth; // placeholder for now
-    private float cleanliness; // placeholder for now
-    private int coins;
+    public bool IsSatisfied { get; private set; }
+
+    private float cleanlinessPercent;
+
+    // Unused - placeholders
+    //private List<DragonScale> scales;
+    //private float happiness;
+    //private float stealth;
+    //private float cleanliness;
+    //private int coins;
 
     ///////////////////////////////////////////////
     // Behaviour
@@ -42,105 +59,43 @@ public class Dragon : MonoBehaviour
 
     void Start()
     {
-        DayManager.Instance.SetCurrentClient(this);
+        SetMode(initialMode);
+    }
 
-        if (enabled) {
-            ResetDirtyLayer();
+    public void SetMode(Mode mode)
+    {
+        switch (mode) {
+            case Mode.Queued:
+                queueRenderObject.active = true;
+                salonRenderObject.active = false;
+                break;
+            case Mode.InSalon:
+                queueRenderObject.active = false;
+                salonRenderObject.active = true;
+                break;
+            case Mode.Left:
+                queueRenderObject.active = false;
+                salonRenderObject.active = false;
+                break;
         }
     }
 
-    void OnEnable()
-    {
-        Debug.Log("Enable");
-        cleanSpriteRend.GetComponent<Renderer>().enabled = true;
-        dirtySpriteRend.GetComponent<Renderer>().enabled = true;
-        dirtySpriteMask.enabled = true;
-        dirtySpriteMaskCollider.enabled = true;
+    public void SetCleanlinessPercent(float percent) {
+        cleanlinessPercent = percent;
+        EvalAndSetIsSatisfied();
     }
 
-    void OnDisable()
+    public void EvalAndSetIsSatisfied()
     {
-        Debug.Log("Disable");
-        cleanSpriteRend.GetComponent<Renderer>().enabled = false;
-        dirtySpriteRend.GetComponent<Renderer>().enabled = false;
-        dirtySpriteMask.enabled = false;
-        dirtySpriteMaskCollider.enabled = false;
-    }
+        bool wasSatisfied = IsSatisfied;
 
-    void ResetDirtyLayer()
-    {
-        //Extract color data once
-        maskColors = dirtySpriteMask.sprite.texture.GetPixels();
-    
-        //Store mask dimensionns
-        maskWidth = dirtySpriteMask.sprite.texture.width;
-        maskHeight = dirtySpriteMask.sprite.texture.height;
-    
-        ClearMask();       
-    }
+        // Satisfaction algorithm
+        IsSatisfied = (cleanlinessPercent >= desiredCleanliness);
 
-    void ClearMask()
-    {         
-        // TODO: set initial texture to inverse of main texture, check percentage fill and tare it. then later count pixels not empty for percentage clean           
-        //set all color data to transparent
-        for (int i = 0; i < maskColors.Length; ++i)
+        // Notify on change
+        if (!wasSatisfied && IsSatisfied)
         {
-        maskColors[i] = new Color(1, 1, 1, 0);
-        }
-    
-        dirtySpriteMask.sprite.texture.SetPixels(maskColors);
-        dirtySpriteMask.sprite.texture.Apply(false);
-    }
-
-    public void Scrub(Vector3 worldPosition, int radius)
-    {
-        //Normalize to the texture coodinates
-        int x = (int)((((worldPosition - dirtySpriteMask.transform.position).x)/dirtySpriteMaskCollider.size.x)*maskWidth/transform.localScale.x + maskWidth/2);
-        int y = (int)((((worldPosition - dirtySpriteMask.transform.position).y)/dirtySpriteMaskCollider.size.y)*maskHeight/transform.localScale.y + maskHeight/2);
-
-        //Draw onto the mask
-        DrawOnMask(x, y, radius);
-    }
-
-    private void DrawOnMask(int cx, int cy, int r)
-    {
-        int px, nx, py, ny, d;
-        
-        for (int x = 0; x <= r; x++)
-        {
-            d = (int)Mathf.Ceil(Mathf.Sqrt(r * r - x * x));
-    
-            for (int y = 0; y <= d; y++)
-            {
-                px = cx + x;
-                nx = cx - x;
-                py = cy + y;
-                ny = cy - y;
-    
-                if ((py * maskWidth + px) >= 0 && (py * maskWidth + px) < maskColors.Length)
-                    maskColors[py * maskWidth + px] = new Color(1, 0, 0, 1);
-
-                if ((py * maskWidth + nx) >= 0 && (py * maskWidth + nx) < maskColors.Length)
-                    maskColors[py * maskWidth + nx] = new Color(0, 1, 0, 1);
-
-                if ((ny * maskWidth + px) >= 0 && (ny * maskWidth + px) < maskColors.Length)
-                    maskColors[ny * maskWidth + px] = new Color(0, 0, 1, 1);
-
-                if ((ny * maskWidth + nx) >= 0 && (ny * maskWidth + nx) < maskColors.Length)
-                    maskColors[ny * maskWidth + nx] = new Color(1, 1, 1, 1);
-            }
-        }
-    
-        dirtySpriteMask.sprite.texture.SetPixels(maskColors);
-        dirtySpriteMask.sprite.texture.Apply(false);
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown("space"))
-        {
-            ResetDirtyLayer();
+            DayManager.Instance.DragonBecameSatisfied(this);
         }
     }
-   
 }
