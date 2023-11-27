@@ -22,7 +22,6 @@ public class Dragon : MonoBehaviour
     // Settings
     ///////////////////////////////////////////////
 
-    // unity can be a bit fiddly with enums so string here is fine
     [Tooltip("The kind of dragon.")]
     public Species species;
 
