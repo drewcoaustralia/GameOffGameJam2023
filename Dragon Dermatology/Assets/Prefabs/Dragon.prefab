@@ -419,6 +419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   species: 0
   initialMode: 0
+  desiredCleanliness: 0
   queueRenderObject: {fileID: 5046853749230913301}
   salonRenderObject: {fileID: 6924723769615102481}
 --- !u!114 &5078191853932029373
@@ -433,5 +434,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a9078d696adab488cb8374250000e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTimeLower: 0
-  waitTimeUpper: 0
+  waitTimeLower: 5
+  waitTimeUpper: 10

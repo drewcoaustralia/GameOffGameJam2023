@@ -5,11 +5,6 @@ using UnityEngine;
 
 public class QueuedDragon : MonoBehaviour
 {
-    /// <summary>
-    /// The dragon gave up waiting.
-    /// </summary>
-    public event EventHandler GaveUp;
-
     ///////////////////////////////////////////////
     // Settings
     ///////////////////////////////////////////////
@@ -23,6 +18,8 @@ public class QueuedDragon : MonoBehaviour
     ///////////////////////////////////////////////
     // State
     ///////////////////////////////////////////////
+    
+    public bool NoLongerWaiting { get; set; }
 
     ///////////////////////////////////////////////
     // Behaviour
@@ -34,18 +31,12 @@ public class QueuedDragon : MonoBehaviour
         StartCoroutine(GiveUpTimer(giveUpAfter));
     }
 
-    void Update()
-    {
-        
-    }
-
     private IEnumerator GiveUpTimer(float giveUpAfter)
     {
         yield return new WaitForSeconds(giveUpAfter);
 
-        if (GaveUp != null)
-        {
-            GaveUp(this, EventArgs.Empty);
+        if (!NoLongerWaiting) {
+            DayManager.Instance.DragonGaveUp(this);
         }
     }
 }
