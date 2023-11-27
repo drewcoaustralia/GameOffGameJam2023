@@ -12,7 +12,8 @@ public enum Species {
 
 public enum Mode {
     Queued,
-    InSalon
+    InSalon,
+    Left
 }
 
 public class Dragon : MonoBehaviour
@@ -25,7 +26,7 @@ public class Dragon : MonoBehaviour
     [Tooltip("The kind of dragon.")]
     public Species species;
 
-    [Tooltip("Indicates where the dragon is within the salon.")]
+    [Tooltip("Indicates where the dragon is within the salon building.")]
     public Mode initialMode;
 
     [Tooltip("Reference to the child object which renders the queued dragon.")]
@@ -65,6 +66,10 @@ public class Dragon : MonoBehaviour
             case Mode.InSalon:
                 queueRenderObject.active = false;
                 salonRenderObject.active = true;
+                break;
+            case Mode.Left:
+                queueRenderObject.active = false;
+                salonRenderObject.active = false;
                 break;
         }
     }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,6 +25,8 @@ public class DayManager : MonoBehaviour
 
     private Dragon currentDragon = null;
     private List<QueuedDragon> queue = new List<QueuedDragon>();
+    private List<QueuedDragon> gaveUpWaiting = new List<QueuedDragon>();
+    private List<Dragon> visited = new List<Dragon>();
     private List<DragonScale> scalesCollected = new List<DragonScale>();
     private int coinsCollected = 0;
 
@@ -50,6 +53,9 @@ public class DayManager : MonoBehaviour
 
     public void SetCurrentClient(Dragon dragon)
     {
+        QueuedDragon queued = dragon.gameObject.GetComponentsInChildren<QueuedDragon>()[0];
+        queue.Remove(queued);
+
         currentDragon = dragon;
     }
 
@@ -62,10 +68,22 @@ public class DayManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(minArrivalTime, maxArrivalTime));
+            yield return new WaitForSeconds(UnityEngine.Random.Range(minArrivalTime, maxArrivalTime));
+
             var dragonObject = Instantiate(dragonPrefab, new Vector3(0, 0, 0), Quaternion.identity);
             QueuedDragon dragon = dragonObject.GetComponent<QueuedDragon>();
+            dragon.GaveUp += QueuedDragon_OnGaveUp;
             queue.Add(dragon);
         }
+    }
+
+    private void QueuedDragon_OnGaveUp(object sender, EventArgs e)
+    {
+        var queuedDragon = (QueuedDragon)sender;
+        queue.Remove(queuedDragon);
+        gaveUpWaiting.Add(queuedDragon);
+
+        Dragon dragon = queuedDragon.gameObject.GetComponentsInChildren<Dragon>()[0];
+        dragon.SetMode(Mode.Left);
     }
 }
