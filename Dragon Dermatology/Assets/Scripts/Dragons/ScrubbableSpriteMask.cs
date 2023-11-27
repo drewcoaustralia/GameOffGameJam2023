@@ -17,6 +17,14 @@ public class ScrubbableSpriteMask : MonoBehaviour
 
     void Start()
     {
+        Sprite dirtySprite = dirtySpriteRend.sprite;
+        Texture2D newTexture = new Texture2D(dirtySprite.texture.width, dirtySprite.texture.height);
+        // Graphics.CopyTexture(dirtySprite.texture, newTexture);
+        // Vector2 pivot = new Vector2((newTexture.width / 2), (newTexture.height / 2));
+        // Vector2 pivot = Vector2.zero;
+        Vector2 pivot = new Vector2(0.5f, 0.5f);
+        Sprite newMask = Sprite.Create(newTexture, dirtySprite.rect, pivot);
+        dirtySpriteMask.sprite = newMask;
         ResetDirtyLayer();
     }
 
@@ -75,6 +83,11 @@ public class ScrubbableSpriteMask : MonoBehaviour
                 nx = cx - x;
                 py = cy + y;
                 ny = cy - y;
+
+                if (nx < 0) continue;
+                if (ny < 0) continue;
+                if (px >= maskWidth) continue;
+                if (py >= maskHeight) continue;
     
                 if ((py * (int)maskWidth + px) >= 0 && (py * (int)maskWidth + px) < maskColors.Length)
                     maskColors[py * (int)maskWidth + px] = new Color(1, 0, 0, 1);
