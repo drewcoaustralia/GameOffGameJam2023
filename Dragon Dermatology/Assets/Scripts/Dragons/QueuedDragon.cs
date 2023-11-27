@@ -16,6 +16,12 @@ public class QueuedDragon : MonoBehaviour
     public float waitTimeUpper;
 
     ///////////////////////////////////////////////
+    // State
+    ///////////////////////////////////////////////
+    
+    public bool NoLongerWaiting { get; set; }
+
+    ///////////////////////////////////////////////
     // Behaviour
     ///////////////////////////////////////////////
 
@@ -29,6 +35,8 @@ public class QueuedDragon : MonoBehaviour
     {
         yield return new WaitForSeconds(giveUpAfter);
 
-        DayManager.Instance.DragonGaveUp(this);
+        if (!NoLongerWaiting) {
+            DayManager.Instance.DragonGaveUp(this);
+        }
     }
 }

@@ -104,6 +104,7 @@ public class DayManager : MonoBehaviour
 
         // Remove from queue
         QueuedDragon queued = dragon.gameObject.GetComponentsInChildren<QueuedDragon>()[0];
+        queued.NoLongerWaiting = true;
         queue.Remove(queued);
 
         currentDragon = dragon;
@@ -165,6 +166,8 @@ public class DayManager : MonoBehaviour
 
     private void MakeDragonLeaveQueue(QueuedDragon d) {
         queue.Remove(d);
+        d.NoLongerWaiting = true;
+
         unseen.Add(d);
 
         Dragon dragon = d.gameObject.GetComponentsInChildren<Dragon>()[0];
