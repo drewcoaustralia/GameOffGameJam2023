@@ -4,24 +4,36 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+public enum Species {
+    Regular,
+    Fire,
+    Water
+}
+
+public enum Mode {
+    Queued,
+    InSalon,
+    Left
+}
+
 public class Dragon : MonoBehaviour
 {
-    ///////////////////////////////////////////////
-    // Component references
-    ///////////////////////////////////////////////
-
-    // collection of sprites may need to change when we have rigged skeletons
-    // TODO: Add references to the new rig and animations
-    // public SpriteRenderer cleanSpriteRend;
-    // public SpriteRenderer dirtySpriteRend;
-    // public SpriteMask dirtySpriteMask;
-
     ///////////////////////////////////////////////
     // Settings
     ///////////////////////////////////////////////
 
     // unity can be a bit fiddly with enums so string here is fine
-    public string species; // classic, fire, water
+    [Tooltip("The kind of dragon.")]
+    public Species species;
+
+    [Tooltip("Indicates where the dragon is within the salon building.")]
+    public Mode initialMode;
+
+    [Tooltip("Reference to the child object which renders the queued dragon.")]
+    public GameObject queueRenderObject;
+
+    [Tooltip("Reference to the child object which renders the in-salon dragon.")]
+    public GameObject salonRenderObject;
 
     ///////////////////////////////////////////////
     // State
@@ -40,5 +52,25 @@ public class Dragon : MonoBehaviour
     void Start()
     {
         DayManager.Instance.SetCurrentClient(this);
+
+        SetMode(initialMode);
+    }
+
+    public void SetMode(Mode mode)
+    {
+        switch (mode) {
+            case Mode.Queued:
+                queueRenderObject.active = true;
+                salonRenderObject.active = false;
+                break;
+            case Mode.InSalon:
+                queueRenderObject.active = false;
+                salonRenderObject.active = true;
+                break;
+            case Mode.Left:
+                queueRenderObject.active = false;
+                salonRenderObject.active = false;
+                break;
+        }
     }
 }
