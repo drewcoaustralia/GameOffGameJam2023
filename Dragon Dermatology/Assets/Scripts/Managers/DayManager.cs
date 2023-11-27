@@ -39,21 +39,24 @@ public class DayManager : MonoBehaviour
     // Visitors
     private Dragon currentDragon = null;
     private List<QueuedDragon> queue = new List<QueuedDragon>();
-    private List<QueuedDragon> gaveUpWaiting = new List<QueuedDragon>();
-    private List<Dragon> completedHappy = new List<Dragon>();
-    private List<Dragon> completedUnhappy = new List<Dragon>();
+    private List<QueuedDragon> unseen = new List<QueuedDragon>();
+    private List<Dragon> seenHappy = new List<Dragon>();
+    private List<Dragon> seenUnhappy = new List<Dragon>();
 
     // Daily goal
-    private int regularScaleGoal = 0;
-    private int fireScaleGoal = 0;
-    private int waterScaleGoal = 0;
+    public int RegularScaleGoal { get; private set; } = 0;
+    public int FireScaleGoal { get; private set; } = 0;
+    public int WaterScaleGoal { get; private set; } = 0;
 
     // Earnings
-    private int coinsCollected = 0;
-    private int regularScalesCollected = 0;
-    private int fireScalesCollected = 0;
-    private int waterScalesCollected = 0;
-    private int goldenScalesCollected = 0;
+    public int CoinsCollected { get; private set; } = 0;
+    public int RegularScalesCollected { get; private set; } = 0;
+    public int FireScalesCollected { get; private set; } = 0;
+    public int WaterScalesCollected { get; private set; } = 0;
+    public int GoldenScalesCollected { get; private set; } = 0;
+    public int UnseenDragons { get { return unseen.Count; } }
+    public int SeenHappyDragons { get { return seenHappy.Count; } }
+    public int SeenUnhappyDragons { get { return seenUnhappy.Count; } }
 
     ///////////////////////////////////////////////
     // Behaviour
@@ -73,17 +76,38 @@ public class DayManager : MonoBehaviour
 
     private void Start()
     {
-        regularScaleGoal = UnityEngine.Random.Range(minRegularScaleGoal, maxRegularScaleGoal);
-        fireScaleGoal = UnityEngine.Random.Range(minFireScaleGoal, maxFireScaleGoal);
-        waterScaleGoal = UnityEngine.Random.Range(minWaterScaleGoal, maxWaterScaleGoal);
+        RegularScaleGoal = UnityEngine.Random.Range(minRegularScaleGoal, maxRegularScaleGoal);
+        FireScaleGoal = UnityEngine.Random.Range(minFireScaleGoal, maxFireScaleGoal);
+        WaterScaleGoal = UnityEngine.Random.Range(minWaterScaleGoal, maxWaterScaleGoal);
         StartCoroutine(QueueRoutine());
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown("z")) // temporary debugging key
+        {
+            FinishCurrentClient();
+        }
+        else if (Input.GetKeyDown("x")) // temporary debugging key
+        {
+            FinishDay();
+        }
     }
 
     public void SetCurrentClient(Dragon dragon)
     {
+        // It's best to avoid defensive programming like this.. but just in case :)
+        if (currentDragon)
+        {
+            FinishCurrentClient();
+        }
+
+        // Remove from queue
         QueuedDragon queued = dragon.gameObject.GetComponentsInChildren<QueuedDragon>()[0];
         queue.Remove(queued);
 
+        // Set and bind
+        dragon.BecameSatisfied += Dragon_OnBecameSatisfied;
         currentDragon = dragon;
     }
 
@@ -92,12 +116,41 @@ public class DayManager : MonoBehaviour
         return currentDragon;
     }
 
+    public void FinishCurrentClient()
+    {
+        if (currentDragon == null) {
+            Debug.Log("ERROR: FinishCurrentClient: Current dragon is null!");
+            return;
+        }
+
+        // Place in completion list
+        if (currentDragon.IsSatisfied) {
+            seenHappy.Add(currentDragon);
+        } else {
+            seenUnhappy.Add(currentDragon);
+        }
+
+        // Unset and unbind
+        currentDragon.BecameSatisfied -= Dragon_OnBecameSatisfied;
+        currentDragon = null;
+    }
+
+    public void FinishDay()
+    {
+        // Any dragons in the queue will leave unhappily
+        while (queue.Count > 0)
+        {
+            MakeDragonLeaveQueue(queue[0]);
+        }
+    }
+
     private IEnumerator QueueRoutine()
     {
         while (true)
         {
             yield return new WaitForSeconds(UnityEngine.Random.Range(minArrivalTime, maxArrivalTime));
 
+            // Instantiate and queue a dragon
             var dragonObject = Instantiate(dragonPrefab, new Vector3(0, 0, 0), Quaternion.identity);
             QueuedDragon dragon = dragonObject.GetComponent<QueuedDragon>();
             dragon.GaveUp += QueuedDragon_OnGaveUp;
@@ -107,11 +160,19 @@ public class DayManager : MonoBehaviour
 
     private void QueuedDragon_OnGaveUp(object sender, EventArgs e)
     {
-        var queuedDragon = (QueuedDragon)sender;
-        queue.Remove(queuedDragon);
-        gaveUpWaiting.Add(queuedDragon);
+        MakeDragonLeaveQueue((QueuedDragon)sender);
+    }
 
-        Dragon dragon = queuedDragon.gameObject.GetComponentsInChildren<Dragon>()[0];
+    private void MakeDragonLeaveQueue(QueuedDragon d) {
+        queue.Remove(d);
+        unseen.Add(d);
+
+        Dragon dragon = d.gameObject.GetComponentsInChildren<Dragon>()[0];
         dragon.SetMode(Mode.Left);
+    }
+
+    private void Dragon_OnBecameSatisfied(object sender, EventArgs e)
+    {
+        // TODO: Present this to the player somehow
     }
 }

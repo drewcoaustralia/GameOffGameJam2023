@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -18,6 +19,11 @@ public enum Mode {
 
 public class Dragon : MonoBehaviour
 {
+    /// <summary>
+    /// The dragon is satisfied. Any further grooming is for bonus items.
+    /// </summary>
+    public event EventHandler BecameSatisfied;
+
     ///////////////////////////////////////////////
     // Settings
     ///////////////////////////////////////////////
@@ -27,6 +33,9 @@ public class Dragon : MonoBehaviour
 
     [Tooltip("Indicates where the dragon is within the salon building.")]
     public Mode initialMode;
+
+    [Tooltip("The desired cleanliness as a percentage between 0-1.")]
+    public float desiredCleanliness;
 
     [Tooltip("Reference to the child object which renders the queued dragon.")]
     public GameObject queueRenderObject;
@@ -38,11 +47,16 @@ public class Dragon : MonoBehaviour
     // State
     ///////////////////////////////////////////////
 
-    private List<DragonScale> scales;
-    private float happiness;
-    private float stealth; // placeholder for now
-    private float cleanliness; // placeholder for now
-    private int coins;
+    public bool IsSatisfied { get; private set; }
+
+    private float cleanlinessPercent;
+
+    // Unused - placeholders
+    //private List<DragonScale> scales;
+    //private float happiness;
+    //private float stealth;
+    //private float cleanliness;
+    //private int coins;
 
     ///////////////////////////////////////////////
     // Behaviour
@@ -50,8 +64,6 @@ public class Dragon : MonoBehaviour
 
     void Start()
     {
-        DayManager.Instance.SetCurrentClient(this);
-
         SetMode(initialMode);
     }
 
@@ -70,6 +82,25 @@ public class Dragon : MonoBehaviour
                 queueRenderObject.active = false;
                 salonRenderObject.active = false;
                 break;
+        }
+    }
+
+    public void SetCleanlinessPercent(float percent) {
+        cleanlinessPercent = percent;
+        EvalAndSetIsSatisfied();
+    }
+
+    public void EvalAndSetIsSatisfied()
+    {
+        bool wasSatisfied = IsSatisfied;
+
+        // Satisfaction algorithm
+        IsSatisfied = (cleanlinessPercent >= desiredCleanliness);
+
+        // Notify on change
+        if (!wasSatisfied && IsSatisfied)
+        {
+            BecameSatisfied(this, EventArgs.Empty);
         }
     }
 }
