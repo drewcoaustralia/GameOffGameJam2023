@@ -106,8 +106,6 @@ public class DayManager : MonoBehaviour
         QueuedDragon queued = dragon.gameObject.GetComponentsInChildren<QueuedDragon>()[0];
         queue.Remove(queued);
 
-        // Set and bind
-        dragon.BecameSatisfied += Dragon_OnBecameSatisfied;
         currentDragon = dragon;
     }
 
@@ -130,8 +128,6 @@ public class DayManager : MonoBehaviour
             seenUnhappy.Add(currentDragon);
         }
 
-        // Unset and unbind
-        currentDragon.BecameSatisfied -= Dragon_OnBecameSatisfied;
         currentDragon = null;
     }
 
@@ -144,6 +140,16 @@ public class DayManager : MonoBehaviour
         }
     }
 
+    public void DragonGaveUp(QueuedDragon dragon)
+    {
+        MakeDragonLeaveQueue(dragon);
+    }
+
+    public void DragonBecameSatisfied(Dragon dragon)
+    {
+        // TODO: Present this to the player somehow
+    }
+
     private IEnumerator QueueRoutine()
     {
         while (true)
@@ -153,14 +159,8 @@ public class DayManager : MonoBehaviour
             // Instantiate and queue a dragon
             var dragonObject = Instantiate(dragonPrefab, new Vector3(0, 0, 0), Quaternion.identity);
             QueuedDragon dragon = dragonObject.GetComponent<QueuedDragon>();
-            dragon.GaveUp += QueuedDragon_OnGaveUp;
             queue.Add(dragon);
         }
-    }
-
-    private void QueuedDragon_OnGaveUp(object sender, EventArgs e)
-    {
-        MakeDragonLeaveQueue((QueuedDragon)sender);
     }
 
     private void MakeDragonLeaveQueue(QueuedDragon d) {
@@ -169,10 +169,5 @@ public class DayManager : MonoBehaviour
 
         Dragon dragon = d.gameObject.GetComponentsInChildren<Dragon>()[0];
         dragon.SetMode(Mode.Left);
-    }
-
-    private void Dragon_OnBecameSatisfied(object sender, EventArgs e)
-    {
-        // TODO: Present this to the player somehow
     }
 }

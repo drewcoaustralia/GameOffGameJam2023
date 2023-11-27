@@ -19,11 +19,6 @@ public enum Mode {
 
 public class Dragon : MonoBehaviour
 {
-    /// <summary>
-    /// The dragon is satisfied. Any further grooming is for bonus items.
-    /// </summary>
-    public event EventHandler BecameSatisfied;
-
     ///////////////////////////////////////////////
     // Settings
     ///////////////////////////////////////////////
@@ -100,7 +95,7 @@ public class Dragon : MonoBehaviour
         // Notify on change
         if (!wasSatisfied && IsSatisfied)
         {
-            BecameSatisfied(this, EventArgs.Empty);
+            DayManager.Instance.DragonBecameSatisfied(this);
         }
     }
 }
