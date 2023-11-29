@@ -29,8 +29,13 @@ public class Dragon : MonoBehaviour
     [Tooltip("Indicates where the dragon is within the salon building.")]
     public Mode initialMode;
 
+    [Range(0, 1)]
     [Tooltip("The desired cleanliness as a percentage between 0-1.")]
     public float desiredCleanliness;
+
+    [Range(0, 1)]
+    [Tooltip("The desired polish as a percentage between 0-1.")]
+    public float desiredPolish;
 
     [Tooltip("Reference to the child object which renders the queued dragon.")]
     public GameObject queueRenderObject;
@@ -42,15 +47,17 @@ public class Dragon : MonoBehaviour
     // State
     ///////////////////////////////////////////////
 
-    public bool IsSatisfied { get; private set; }
+    public bool IsFeelingClean { get; private set; }
+    public bool IsFeelingProud { get; private set; }
 
     private float cleanlinessPercent;
+    private float polishPercent;
+    private int numSuds;
 
     // Unused - placeholders
     //private List<DragonScale> scales;
     //private float happiness;
     //private float stealth;
-    //private float cleanliness;
     //private int coins;
 
     ///////////////////////////////////////////////
@@ -82,20 +89,39 @@ public class Dragon : MonoBehaviour
 
     public void SetCleanlinessPercent(float percent) {
         cleanlinessPercent = percent;
-        EvalAndSetIsSatisfied();
+        EvalFeelings();
     }
 
-    public void EvalAndSetIsSatisfied()
+    public void SetPolishPercent(float percent) {
+        polishPercent = percent;
+        EvalFeelings();
+    }
+
+    public void AddSud() {
+        numSuds++;
+        EvalFeelings();
+    }
+
+    public void RemoveSud() {
+        numSuds--;
+        EvalFeelings();
+    }
+
+    public void EvalFeelings()
     {
-        bool wasSatisfied = IsSatisfied;
-
         // Satisfaction algorithm
-        IsSatisfied = (cleanlinessPercent >= desiredCleanliness);
-
-        // Notify on change
-        if (!wasSatisfied && IsSatisfied)
+        bool wasClean = IsFeelingClean;
+        IsFeelingClean = (cleanlinessPercent >= desiredCleanliness && numSuds < 1);
+        if (!wasClean != IsFeelingClean)
         {
-            DayManager.Instance.DragonBecameSatisfied(this);
+            DayManager.Instance.DragonFeelsCleanChanged(this, IsFeelingClean);
+        }
+
+        bool wasProud = IsFeelingProud;
+        IsFeelingProud = (polishPercent >= desiredPolish);
+        if (!wasProud != IsFeelingProud)
+        {
+            DayManager.Instance.DragonFeelsProudChanged(this, IsFeelingProud);
         }
     }
 }

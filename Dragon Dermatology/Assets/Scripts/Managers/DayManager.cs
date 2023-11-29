@@ -40,7 +40,8 @@ public class DayManager : MonoBehaviour
     private Dragon currentDragon = null;
     private List<QueuedDragon> queue = new List<QueuedDragon>();
     private List<QueuedDragon> unseen = new List<QueuedDragon>();
-    private List<Dragon> seenHappy = new List<Dragon>();
+    private List<Dragon> seenProud = new List<Dragon>();
+    private List<Dragon> seenClean = new List<Dragon>();
     private List<Dragon> seenUnhappy = new List<Dragon>();
 
     // Daily goal
@@ -55,7 +56,8 @@ public class DayManager : MonoBehaviour
     public int WaterScalesCollected { get; private set; } = 0;
     public int GoldenScalesCollected { get; private set; } = 0;
     public int UnseenDragons { get { return unseen.Count; } }
-    public int SeenHappyDragons { get { return seenHappy.Count; } }
+    public int SeenProudDragons { get { return seenProud.Count; } }
+    public int SeenCleanDragons { get { return seenClean.Count; } }
     public int SeenUnhappyDragons { get { return seenUnhappy.Count; } }
 
     ///////////////////////////////////////////////
@@ -127,8 +129,10 @@ public class DayManager : MonoBehaviour
         }
 
         // Place in completion list
-        if (currentDragon.IsSatisfied) {
-            seenHappy.Add(currentDragon);
+        if (currentDragon.IsFeelingProud) {
+            seenProud.Add(currentDragon);
+        } else if (currentDragon.IsFeelingClean) {
+            seenClean.Add(currentDragon);
         } else {
             seenUnhappy.Add(currentDragon);
         }
@@ -136,9 +140,14 @@ public class DayManager : MonoBehaviour
         currentDragon = null;
     }
 
-    public void DragonBecameSatisfied(Dragon dragon)
+    public void DragonFeelsCleanChanged(Dragon dragon, bool feelsClean)
     {
-        // TODO: Present this to the player somehow
+        // TODO: Present this to the player somehow. Maybe shouldn't even be here and all done in dragon?
+    }
+
+    public void DragonFeelsProudChanged(Dragon dragon, bool feelsProud)
+    {
+        // TODO: Present this to the player somehow. Maybe shouldn't even be here and all done in dragon?
     }
 
     ///////////////////////////////////////////////
@@ -171,7 +180,7 @@ public class DayManager : MonoBehaviour
         }
     }
 
-    public void DragonGaveUpQueueing(QueuedDragon dragon)
+    public void DragonGaveUpQueueing(QueuedDragon d)
     {
         queue.Remove(d);
         d.NoLongerWaiting = true;
