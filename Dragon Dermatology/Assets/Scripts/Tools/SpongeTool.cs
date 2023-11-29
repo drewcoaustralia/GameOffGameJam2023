@@ -28,6 +28,7 @@ public class SpongeTool : Tool
         RaycastHit2D[] hits = Physics2D.RaycastAll(mousePosition, Vector2.zero);
         if (hits != null && hits.Length != 0)
         {
+            // check for highest layer? or just scrub all
             foreach (RaycastHit2D hit in hits)
             {
                 if (hit.collider != null)

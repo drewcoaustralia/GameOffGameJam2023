@@ -48,6 +48,7 @@ public class ScrubbableSpriteMask : MonoBehaviour
         ClearMask();       
 
         GetComponent<BoxCollider2D>().size = new Vector2(maskWidth / target.sprite.pixelsPerUnit, maskHeight / target.sprite.pixelsPerUnit);
+        // copy transform into local space
     }
 
     void ClearMask()

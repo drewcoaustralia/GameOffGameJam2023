@@ -58,6 +58,9 @@ TagManager:
   - name: Scales
     uniqueID: 72647271
     locked: 0
+  - name: Dirt
+    uniqueID: 2712824419
+    locked: 0
   - name: Tools
     uniqueID: 3843548903
     locked: 0

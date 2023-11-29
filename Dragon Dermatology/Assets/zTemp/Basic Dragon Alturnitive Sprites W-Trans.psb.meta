@@ -1,0 +1,2305 @@
+fileFormatVersion: 2
+guid: 8126723606e8dac4f87dd5a2eb0ad67c
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 7e54d94500aa4544ab2a82b43219dad2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  multiSpriteImportData: []
+  layeredSpriteImportData:
+  - name: Layer 115 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 628
+      width: 1106
+      height: 615
+    spriteID: 18aaed47d774cc94782cceff703aea03
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 628}
+    spritePosition: {x: 647, y: 333}
+  - name: Layer 116 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 675
+      y: 1991
+      width: 249
+      height: 348
+    spriteID: 9d8c8188942ad984e99ae1671623a397
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 675, y: 1991}
+    spritePosition: {x: 370, y: 694}
+  - name: Layer 117 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 139
+      y: 3463
+      width: 163
+      height: 83
+    spriteID: 044b9cd7e7cac1a4bb96b467939c4aea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 139, y: 3463}
+    spritePosition: {x: 386, y: 698}
+  - name: Layer 118 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 463
+      y: 3065
+      width: 450
+      height: 390
+    spriteID: 355c3d3c8ded7f94783541e3b13ebb81
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 463, y: 3065}
+    spritePosition: {x: 443, y: 539}
+  - name: Layer 119 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 787
+      y: 2727
+      width: 233
+      height: 314
+    spriteID: 18c6695418584a04a8c56847571323bd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 787, y: 2727}
+    spritePosition: {x: 557, y: 222}
+  - name: Layer 120 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 921
+      y: 3065
+      width: 158
+      height: 212
+    spriteID: 534f752b6fec4394a9036d6cd1ff4e7b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 921, y: 3065}
+    spritePosition: {x: 542, y: 63}
+  - name: Layer 121 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1912
+      y: 541
+      width: 130
+      height: 64
+    spriteID: a49ef6ea77948c945bb856bf6ad83669
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1912, y: 541}
+    spritePosition: {x: 436, y: 51}
+  - name: Layer 122 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1125
+      y: 347
+      width: 292
+      height: 245
+    spriteID: 04799a89cd28a5a43ae6762e373ed92c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1125, y: 347}
+    spritePosition: {x: 877, y: 154}
+  - name: Layer 123 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1425
+      y: 347
+      width: 183
+      height: 141
+    spriteID: 198fe284da32aff4d9042e2bd040292a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1425, y: 347}
+    spritePosition: {x: 1004, y: 50}
+  - name: Layer 124 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 943
+      y: 2641
+      width: 141
+      height: 60
+    spriteID: 38aa68b61e8a5b344ad77c5e1d9190ae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 943, y: 2641}
+    spritePosition: {x: 901, y: 44}
+  - name: Layer 125 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1991
+      width: 663
+      height: 389
+    spriteID: fbe09232328325d40847cf4804eaed9e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1991}
+    spritePosition: {x: 456, y: 289}
+  - name: Layer 126 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2727
+      width: 775
+      height: 330
+    spriteID: 39abca7ce90a1f54a821b573be822433
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2727}
+    spritePosition: {x: 1003, y: 132}
+  - name: Layer 127 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1251
+      width: 846
+      height: 327
+    spriteID: c4d455ce6fa25f84f8ae11277b1d27cd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1251}
+    spritePosition: {x: 353, y: 508}
+  - name: Layer 128 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1616
+      y: 347
+      width: 140
+      height: 176
+    spriteID: 7b601a8bd3c6bf441b5e8e81d0f74e0c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1616, y: 347}
+    spritePosition: {x: 502, y: 235}
+  - name: Layer 129 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3463
+      width: 127
+      height: 186
+    spriteID: 6cd0cd61866645e438f50093f547b0d0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 3463}
+    spritePosition: {x: 477, y: 125}
+  - name: Layer 130 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 581
+      y: 3463
+      width: 85
+      height: 47
+    spriteID: 316cb031e590581428c47e4c359ef98e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 581, y: 3463}
+    spritePosition: {x: 403, y: 118}
+  - name: Layer 131 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 932
+      y: 1586
+      width: 156
+      height: 188
+    spriteID: c79108de5da507a4aa1f087aa6ae1392
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 932, y: 1586}
+    spritePosition: {x: 811, y: 187}
+  - name: Layer 132 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1425
+      y: 496
+      width: 141
+      height: 107
+    spriteID: c1f574d588b43ab4f81472dfafa1bca3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1425, y: 496}
+    spritePosition: {x: 840, y: 114}
+  - name: Layer 133 Copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 675
+      y: 1942
+      width: 82
+      height: 39
+    spriteID: aa27a9ace8fd4684f8def0262256b135
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 675, y: 1942}
+    spritePosition: {x: 770, y: 107}
+  - name: BD Happy Expression
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1764
+      y: 531
+      width: 92
+      height: 70
+    spriteID: 4c1a0f1d30906b24aacd72e15b62d783
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1764, y: 531}
+    spritePosition: {x: 434, y: 757}
+  - name: BD Mad Expression
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1028
+      y: 2727
+      width: 52
+      height: 49
+    spriteID: c682177b4e5d2eb4fb33a270fd8c7a30
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1028, y: 2727}
+    spritePosition: {x: 442, y: 774}
+  - name: BD F Wing Dirty
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1113
+      height: 616
+    spriteID: cd4bab8279c6e6041820b205603428d8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 641, y: 332}
+  - name: BD Head Dirty
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 675
+      y: 1586
+      width: 249
+      height: 348
+    spriteID: 86ba839a9b3901b48898c0b2eda4f67e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 675, y: 1586}
+    spritePosition: {x: 370, y: 694}
+  - name: BD Jaw Dirty
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 310
+      y: 3463
+      width: 163
+      height: 83
+    spriteID: e0fc7c297adb2d84abc057266ac28040
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 310, y: 3463}
+    spritePosition: {x: 386, y: 698}
+  - name: BD Neck Dirty
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3065
+      width: 451
+      height: 390
+    spriteID: 7d31a641e97b0b64295a98125844368a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 3065}
+    spritePosition: {x: 443, y: 539}
+  - name: BD F Sholder Dirty
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 858
+      y: 1251
+      width: 235
+      height: 317
+    spriteID: a3a8234046e6974418e3c5b301c853ba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 858, y: 1251}
+    spritePosition: {x: 557, y: 221}
+  - name: BD F Forearm Dirty
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 932
+      y: 1991
+      width: 167
+      height: 238
+    spriteID: d42ca51a5d5d99f459b928e5e8e5aa0b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 932, y: 1991}
+    spritePosition: {x: 542, y: 62}
+  - name: BD F Hand Dirty
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1616
+      y: 531
+      width: 135
+      height: 64
+    spriteID: 15b4fcceaccee9b4ca5460d0284a3c08
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1616, y: 531}
+    spritePosition: {x: 436, y: 51}
+  - name: BD F Hip Dirty
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 787
+      y: 2388
+      width: 298
+      height: 245
+    spriteID: 614b07c65883c0b4c8ab1339b89d5bfc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 787, y: 2388}
+    spritePosition: {x: 871, y: 154}
+  - name: BD F Calf Dirty
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 921
+      y: 3285
+      width: 185
+      height: 161
+    spriteID: 9c2143378c75abc42a26e2a7d0aa7eda
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 921, y: 3285}
+    spritePosition: {x: 1003, y: 50}
+  - name: BD F Foot Dirty
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 787
+      y: 2641
+      width: 148
+      height: 60
+    spriteID: 64dcc53fc1f3faf45b836afa0e742ddb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 787, y: 2641}
+    spritePosition: {x: 901, y: 44}
+  - name: BD Torso Dirty
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1586
+      width: 663
+      height: 397
+    spriteID: 49af5db15671fbb43ae00aabfb6dde4f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1586}
+    spritePosition: {x: 456, y: 281}
+  - name: BD Tail Dirty
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2388
+      width: 775
+      height: 331
+    spriteID: 57eae73fe90e4964a93096952b9b43b2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2388}
+    spritePosition: {x: 1003, y: 132}
+  - name: BD B Wing Dirty
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1125
+      y: 4
+      width: 847
+      height: 335
+    spriteID: d7d0be4a20eab9d478b3cc5c9252092f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1125, y: 4}
+    spritePosition: {x: 353, y: 500}
+  - name: BD B Sholder Dirty
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1764
+      y: 347
+      width: 140
+      height: 176
+    spriteID: 24456832ba5fac84abafb3e6aa2b476a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1764, y: 347}
+    spritePosition: {x: 502, y: 235}
+  - name: BD B Forearm Dirty
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1912
+      y: 347
+      width: 128
+      height: 186
+    spriteID: ba1467bc2b72e884c8bb43d15ee813b7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1912, y: 347}
+    spritePosition: {x: 476, y: 125}
+  - name: BD B Hand Dirty
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 481
+      y: 3463
+      width: 92
+      height: 47
+    spriteID: de9cc122b2d68ba48abac0d23f221912
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 481, y: 3463}
+    spritePosition: {x: 403, y: 118}
+  - name: BD B Hip Dirty
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 932
+      y: 1782
+      width: 156
+      height: 188
+    spriteID: c9653da5e8a08fe418def6fd47423b20
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 932, y: 1782}
+    spritePosition: {x: 811, y: 187}
+  - name: BD B Calf Dirty
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 932
+      y: 2237
+      width: 141
+      height: 125
+    spriteID: c4edf62e79f2a2441aa66f979b4b9a04
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 932, y: 2237}
+    spritePosition: {x: 840, y: 114}
+  - name: BD B Foot Dirty
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 674
+      y: 3463
+      width: 95
+      height: 42
+    spriteID: 4a9ffc16fe5d1934f820c78684bbb692
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 674, y: 3463}
+    spritePosition: {x: 770, y: 107}
+  spriteImportData: []
+  rigSpriteImportData: []
+  sharedRigSpriteImportData: []
+  mosaicSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  padding: 4
+  spriteSizeExpand: 0
+  skeletonAssetReferenceID: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  pSDLayerImportSetting: []
+  psdLayers:
+  - name: BD Dirty w/Transparancy
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: f304c059f4109104c82346119239cd1d
+    layerID: 0
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: BD FWing Dirty Trans
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: b3e8441e40c446f4e9068f88e444c600
+    layerID: 1498196895
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 70 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 7b9129e763bf3a14ab70761e69248ec5
+    layerID: -1164377747
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 115 Copy
+    spriteName: Layer 115 Copy
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 18aaed47d774cc94782cceff703aea03
+    layerID: 2036222835
+    mosaicPosition: {x: 4, y: 628}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Folder 1 Copy
+    spriteName: 
+    isGroup: 1
+    parentIndex: 1
+    spriteID: 2151407643899eb4da442c965930d9f7
+    layerID: 1829251794
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 71 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 4
+    spriteID: f3031b1f5b560a74daa18eb20b832dce
+    layerID: -356517038
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 72 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 4
+    spriteID: c501cec9c1d08354494ab19234e46b96
+    layerID: -113306333
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: BD Head Dirty Trans
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: bf3f6097b55192a4e9fed3abe428405e
+    layerID: -995793636
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 110 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 7
+    spriteID: 43ee74717efdd754697b99a6c794e48b
+    layerID: 2036215278
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 56 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 7
+    spriteID: 71df66ae17a155b4f8fd0bfa79567d9d
+    layerID: 1340346485
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 116 Copy
+    spriteName: Layer 116 Copy
+    isGroup: 0
+    parentIndex: 7
+    spriteID: 9d8c8188942ad984e99ae1671623a397
+    layerID: 2036221812
+    mosaicPosition: {x: 675, y: 1991}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Folder 3 Copy
+    spriteName: 
+    isGroup: 1
+    parentIndex: 7
+    spriteID: c65df45f441f63e44b853ef02f5240f0
+    layerID: 1102461320
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 58 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 11
+    spriteID: 52c3428945f24e74f8c1c3bfd2a364c9
+    layerID: 1742856019
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 57 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 11
+    spriteID: d25dd8654b974344485b85ef02b4e355
+    layerID: 370345306
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: BD Jaw Dirty Trans
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 68e75b413db804941ba2712a6278ca82
+    layerID: 399714480
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 59 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 3d4361610186a624b8ac7902bf052c94
+    layerID: -1744250568
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 117 Copy
+    spriteName: Layer 117 Copy
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 044b9cd7e7cac1a4bb96b467939c4aea
+    layerID: 2036216565
+    mosaicPosition: {x: 139, y: 3463}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Folder 4 Copy
+    spriteName: 
+    isGroup: 1
+    parentIndex: 14
+    spriteID: e8883c240ac06a24195e94c531a86342
+    layerID: -594330333
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 61 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 17
+    spriteID: 48fd2a9b253d0254fb6ea74698ca2e4c
+    layerID: -356622415
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 60 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 17
+    spriteID: 8a61236058989cb448ea5413454111f6
+    layerID: -1164483124
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: BD Neck Dirty Trans
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 7631e0f99fe63ce48b79c768a1134c92
+    layerID: 1796610209
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 66 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 20
+    spriteID: ec6195b3e7e23044ab25950118f1035e
+    layerID: 1340169238
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 64 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 20
+    spriteID: 0e02545fabaf7174fab1731e2f5d25bb
+    layerID: 289097824
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 118 Copy
+    spriteName: Layer 118 Copy
+    isGroup: 0
+    parentIndex: 20
+    spriteID: 355c3d3c8ded7f94783541e3b13ebb81
+    layerID: 2036223990
+    mosaicPosition: {x: 463, y: 3065}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Folder 5 Copy
+    spriteName: 
+    isGroup: 1
+    parentIndex: 20
+    spriteID: 021fc0c5108c69b4dac34e3372d8bf5c
+    layerID: 375670846
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 65 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 24
+    spriteID: 9af3925c47e241245ad96ff37833beef
+    layerID: 1096958533
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 62 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 24
+    spriteID: 53bba404a2943104f9002024120b1ac3
+    layerID: -113411710
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 63 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 24
+    spriteID: 9c7d462c22039fc4eb923d602ebfed76
+    layerID: -1083412889
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: BD F Sholder Dirty Trans
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 3ddbde7ba7dadfd46b2585758767e61a
+    layerID: -1458000261
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 73 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 28
+    spriteID: 93e7cec283c08f54eb2bee757da3d6dd
+    layerID: -1083307512
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 119 Copy
+    spriteName: Layer 119 Copy
+    isGroup: 0
+    parentIndex: 28
+    spriteID: 18c6695418584a04a8c56847571323bd
+    layerID: 2036227191
+    mosaicPosition: {x: 787, y: 2727}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Folder 6 Copy
+    spriteName: 
+    isGroup: 1
+    parentIndex: 28
+    spriteID: e8042d5616fca5141979b57053410dd0
+    layerID: 456741081
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 76 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 31
+    spriteID: 816b340fa0a96dc42bb3b4037e1ac128
+    layerID: 1340274615
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 75 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 31
+    spriteID: 465cfa036e3a25c49afb46fe06ef8b08
+    layerID: 1097063910
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: BD F Forearm Dirty Trans
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: b2ae1423986c0be479ce36fd278c5172
+    layerID: -421941108
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 74 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 34
+    spriteID: b40ed703591ac1a409a507ef300a84f3
+    layerID: 289203201
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 120 Copy
+    spriteName: Layer 120 Copy
+    isGroup: 0
+    parentIndex: 34
+    spriteID: 534f752b6fec4394a9036d6cd1ff4e7b
+    layerID: 1980165225
+    mosaicPosition: {x: 921, y: 3065}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Folder 7 Copy
+    spriteName: 
+    isGroup: 1
+    parentIndex: 34
+    spriteID: cde369efb6e1e5f41a59dab261661c8b
+    layerID: -351119628
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 77 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 37
+    spriteID: 4a20df79b33a8744d9fa87685f3144ed
+    layerID: 370273436
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: BD F Hand Dirty Trans
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 7ad2e50f85a63164d97356e532b73963
+    layerID: 1208680235
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 78 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 39
+    spriteID: 8eebce4e782b34c4eb08fd6d81244185
+    layerID: 1742784149
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 121 Copy
+    spriteName: Layer 121 Copy
+    isGroup: 0
+    parentIndex: 39
+    spriteID: a49ef6ea77948c945bb856bf6ad83669
+    layerID: 1980168426
+    mosaicPosition: {x: 1912, y: 541}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Folder 8 Copy
+    spriteName: 
+    isGroup: 1
+    parentIndex: 39
+    spriteID: 8526f04d91d9bdc4ab4c12d4ec011b42
+    layerID: -2047911281
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 80 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 42
+    spriteID: b951808db2cd73e46a0ff6d2bd56d66f
+    layerID: -1164268010
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 79 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 42
+    spriteID: e3806bf183e8fed478efd632741ab98e
+    layerID: -1744322438
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: BD F Hip Dirty Trans
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 5467c29f9a0b0da49b32a30ca164b4bc
+    layerID: -646147907
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 81 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 45
+    spriteID: e65d6979d3e61c84cb09d07c8cd682f0
+    layerID: -356407301
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 122 Copy
+    spriteName: Layer 122 Copy
+    isGroup: 0
+    parentIndex: 45
+    spriteID: 04799a89cd28a5a43ae6762e373ed92c
+    layerID: 1980167403
+    mosaicPosition: {x: 1125, y: 347}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Folder 9 Copy
+    spriteName: 
+    isGroup: 1
+    parentIndex: 45
+    spriteID: d9e0f957c7aa57e4ebebf9b10eede77d
+    layerID: -1077910102
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 82 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 48
+    spriteID: 17455fbd6e245fc4e97922d92bab0281
+    layerID: -113196596
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: BD F Calf Dirty Trans
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: ddf6e090c79cb024db3e853258a181b7
+    layerID: 2043255318
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 83 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 50
+    spriteID: e92dbbbcf5c1f6e4fa41690ecd20a653
+    layerID: -1083197775
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 123 Copy
+    spriteName: Layer 123 Copy
+    isGroup: 0
+    parentIndex: 50
+    spriteID: 198fe284da32aff4d9042e2bd040292a
+    layerID: 1980162156
+    mosaicPosition: {x: 1425, y: 347}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Folder 10 Copy
+    spriteName: 
+    isGroup: 1
+    parentIndex: 50
+    spriteID: 3d340b69b7d4eda4e8e76e3add19261a
+    layerID: 1165121936
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 84 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 53
+    spriteID: 994bfb10a8faa554d9204441bdfac610
+    layerID: 289312938
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: BD F Foot Dirty Trans
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 6c480b2ced8b80345b4747fa6c6185df
+    layerID: -2081476064
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 85 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 55
+    spriteID: c774fb9689f33294397dd41e238fb15a
+    layerID: 1097173647
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 124 Copy
+    spriteName: Layer 124 Copy
+    isGroup: 0
+    parentIndex: 55
+    spriteID: 38aa68b61e8a5b344ad77c5e1d9190ae
+    layerID: 1980169581
+    mosaicPosition: {x: 943, y: 2641}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Folder 11 Copy
+    spriteName: 
+    isGroup: 1
+    parentIndex: 55
+    spriteID: 4113d52b94a0f9c41a9731d88deef011
+    layerID: 1165118735
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 87 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 58
+    spriteID: 29f7987976a54554f811ae72f872509e
+    layerID: 370383173
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 86 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 58
+    spriteID: f6506f2fefafd7742bf61b546ca1dc46
+    layerID: 1340384352
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: BD Torso Dirty Trans
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: ce3666ca406b46447a79c716e27edf8c
+    layerID: -109495233
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 67 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 61
+    spriteID: a6fc43512494ce949af617b242c0f859
+    layerID: 370168059
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 125 Copy
+    spriteName: Layer 125 Copy
+    isGroup: 0
+    parentIndex: 61
+    spriteID: fbe09232328325d40847cf4804eaed9e
+    layerID: 1980172782
+    mosaicPosition: {x: 4, y: 1991}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Folder 12 Copy
+    spriteName: 
+    isGroup: 1
+    parentIndex: 61
+    spriteID: c862946b741952841ae4676a70bc88da
+    layerID: 1165115666
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 69 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 64
+    spriteID: 163a35f8099a4304a937a2a162c455c9
+    layerID: -1744427815
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 68 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 64
+    spriteID: 62f1094f2917c5e4d800751c9d62d257
+    layerID: 1742678772
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Folder 2 Dirty Trans
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 63c2d9ba4d881574a8a2d01b86a6983f
+    layerID: 456308526
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 91 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 67
+    spriteID: 017693f9ea896ab4e857080f9a766230
+    layerID: -356301668
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 126 Copy
+    spriteName: Layer 126 Copy
+    isGroup: 0
+    parentIndex: 67
+    spriteID: 39abca7ce90a1f54a821b573be822433
+    layerID: 1980171759
+    mosaicPosition: {x: 4, y: 2727}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Folder 13 Copy
+    spriteName: 
+    isGroup: 1
+    parentIndex: 67
+    spriteID: 8354d31c360be6e4fb19af1b6969c855
+    layerID: 1165120913
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 94 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 70
+    spriteID: 8df010b37d0ea2240b4c6908e0e037e9
+    layerID: 289418571
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 93 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 70
+    spriteID: 2d1aaeb7fc7a66f4782a39f571720320
+    layerID: -1083092142
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 92 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 70
+    spriteID: b84693adc597b5a47a41edf02a68580f
+    layerID: -113090963
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 90 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 70
+    spriteID: ee68deca1fd143b42972f0e22320fd6c
+    layerID: -1164162377
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: BD B Wing Dirty Trans
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: c84f629507b1854488d6aadbb28dcc43
+    layerID: 1576420455
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 88 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 75
+    spriteID: daa0d65e2eb7c514eade256e2aa89d47
+    layerID: 1742893886
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 127 Copy
+    spriteName: Layer 127 Copy
+    isGroup: 0
+    parentIndex: 75
+    spriteID: c4d455ce6fa25f84f8ae11277b1d27cd
+    layerID: 1980166512
+    mosaicPosition: {x: 4, y: 1251}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Layer 89 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 75
+    spriteID: e1c0e591a4c4b9c4aa8395545e221fa9
+    layerID: -1744212701
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: BD B Sholder Dirty Trans
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: f6789f817962beb4bbe4ceba5034fc3e
+    layerID: 1302662119
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 98 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 79
+    spriteID: d8dcf74e5355765489f5944c551d5654
+    layerID: 1742999519
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 128 Copy
+    spriteName: Layer 128 Copy
+    isGroup: 0
+    parentIndex: 79
+    spriteID: 7b601a8bd3c6bf441b5e8e81d0f74e0c
+    layerID: 1980173937
+    mosaicPosition: {x: 1616, y: 347}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Layer 96 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 79
+    spriteID: 4a50d1db79d98b849ab1da5d1084e8a5
+    layerID: 1340489985
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: BD B Forearm Dirty Trans
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 3ccbc6fff606545459024e39ddb08d9a
+    layerID: 1716099064
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 97 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 83
+    spriteID: 0472013a226c74b449df6d7efca33827
+    layerID: 370488806
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 129 Copy
+    spriteName: Layer 129 Copy
+    isGroup: 0
+    parentIndex: 83
+    spriteID: 6cd0cd61866645e438f50093f547b0d0
+    layerID: 1980177138
+    mosaicPosition: {x: 4, y: 3463}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Folder 14 Copy
+    spriteName: 
+    isGroup: 1
+    parentIndex: 83
+    spriteID: 6516e13f828779844bfa0e04b974fd97
+    layerID: 1165126292
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 102 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 86
+    spriteID: d7bf1abdfa34524449d8474db403daa7
+    layerID: -1369150219
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 95 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 86
+    spriteID: 63de1935a8c861548b63429e09df11cc
+    layerID: 1097279280
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: BD B Hand Dirty Trans
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 9a8b4721e989f974f823883cda5c6789
+    layerID: -707491905
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 99 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 89
+    spriteID: eb3639123c43d3f46a4f9c8d647ae72e
+    layerID: -1744107068
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 130 Copy
+    spriteName: Layer 130 Copy
+    isGroup: 0
+    parentIndex: 89
+    spriteID: 316cb031e590581428c47e4c359ef98e
+    layerID: -1718871324
+    mosaicPosition: {x: 581, y: 3463}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Folder 15 Copy
+    spriteName: 
+    isGroup: 1
+    parentIndex: 89
+    spriteID: 7ca0f6c889f4ae049b52c6cc73d2ee70
+    layerID: 1165123091
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 101 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 92
+    spriteID: 70d7027ca044d0949ac18bc00b55fbce
+    layerID: -1369149196
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 100 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 92
+    spriteID: 9e77289e538e53145a744da3a2ca39c0
+    layerID: -1369152397
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: BD B Hip Dirty Trans
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 3ed441ecbe538824ebd4228fc45cbd4e
+    layerID: 621272617
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 103 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 95
+    spriteID: d940a74636a097440867fd82a9cd7a1a
+    layerID: -1369155466
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 131 Copy
+    spriteName: Layer 131 Copy
+    isGroup: 0
+    parentIndex: 95
+    spriteID: c79108de5da507a4aa1f087aa6ae1392
+    layerID: -1718868123
+    mosaicPosition: {x: 932, y: 1586}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Layer 104 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 95
+    spriteID: 0538fec2361f2ec41bc2fcf69f817d9f
+    layerID: -1369148041
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: BD B Calf Dirty Trans
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 298288f75c3926947ae19405c79084f3
+    layerID: 127083178
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 105 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 99
+    spriteID: 6427d93c50f913549994c5d7d98b0e72
+    layerID: -1369144840
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 132 Copy
+    spriteName: Layer 132 Copy
+    isGroup: 0
+    parentIndex: 99
+    spriteID: c1f574d588b43ab4f81472dfafa1bca3
+    layerID: -1718869146
+    mosaicPosition: {x: 1425, y: 496}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Layer 106 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 99
+    spriteID: 4065613357604d843ba4b7fed07fa4f5
+    layerID: -1369145863
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: BD B Foot Dirty Trans
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 02902930192cbe6479dfa670c0246a1c
+    layerID: 251520140
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 107 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 103
+    spriteID: 82dfbcb8e2dd6154d9f59018ee4e5716
+    layerID: -1369151110
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 133 Copy
+    spriteName: Layer 133 Copy
+    isGroup: 0
+    parentIndex: 103
+    spriteID: aa27a9ace8fd4684f8def0262256b135
+    layerID: -1718874393
+    mosaicPosition: {x: 675, y: 1942}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Folder 16 Copy
+    spriteName: 
+    isGroup: 1
+    parentIndex: 103
+    spriteID: 37e456e1dcd16ef4689fd45d217dcce0
+    layerID: 1165120022
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Layer 109 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 106
+    spriteID: 19c08679d68f88345be72c45427cab4e
+    layerID: -1369140484
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 108 Copy
+    spriteName: 
+    isGroup: 0
+    parentIndex: 106
+    spriteID: 3689f86adfc32e34bb52cbb2f7f09aa5
+    layerID: -1369143685
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Expressions
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: cba2b5b8ea7b1bb4b8123f6e09998782
+    layerID: 1895291681
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: BD Happy Expression
+    spriteName: BD Happy Expression
+    isGroup: 0
+    parentIndex: 109
+    spriteID: 4c1a0f1d30906b24aacd72e15b62d783
+    layerID: -1256365052
+    mosaicPosition: {x: 1764, y: 531}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: BD Mad Expression
+    spriteName: BD Mad Expression
+    isGroup: 0
+    parentIndex: 109
+    spriteID: c682177b4e5d2eb4fb33a270fd8c7a30
+    layerID: -1219283988
+    mosaicPosition: {x: 1028, y: 2727}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: BD Dirty
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: d2db21dcd356499449987ffc9c862e99
+    layerID: 696812960
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: BD F Wing Dirty
+    spriteName: BD F Wing Dirty
+    isGroup: 0
+    parentIndex: 112
+    spriteID: cd4bab8279c6e6041820b205603428d8
+    layerID: 50967061
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: BD Head Dirty
+    spriteName: BD Head Dirty
+    isGroup: 0
+    parentIndex: 112
+    spriteID: 86ba839a9b3901b48898c0b2eda4f67e
+    layerID: 1671100050
+    mosaicPosition: {x: 675, y: 1586}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: BD Jaw Dirty
+    spriteName: BD Jaw Dirty
+    isGroup: 0
+    parentIndex: 112
+    spriteID: e0fc7c297adb2d84abc057266ac28040
+    layerID: -465468806
+    mosaicPosition: {x: 310, y: 3463}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: BD Neck Dirty
+    spriteName: BD Neck Dirty
+    isGroup: 0
+    parentIndex: 112
+    spriteID: 7d31a641e97b0b64295a98125844368a
+    layerID: -1789587685
+    mosaicPosition: {x: 4, y: 3065}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: BD F Sholder Dirty
+    spriteName: BD F Sholder Dirty
+    isGroup: 0
+    parentIndex: 112
+    spriteID: a3a8234046e6974418e3c5b301c853ba
+    layerID: 766494373
+    mosaicPosition: {x: 858, y: 1251}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: BD F Forearm Dirty
+    spriteName: BD F Forearm Dirty
+    isGroup: 0
+    parentIndex: 112
+    spriteID: d42ca51a5d5d99f459b928e5e8e5aa0b
+    layerID: 853215378
+    mosaicPosition: {x: 932, y: 1991}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: BD F Hand Dirty
+    spriteName: BD F Hand Dirty
+    isGroup: 0
+    parentIndex: 112
+    spriteID: 15b4fcceaccee9b4ca5460d0284a3c08
+    layerID: -592898087
+    mosaicPosition: {x: 1616, y: 531}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: BD F Hip Dirty
+    spriteName: BD F Hip Dirty
+    isGroup: 0
+    parentIndex: 112
+    spriteID: 614b07c65883c0b4c8ab1339b89d5bfc
+    layerID: 827386627
+    mosaicPosition: {x: 787, y: 2388}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: BD F Calf Dirty
+    spriteName: BD F Calf Dirty
+    isGroup: 0
+    parentIndex: 112
+    spriteID: 9c2143378c75abc42a26e2a7d0aa7eda
+    layerID: 1388534488
+    mosaicPosition: {x: 921, y: 3285}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: BD F Foot Dirty
+    spriteName: BD F Foot Dirty
+    isGroup: 0
+    parentIndex: 112
+    spriteID: 64dcc53fc1f3faf45b836afa0e742ddb
+    layerID: -1311303630
+    mosaicPosition: {x: 787, y: 2641}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: BD Torso Dirty
+    spriteName: BD Torso Dirty
+    isGroup: 0
+    parentIndex: 112
+    spriteID: 49af5db15671fbb43ae00aabfb6dde4f
+    layerID: -1892048919
+    mosaicPosition: {x: 4, y: 1586}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: BD Tail Dirty
+    spriteName: BD Tail Dirty
+    isGroup: 0
+    parentIndex: 112
+    spriteID: 57eae73fe90e4964a93096952b9b43b2
+    layerID: -775773270
+    mosaicPosition: {x: 4, y: 2388}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: BD B Wing Dirty
+    spriteName: BD B Wing Dirty
+    isGroup: 0
+    parentIndex: 112
+    spriteID: d7d0be4a20eab9d478b3cc5c9252092f
+    layerID: 1104775209
+    mosaicPosition: {x: 1125, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: BD B Sholder Dirty
+    spriteName: BD B Sholder Dirty
+    isGroup: 0
+    parentIndex: 112
+    spriteID: 24456832ba5fac84abafb3e6aa2b476a
+    layerID: 688968121
+    mosaicPosition: {x: 1764, y: 347}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: BD B Forearm Dirty
+    spriteName: BD B Forearm Dirty
+    isGroup: 0
+    parentIndex: 112
+    spriteID: ba1467bc2b72e884c8bb43d15ee813b7
+    layerID: -155460186
+    mosaicPosition: {x: 1912, y: 347}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: BD B Hand Dirty
+    spriteName: BD B Hand Dirty
+    isGroup: 0
+    parentIndex: 112
+    spriteID: de9cc122b2d68ba48abac0d23f221912
+    layerID: -735879995
+    mosaicPosition: {x: 481, y: 3463}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: BD B Hip Dirty
+    spriteName: BD B Hip Dirty
+    isGroup: 0
+    parentIndex: 112
+    spriteID: c9653da5e8a08fe418def6fd47423b20
+    layerID: 1788274199
+    mosaicPosition: {x: 932, y: 1782}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: BD B Calf Dirty
+    spriteName: BD B Calf Dirty
+    isGroup: 0
+    parentIndex: 112
+    spriteID: c4edf62e79f2a2441aa66f979b4b9a04
+    layerID: 1245552580
+    mosaicPosition: {x: 932, y: 2237}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: BD B Foot Dirty
+    spriteName: BD B Foot Dirty
+    isGroup: 0
+    parentIndex: 112
+    spriteID: 4a9ffc16fe5d1934f820c78684bbb692
+    layerID: -257495482
+    mosaicPosition: {x: 674, y: 3463}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  mosaicPSDLayers: []
+  rigPSDLayers: []
+  sharedRigPSDLayers: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
