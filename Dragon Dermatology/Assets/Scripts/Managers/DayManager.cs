@@ -32,6 +32,13 @@ public class DayManager : MonoBehaviour
     [Tooltip("The most water scales goal for a day.")]
     public int maxWaterScaleGoal;
 
+    public int coinsAtRegularScaleGoal;
+    public int coinsPerBonusRegularScale;
+    public int coinsAtFireScaleGoal;
+    public int coinsPerBonusFireScale;
+    public int coinsAtWaterScaleGoal;
+    public int coinsPerBonusWaterScale;
+
     ///////////////////////////////////////////////
     // State
     ///////////////////////////////////////////////
@@ -121,6 +128,34 @@ public class DayManager : MonoBehaviour
         return currentDragon;
     }
 
+    public void RegularScaleCollected()
+    {
+        RegularScalesCollected++;
+
+        // TODO: Dragon looks annoyed
+    }
+
+    public void FireScaleCollected()
+    {
+        FireScalesCollected++;
+
+        // TODO: Dragon looks annoyed
+    }
+
+    public void WaterScaleCollected()
+    {
+        WaterScalesCollected++;
+
+        // TODO: Dragon looks annoyed
+    }
+
+    public void GoldenScaleCollected()
+    {
+        GoldenScalesCollected++;
+
+        // TODO: Dragon looks annoyed
+    }
+
     public void FinishCurrentClient()
     {
         if (currentDragon == null) {
@@ -137,7 +172,44 @@ public class DayManager : MonoBehaviour
             seenUnhappy.Add(currentDragon);
         }
 
+        // TODO: Show Summary Splash. Can contain:
+        //         IsGoalMet() -- if not, player can use golden scale (GoldenScalesCollected)
+        //         RegularScalesCollected / RegularScaleGoal
+        //         FireScalesCollected / FireScaleGoal
+        //         WaterScalesCollected / WaterScaleGoal
+        //         CoinsCollected
+        //         SeenProudDragons
+        //         SeenCleanDragons
+        //         SeenUnhappyDragons
+        //         UnseenDragons
+
+        // TODO: Player can use golden scales, then click 'cash out' button when ready
+
+        // Earn some coins
+        CoinsCollected += CoinsForScales(RegularScalesCollected, RegularScaleGoal, coinsAtRegularScaleGoal, coinsPerBonusRegularScale);
+        CoinsCollected += CoinsForScales(FireScalesCollected, FireScaleGoal, coinsAtFireScaleGoal, coinsPerBonusFireScale);
+        CoinsCollected += CoinsForScales(WaterScalesCollected, WaterScaleGoal, coinsAtWaterScaleGoal, coinsPerBonusWaterScale);
+
         currentDragon = null;
+    }
+
+    private int CoinsForScales(int collected, int goal, int coinsAtGoal, int coinsPerBonus)
+    {
+        if (collected >= goal)
+        {
+            return coinsAtGoal + coinsPerBonus * (collected - goal);
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
+    private bool IsGoalMet()
+    {
+        return RegularScalesCollected > RegularScaleGoal &&
+                FireScalesCollected > FireScaleGoal &&
+                WaterScalesCollected > WaterScaleGoal;
     }
 
     public void DragonFeelsCleanChanged(Dragon dragon, bool feelsClean)
