@@ -38,6 +38,7 @@ public class DayManager : MonoBehaviour
     public int coinsPerBonusFireScale;
     public int coinsAtWaterScaleGoal;
     public int coinsPerBonusWaterScale;
+    public int coinsPerGoldenScale;
 
     ///////////////////////////////////////////////
     // State
@@ -172,23 +173,7 @@ public class DayManager : MonoBehaviour
             seenUnhappy.Add(currentDragon);
         }
 
-        // TODO: Show Summary Splash. Can contain:
-        //         IsGoalMet() -- if not, player can use golden scale (GoldenScalesCollected)
-        //         RegularScalesCollected / RegularScaleGoal
-        //         FireScalesCollected / FireScaleGoal
-        //         WaterScalesCollected / WaterScaleGoal
-        //         CoinsCollected
-        //         SeenProudDragons
-        //         SeenCleanDragons
-        //         SeenUnhappyDragons
-        //         UnseenDragons
-
-        // TODO: Player can use golden scales, then click 'cash out' button when ready
-
-        // Earn some coins
-        CoinsCollected += CoinsForScales(RegularScalesCollected, RegularScaleGoal, coinsAtRegularScaleGoal, coinsPerBonusRegularScale);
-        CoinsCollected += CoinsForScales(FireScalesCollected, FireScaleGoal, coinsAtFireScaleGoal, coinsPerBonusFireScale);
-        CoinsCollected += CoinsForScales(WaterScalesCollected, WaterScaleGoal, coinsAtWaterScaleGoal, coinsPerBonusWaterScale);
+        CoinsCollected += currentDragon.AskForPayment();
 
         currentDragon = null;
     }
@@ -233,6 +218,28 @@ public class DayManager : MonoBehaviour
         {
             DragonGaveUpQueueing(queue[0]);
         }
+
+        // TODO: Show Summary Splash. Can contain:
+        //         IsGoalMet() -- if not, player can use golden scale (GoldenScalesCollected)
+        //         RegularScalesCollected / RegularScaleGoal
+        //         FireScalesCollected / FireScaleGoal
+        //         WaterScalesCollected / WaterScaleGoal
+        //         CoinsCollected
+        //         SeenProudDragons
+        //         SeenCleanDragons
+        //         SeenUnhappyDragons
+        //         UnseenDragons
+
+        // TODO: Player can use golden scales, then click 'cash out' button when ready
+        // Earn some coins when using a golden scale for fun
+            // CoinsCollected += coinsPerGoldenScale;
+            // GoldenScalesCollected--;
+
+        // Earn some coins for goals met
+        CoinsCollected += GoldenScalesCollected * coinsPerGoldenScale; // These get reduced if spent on goals
+        CoinsCollected += CoinsForScales(RegularScalesCollected, RegularScaleGoal, coinsAtRegularScaleGoal, coinsPerBonusRegularScale);
+        CoinsCollected += CoinsForScales(FireScalesCollected, FireScaleGoal, coinsAtFireScaleGoal, coinsPerBonusFireScale);
+        CoinsCollected += CoinsForScales(WaterScalesCollected, WaterScaleGoal, coinsAtWaterScaleGoal, coinsPerBonusWaterScale);
     }
 
     ///////////////////////////////////////////////
