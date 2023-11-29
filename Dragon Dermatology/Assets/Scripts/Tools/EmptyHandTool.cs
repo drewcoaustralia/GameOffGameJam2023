@@ -39,6 +39,7 @@ public class EmptyHandTool : Tool
         }
         else
         {
+            hoveringTool = null;
             SetHover(false);
         }
 
