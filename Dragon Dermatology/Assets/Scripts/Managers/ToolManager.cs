@@ -9,10 +9,9 @@ public class ToolManager : MonoBehaviour
 
     public EmptyHandTool emptyHand;
 
-    private Tool heldTool = null;
-    private SFXObject playingSound;
+    [SerializeField]private Tool heldTool = null;
 
-    public AudioClip pickupSound;
+    public List<AudioClip> pickupSounds;
 
     private void Awake() 
     {
@@ -26,17 +25,24 @@ public class ToolManager : MonoBehaviour
         } 
     }
 
-    void Start()
-    {
-        Cursor.visible = false;
-    }
-
     public void SetHeldTool(Tool tool)
     {
-        if (heldTool != null) heldTool.gameObject.SetActive(false);
-        // obj.SetActive(true);
+        if (tool == null) return;
+        // if (heldTool != null) DropHeldTool();
+        if (heldTool != null) return;
         heldTool = tool;
-        AudioManager.Instance.PlaySFXAtPoint(pickupSound, Vector3.zero);
+        tool.Pickup();
+        AudioManager.Instance.PlayRandomSFXAtPoint(pickupSounds, Vector3.zero);
+        emptyHand.gameObject.SetActive(false);
+    }
+
+    public void DropHeldTool()
+    {
+        if (heldTool == null) return;
+        heldTool.Drop();
+        AudioManager.Instance.PlayRandomSFXAtPoint(pickupSounds, Vector3.zero); // TODO CHANGE SOUNDS
+        heldTool = null;
+        emptyHand.gameObject.SetActive(true);
     }
 
     void Update()
@@ -47,24 +53,24 @@ public class ToolManager : MonoBehaviour
         if (heldTool != null) heldTool.transform.position = Camera.main.ScreenToWorldPoint(mousePos); // plus offset
     }
 
-    public void SetHover(bool hover)
-    {
-        emptyHand.SetHover(hover);
-        if (hover)
-        {
-            if (heldTool != null)
-            {
-                heldTool.gameObject.SetActive(false);
-                emptyHand.gameObject.SetActive(true);
-            }
-        }
-        else
-        {
-            if (heldTool != null)
-            {
-                heldTool.gameObject.SetActive(true);
-                emptyHand.gameObject.SetActive(false);
-            }
-        }
-    }
+    // public void SetHover(bool hover)
+    // {
+    //     emptyHand.SetHover(hover);
+    //     if (hover)
+    //     {
+    //         if (heldTool != null)
+    //         {
+    //             heldTool.gameObject.SetActive(false);
+    //             emptyHand.gameObject.SetActive(true);
+    //         }
+    //     }
+    //     else
+    //     {
+    //         if (heldTool != null)
+    //         {
+    //             heldTool.gameObject.SetActive(true);
+    //             emptyHand.gameObject.SetActive(false);
+    //         }
+    //     }
+    // }
 }

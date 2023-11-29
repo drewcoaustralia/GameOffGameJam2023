@@ -66,16 +66,16 @@ public class Dragon : MonoBehaviour
     {
         switch (mode) {
             case Mode.Queued:
-                queueRenderObject.active = true;
-                salonRenderObject.active = false;
+                queueRenderObject.SetActive(true);
+                salonRenderObject.SetActive(false);
                 break;
             case Mode.InSalon:
-                queueRenderObject.active = false;
-                salonRenderObject.active = true;
+                queueRenderObject.SetActive(false);
+                salonRenderObject.SetActive(true);
                 break;
             case Mode.Left:
-                queueRenderObject.active = false;
-                salonRenderObject.active = false;
+                queueRenderObject.SetActive(false);
+                salonRenderObject.SetActive(false);
                 break;
         }
     }

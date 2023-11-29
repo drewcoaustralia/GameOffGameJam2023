@@ -21,7 +21,7 @@ public class SpongeTool : Tool
         currentSoapTime = Random.Range(minSoapTime, maxSoapTime);
     }
 
-    protected override void PerformAction()
+    protected override void OngoingAction()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0;

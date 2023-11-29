@@ -6,6 +6,8 @@ TagManager:
   tags:
   - howtoMenu
   - mainMenu
+  - scale
+  - tool
   layers:
   - Default
   - TransparentFX
@@ -43,14 +45,8 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Environment
+  - name: Environment_Background
     uniqueID: 1976190905
-    locked: 0
-  - name: Trees
-    uniqueID: 2060564511
-    locked: 0
-  - name: Mushrooms
-    uniqueID: 1798968991
     locked: 0
   - name: Dragon
     uniqueID: 2217604863
@@ -60,6 +56,15 @@ TagManager:
     locked: 0
   - name: Dirt
     uniqueID: 2712824419
+    locked: 0
+  - name: Environment_Mid
+    uniqueID: 3609161567
+    locked: 0
+  - name: Table
+    uniqueID: 166113531
+    locked: 0
+  - name: Environment_Foreground
+    uniqueID: 1966016501
     locked: 0
   - name: Tools
     uniqueID: 3843548903

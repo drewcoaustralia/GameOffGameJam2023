@@ -53,6 +53,7 @@ public class AudioManager : MonoBehaviour
 
     public SFXObject PlayRandomSFXAtPoint(List<AudioClip> clips, Vector3 point, float delay=0f, bool loop=false, float volume=1f)
     {
+        if (clips == null || clips.Count <= 0) return null;
         return PlaySFXAtPoint(clips[Random.Range(0,clips.Count)], point, delay, loop, volume);
     }
 }

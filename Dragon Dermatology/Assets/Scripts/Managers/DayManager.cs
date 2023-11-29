@@ -158,7 +158,7 @@ public class DayManager : MonoBehaviour
             yield return new WaitForSeconds(UnityEngine.Random.Range(minArrivalTime, maxArrivalTime));
 
             // Instantiate and queue a dragon
-            var dragonObject = Instantiate(dragonPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+            GameObject dragonObject = Instantiate(dragonPrefab, new Vector3(0, 0, 0), Quaternion.identity);
             QueuedDragon dragon = dragonObject.GetComponent<QueuedDragon>();
             queue.Add(dragon);
         }
