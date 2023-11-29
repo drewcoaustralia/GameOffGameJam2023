@@ -59,7 +59,7 @@ public class DayManager : MonoBehaviour
     public int SeenUnhappyDragons { get { return seenUnhappy.Count; } }
 
     ///////////////////////////////////////////////
-    // Behaviour
+    // Component Lifecycle
     ///////////////////////////////////////////////
 
     private void Awake() 
@@ -93,6 +93,10 @@ public class DayManager : MonoBehaviour
             FinishDay();
         }
     }
+
+    ///////////////////////////////////////////////
+    // Salon
+    ///////////////////////////////////////////////
 
     public void SetCurrentClient(Dragon dragon)
     {
@@ -132,24 +136,27 @@ public class DayManager : MonoBehaviour
         currentDragon = null;
     }
 
+    public void DragonBecameSatisfied(Dragon dragon)
+    {
+        // TODO: Present this to the player somehow
+    }
+
+    ///////////////////////////////////////////////
+    // Scoring
+    ///////////////////////////////////////////////
+
     public void FinishDay()
     {
         // Any dragons in the queue will leave unhappily
         while (queue.Count > 0)
         {
-            MakeDragonLeaveQueue(queue[0]);
+            DragonGaveUpQueueing(queue[0]);
         }
     }
 
-    public void DragonGaveUp(QueuedDragon dragon)
-    {
-        MakeDragonLeaveQueue(dragon);
-    }
-
-    public void DragonBecameSatisfied(Dragon dragon)
-    {
-        // TODO: Present this to the player somehow
-    }
+    ///////////////////////////////////////////////
+    // Queue
+    ///////////////////////////////////////////////
 
     private IEnumerator QueueRoutine()
     {
@@ -164,7 +171,8 @@ public class DayManager : MonoBehaviour
         }
     }
 
-    private void MakeDragonLeaveQueue(QueuedDragon d) {
+    public void DragonGaveUpQueueing(QueuedDragon dragon)
+    {
         queue.Remove(d);
         d.NoLongerWaiting = true;
 
