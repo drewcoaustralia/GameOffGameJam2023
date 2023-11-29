@@ -112,14 +112,14 @@ public class Dragon : MonoBehaviour
         // Satisfaction algorithm
         bool wasClean = IsFeelingClean;
         IsFeelingClean = (cleanlinessPercent >= desiredCleanliness && numSuds < 1);
-        if (!wasClean != IsFeelingClean)
+        if (wasClean != IsFeelingClean)
         {
             DayManager.Instance.DragonFeelsCleanChanged(this, IsFeelingClean);
         }
 
         bool wasProud = IsFeelingProud;
-        IsFeelingProud = (polishPercent >= desiredPolish);
-        if (!wasProud != IsFeelingProud)
+        IsFeelingProud = (IsFeelingClean && polishPercent >= desiredPolish);
+        if (wasProud != IsFeelingProud)
         {
             DayManager.Instance.DragonFeelsProudChanged(this, IsFeelingProud);
         }

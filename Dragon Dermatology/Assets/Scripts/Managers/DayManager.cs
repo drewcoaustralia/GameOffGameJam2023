@@ -207,9 +207,9 @@ public class DayManager : MonoBehaviour
 
     private bool IsGoalMet()
     {
-        return RegularScalesCollected > RegularScaleGoal &&
-                FireScalesCollected > FireScaleGoal &&
-                WaterScalesCollected > WaterScaleGoal;
+        return RegularScalesCollected >= RegularScaleGoal &&
+                FireScalesCollected >= FireScaleGoal &&
+                WaterScalesCollected >= WaterScaleGoal;
     }
 
     public void DragonFeelsCleanChanged(Dragon dragon, bool feelsClean)
