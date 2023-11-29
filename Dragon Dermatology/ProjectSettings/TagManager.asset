@@ -8,6 +8,7 @@ TagManager:
   - mainMenu
   - scale
   - tool
+  - table
   layers:
   - Default
   - TransparentFX
