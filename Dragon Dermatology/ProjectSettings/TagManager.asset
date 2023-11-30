@@ -9,6 +9,8 @@ TagManager:
   - scale
   - tool
   - table
+  - soap
+  - register
   layers:
   - Default
   - TransparentFX

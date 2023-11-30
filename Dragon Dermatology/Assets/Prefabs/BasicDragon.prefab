@@ -4636,7 +4636,7 @@ GameObject:
   - component: {fileID: 8373472687671682838}
   - component: {fileID: 4260820786177438422}
   m_Layer: 0
-  m_Name: Client
+  m_Name: BasicDragon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -9,6 +9,7 @@ public class SpongeTool : Tool
     public float minSoapTime = 0.5f;
     public float maxSoapTime = 1.5f;
     private float currentSoapTime = 0f;
+    public GameObject soapPrefab;
 
     public override void Start()
     {
@@ -36,13 +37,12 @@ public class SpongeTool : Tool
                     if (hit.collider.GetComponent<ScrubbableSpriteMask>() != null)
                     {
                         hit.collider.GetComponent<ScrubbableSpriteMask>().Scrub(mousePosition, scrubRadius);
+                        currentSoapTime -= Time.deltaTime;
+                        if (currentSoapTime <= 0) SpawnSuds(hit.collider.transform);
                     }
                 }
             }
         }
-
-        currentSoapTime -= Time.deltaTime;
-        if (currentSoapTime <= 0) SpawnSuds();
     }
 
     public override void Update()
@@ -50,15 +50,17 @@ public class SpongeTool : Tool
         base.Update();
     }
 
-    void SpawnSuds()
+    void SpawnSuds(Transform parent)
     {
         // instantiate at position then reset
+        GameObject soap = Instantiate(soapPrefab, transform.position, Quaternion.identity, parent);
         ResetSoap();
     }
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        // check if collided with dirt particles
-        if (!inUse) return;
-        Destroy(col.gameObject);
-    }
+    // void OnTriggerEnter2D(Collider2D col)
+    // {
+    //     // check if collided with dirt particles
+    //     if (!inUse) return;
+    //     if (col.gameObject.tag != "soap") return;
+    //     Destroy(col.gameObject);
+    // }
 }

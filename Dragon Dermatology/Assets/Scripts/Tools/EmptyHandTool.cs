@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EmptyHandTool : Tool
 {
     private Tool hoveringTool = null;
     private List<GameObject> hoveringToolList;
+    private GameObject hoveringUIObject;
     public override void Start()
     {
         base.Start();
@@ -17,7 +19,24 @@ public class EmptyHandTool : Tool
 
     protected override void StartAction()
     {
-        ToolManager.Instance.SetHeldTool(hoveringTool);
+        if (hoveringUIObject != null)
+        {
+            switch (hoveringUIObject.tag)
+            {
+                case "register":
+                {
+                    hoveringUIObject.GetComponent<Register>().Activate();
+                    return;
+                }
+                default:
+                    // no hovering tag found, break to normal usage
+                    break;
+            }
+        }
+        else
+        {
+            ToolManager.Instance.SetHeldTool(hoveringTool);
+        }
     }
 
     public override void Update()
@@ -54,14 +73,46 @@ public class EmptyHandTool : Tool
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.tag != "tool") return;
-        hoveringToolList.Add(collider.transform.parent.gameObject);
+        switch (collider.gameObject.tag)
+        {
+            case "register":
+            {
+                hoveringUIObject = collider.gameObject;
+                collider.gameObject.GetComponent<Register>().SetHover(true);
+                return;
+            }
+            case "tool":
+            {
+                hoveringToolList.Add(collider.transform.parent.gameObject);
+                return;
+            }
+            default:
+            {
+                return;
+            }
+        }
     }
 
     void OnTriggerExit2D(Collider2D collider)
     {
-        if (collider.gameObject.tag != "tool") return;
-        hoveringToolList.Remove(collider.transform.parent.gameObject);
+        switch (collider.gameObject.tag)
+        {
+            case "register":
+            {
+                hoveringUIObject = null;
+                collider.gameObject.GetComponent<Register>().SetHover(false);
+                return;
+            }
+            case "tool":
+            {
+                hoveringToolList.Remove(collider.transform.parent.gameObject);
+                return;
+            }
+            default:
+            {
+                return;
+            }
+        }
     }
 
     public override void SetHover(bool hover)
