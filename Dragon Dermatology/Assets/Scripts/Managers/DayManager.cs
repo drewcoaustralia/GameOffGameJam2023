@@ -19,6 +19,9 @@ public class DayManager : MonoBehaviour
     [Tooltip("The highest amount of time it might take for a dragon to show up.")]
     public float maxArrivalTime;
 
+    [Tooltip("Toggles the queue login on or off.")]
+    public bool queueActive = true;
+
     [Tooltip("The least regular scale goal for a day.")]
     public int minRegularScaleGoal;
     [Tooltip("The most regular scales goal for a day.")]
@@ -153,7 +156,7 @@ public class DayManager : MonoBehaviour
 
     private IEnumerator QueueRoutine()
     {
-        while (true)
+        while (queueActive)
         {
             yield return new WaitForSeconds(UnityEngine.Random.Range(minArrivalTime, maxArrivalTime));
 
