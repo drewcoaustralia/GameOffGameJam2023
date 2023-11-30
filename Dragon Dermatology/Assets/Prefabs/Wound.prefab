@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1375410151974486449}
   - component: {fileID: 5122281227565416941}
-  - component: {fileID: 1154980090319991229}
-  - component: {fileID: 4515953997930456365}
+  - component: {fileID: 9098075442855295}
+  - component: {fileID: 6769463336809462739}
   m_Layer: 0
-  m_Name: Soap
-  m_TagString: soap
+  m_Name: Wound
+  m_TagString: wound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: -1582142877
   m_SortingLayer: 4
   m_SortingOrder: 99
-  m_Sprite: {fileID: -7348096251646754109, guid: 0ac798b34ca087246a9093ad02c0ae25, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3115d27d4a3fa874e92b61994110cc2f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,8 +86,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &1154980090319991229
-CircleCollider2D:
+--- !u!70 &9098075442855295
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -121,8 +121,9 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.6
---- !u!114 &4515953997930456365
+  m_Size: {x: 2.5, y: 0.5}
+  m_Direction: 1
+--- !u!114 &6769463336809462739
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,17 +132,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7506089778554614872}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfad493ded36534418c7043bea73bbb3, type: 3}
+  m_Script: {fileID: 11500000, guid: dc9b75e788d98ba4ca69ca9db0665363, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: -7348096251646754109, guid: 0ac798b34ca087246a9093ad02c0ae25, type: 3}
-  - {fileID: -807779812481883315, guid: 0ac798b34ca087246a9093ad02c0ae25, type: 3}
-  - {fileID: -1310243387583910188, guid: 0ac798b34ca087246a9093ad02c0ae25, type: 3}
-  - {fileID: -6676117314781562379, guid: 0ac798b34ca087246a9093ad02c0ae25, type: 3}
-  - {fileID: -5298869245154635109, guid: 0ac798b34ca087246a9093ad02c0ae25, type: 3}
+  - {fileID: 21300000, guid: 3115d27d4a3fa874e92b61994110cc2f, type: 3}
+  - {fileID: 21300000, guid: 976e551de127dfd4fad852b836e0ad01, type: 3}
   minSize: 0.5
-  maxSize: 1
-  shrinkSpeed: 1.25
-  shrinkThreshold: 0.25
-  fadeTime: 0.5
+  maxSize: 1.5
+  fadeSpeed: 1

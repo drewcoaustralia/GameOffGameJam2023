@@ -11,6 +11,8 @@ TagManager:
   - table
   - soap
   - register
+  - water
+  - wound
   layers:
   - Default
   - TransparentFX

@@ -692,6 +692,7 @@ GameObject:
   - component: {fileID: 292221239}
   - component: {fileID: 292221241}
   - component: {fileID: 292221240}
+  - component: {fileID: 292221242}
   m_Layer: 2
   m_Name: PolisherTool
   m_TagString: tool
@@ -786,6 +787,33 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.25
+--- !u!50 &292221242
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292221238}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &454701697
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,9 +943,9 @@ MonoBehaviour:
   hoverSprite: {fileID: 1760757270083144338, guid: 7e74ee14c59f68446bc1c5b54513ae44, type: 3}
   idleSprite: {fileID: 7798421715531490834, guid: 7e74ee14c59f68446bc1c5b54513ae44, type: 3}
   inUseSprite: {fileID: -4426023768462342078, guid: 7e74ee14c59f68446bc1c5b54513ae44, type: 3}
-  scrubRadius: 35
-  minSoapTime: 0.25
-  maxSoapTime: 0.5
+  scrubRadius: 45
+  minSoapTime: 0.05
+  maxSoapTime: 0.15
   soapPrefab: {fileID: 7506089778554614872, guid: e6599799ab67c294daf0e28ae03744fb, type: 3}
 --- !u!4 &480232584
 Transform:
@@ -2786,6 +2814,7 @@ GameObject:
   - component: {fileID: 1431609718}
   - component: {fileID: 1431609717}
   - component: {fileID: 1431609719}
+  - component: {fileID: 1431609720}
   m_Layer: 2
   m_Name: WatergunTool
   m_TagString: tool
@@ -2819,6 +2848,10 @@ MonoBehaviour:
   hoverSprite: {fileID: 5197594916356836234, guid: f51c1bae708983b408835cd7792ebbc5, type: 3}
   idleSprite: {fileID: -7119481432558669884, guid: 161e48f123ae90947ad7fe95d37e1140, type: 3}
   inUseSprite: {fileID: -3183621545343410217, guid: 161e48f123ae90947ad7fe95d37e1140, type: 3}
+  sprayRadius: 10
+  minDropTime: 0.05
+  maxDropTime: 0.15
+  dropPrefab: {fileID: 7506089778554614872, guid: c72000546207ac84f8dfe124509ce309, type: 3}
 --- !u!4 &1431609718
 Transform:
   m_ObjectHideFlags: 0
@@ -2870,7 +2903,34 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.2
+  m_Radius: 0.5
+--- !u!50 &1431609720
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431609716}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1479769132
 GameObject:
   m_ObjectHideFlags: 0
@@ -3066,6 +3126,7 @@ GameObject:
   - component: {fileID: 1716097218}
   - component: {fileID: 1716097219}
   - component: {fileID: 1716097220}
+  - component: {fileID: 1716097221}
   m_Layer: 2
   m_Name: PotionTool
   m_TagString: tool
@@ -3154,9 +3215,33 @@ MonoBehaviour:
   hoverSprite: {fileID: 1302723820812287101, guid: d13891e214aed594483d2a534c5a13b5, type: 3}
   idleSprite: {fileID: -5431891241092535249, guid: 3aa945bafb7effc4b99715dd0b0be8c7, type: 3}
   inUseSprite: {fileID: 1934673760832683059, guid: 3aa945bafb7effc4b99715dd0b0be8c7, type: 3}
-  scrubRadius: 25
-  minSoapTime: 0.5
-  maxSoapTime: 1.5
+--- !u!50 &1716097221
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716097217}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1733496862
 GameObject:
   m_ObjectHideFlags: 0

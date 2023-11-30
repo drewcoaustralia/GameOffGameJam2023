@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(CircleCollider2D))]
-public class Soap : MonoBehaviour
+public class Water : MonoBehaviour
 {
     public List<Sprite> sprites;
     private SpriteRenderer _rend;
