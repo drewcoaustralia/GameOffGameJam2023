@@ -37,6 +37,12 @@ public class Dragon : MonoBehaviour
     [Tooltip("The desired polish as a percentage between 0-1.")]
     public float desiredPolish;
 
+    public int minCoinsIfClean;
+    public int maxCoinsIfClean;
+    public int minCoinsIfProud;
+    public int maxCoinsIfProud;
+
+
     [Tooltip("Reference to the child object which renders the queued dragon.")]
     public GameObject queueRenderObject;
 
@@ -87,6 +93,12 @@ public class Dragon : MonoBehaviour
         }
     }
 
+    public int AskForPayment()
+    {
+        return (IsFeelingClean ? UnityEngine.Random.Range(minCoinsIfClean, maxCoinsIfClean) : 0) +
+                (IsFeelingProud ? UnityEngine.Random.Range(minCoinsIfProud, maxCoinsIfProud) : 0);
+    }
+
     public void SetCleanlinessPercent(float percent) {
         cleanlinessPercent = percent;
         EvalFeelings();
@@ -107,7 +119,7 @@ public class Dragon : MonoBehaviour
         EvalFeelings();
     }
 
-    public void EvalFeelings()
+    private void EvalFeelings()
     {
         // Satisfaction algorithm
         bool wasClean = IsFeelingClean;
