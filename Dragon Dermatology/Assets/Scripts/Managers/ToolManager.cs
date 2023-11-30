@@ -25,6 +25,11 @@ public class ToolManager : MonoBehaviour
         } 
     }
 
+    void Start()
+    {
+        Cursor.visible = false;
+    }
+
     public void SetHeldTool(Tool tool)
     {
         if (tool == null) return;
