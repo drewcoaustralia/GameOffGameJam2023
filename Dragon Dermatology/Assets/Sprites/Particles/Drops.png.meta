@@ -272,7 +272,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Drops_0: 4564899823668317575
+      Drops_1: 6749907094918187561
+      Drops_2: -2040057753640575754
+      Drops_3: 5622005364771165601
+      Drops_4: 2932976599428820663
+      Drops_5: -9079316033098101434
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
