@@ -13,6 +13,7 @@ public abstract class Tool : MonoBehaviour
     public List<AudioClip> sfx;
     protected SFXObject loopingSound;
     public Sprite tableSprite;
+    public Sprite hoverSprite;
     public Sprite idleSprite;
     public Sprite inUseSprite;
 
@@ -71,6 +72,11 @@ public abstract class Tool : MonoBehaviour
         visualsRenderer.sprite = inUse ? inUseSprite : idleSprite;
 
         if (inUse) OngoingAction();
+    }
+
+    public virtual void SetHover(bool hover)
+    {
+        visualsRenderer.sprite = hover ? hoverSprite : tableSprite;
     }
 
     public void Pickup()

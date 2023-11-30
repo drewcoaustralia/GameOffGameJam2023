@@ -33,12 +33,15 @@ public class EmptyHandTool : Tool
                 if (Vector3.Distance(tool.transform.position, transform.position) < dist)
                 {
                     dist = Vector3.Distance(tool.transform.position, transform.position);
+                    if (hoveringTool != null) hoveringTool.SetHover(false);
                     hoveringTool = tool.GetComponent<Tool>();
+                    hoveringTool.SetHover(true);
                 }
             }
         }
         else
         {
+            if (hoveringTool != null) hoveringTool.SetHover(false);
             hoveringTool = null;
             SetHover(false);
         }
@@ -61,7 +64,7 @@ public class EmptyHandTool : Tool
         hoveringToolList.Remove(collider.transform.parent.gameObject);
     }
 
-    public void SetHover(bool hover)
+    public override void SetHover(bool hover)
     {
         inUse = hover;
         visualsRenderer.sprite = hover ? inUseSprite : idleSprite;
