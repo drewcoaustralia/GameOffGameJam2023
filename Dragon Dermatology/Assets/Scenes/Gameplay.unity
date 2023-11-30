@@ -748,9 +748,6 @@ MonoBehaviour:
   hoverSprite: {fileID: -3230746050120292139, guid: e2b8056e677e0dc4f9a0290fecc680c5, type: 3}
   idleSprite: {fileID: 1216942374392441859, guid: e2b8056e677e0dc4f9a0290fecc680c5, type: 3}
   inUseSprite: {fileID: -2644872129541877630, guid: e2b8056e677e0dc4f9a0290fecc680c5, type: 3}
-  scrubRadius: 25
-  minSoapTime: 0.5
-  maxSoapTime: 1.5
 --- !u!58 &292221241
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1880,15 +1877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragonPrefab: {fileID: 5630537948781234713, guid: 765eee7e2d2929348bf7f770c639d648, type: 3}
-  minArrivalTime: 1
-  maxArrivalTime: 5
   queueActive: 1
-  minRegularScaleGoal: 0
-  maxRegularScaleGoal: 0
-  minFireScaleGoal: 0
-  maxFireScaleGoal: 0
-  minWaterScaleGoal: 0
-  maxWaterScaleGoal: 0
 --- !u!4 &902431814
 Transform:
   m_ObjectHideFlags: 0
@@ -2309,6 +2298,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8833702324909631837, guid: 765eee7e2d2929348bf7f770c639d648, type: 3}
   m_PrefabInstance: {fileID: 6549193049308208799}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1247913568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1247913570}
+  - component: {fileID: 1247913569}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1247913569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247913568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2a7befcbd3d27c41915396a70b7dda8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  daysToComplete: 0
+  goalIncreasePerDay: 0
+  arrivalTimeDecreasePerDay: 0
+  minArrivalTime: 0
+  maxArrivalTime: 0
+  minRegularScaleGoal: 0
+  maxRegularScaleGoal: 0
+  minFireScaleGoal: 0
+  maxFireScaleGoal: 0
+  minWaterScaleGoal: 0
+  maxWaterScaleGoal: 0
+  coinsAtRegularScaleGoal: 0
+  coinsPerBonusRegularScale: 0
+  coinsAtFireScaleGoal: 0
+  coinsPerBonusFireScale: 0
+  coinsAtWaterScaleGoal: 0
+  coinsPerBonusWaterScale: 0
+  coinsPerGoldenScale: 0
+--- !u!4 &1247913570
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247913568}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1262934212
 GameObject:
   m_ObjectHideFlags: 0
@@ -4157,6 +4208,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1247913570}
   - {fileID: 1224606192}
   - {fileID: 983113932}
   - {fileID: 1135267884}
