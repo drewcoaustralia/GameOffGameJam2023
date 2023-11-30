@@ -13,33 +13,6 @@ public class DayManager : MonoBehaviour
 
     public GameObject dragonPrefab;
 
-    [Tooltip("The lowest amount of time it might take for a dragon to show up.")]
-    public float minArrivalTime;
-
-    [Tooltip("The highest amount of time it might take for a dragon to show up.")]
-    public float maxArrivalTime;
-
-    [Tooltip("The least regular scale goal for a day.")]
-    public int minRegularScaleGoal;
-    [Tooltip("The most regular scales goal for a day.")]
-    public int maxRegularScaleGoal;
-    [Tooltip("The least fire scales goal for a day.")]
-    public int minFireScaleGoal;
-    [Tooltip("The most fire scales goal for a day.")]
-    public int maxFireScaleGoal;
-    [Tooltip("The least water scales goal for a day.")]
-    public int minWaterScaleGoal;
-    [Tooltip("The most water scales goal for a day.")]
-    public int maxWaterScaleGoal;
-
-    public int coinsAtRegularScaleGoal;
-    public int coinsPerBonusRegularScale;
-    public int coinsAtFireScaleGoal;
-    public int coinsPerBonusFireScale;
-    public int coinsAtWaterScaleGoal;
-    public int coinsPerBonusWaterScale;
-    public int coinsPerGoldenScale;
-
     ///////////////////////////////////////////////
     // State
     ///////////////////////////////////////////////
@@ -86,9 +59,9 @@ public class DayManager : MonoBehaviour
 
     private void Start()
     {
-        RegularScaleGoal = UnityEngine.Random.Range(minRegularScaleGoal, maxRegularScaleGoal);
-        FireScaleGoal = UnityEngine.Random.Range(minFireScaleGoal, maxFireScaleGoal);
-        WaterScaleGoal = UnityEngine.Random.Range(minWaterScaleGoal, maxWaterScaleGoal);
+        RegularScaleGoal = UnityEngine.Random.Range(GameManager.Instance.minRegularScaleGoal, GameManager.Instance.maxRegularScaleGoal);
+        FireScaleGoal = UnityEngine.Random.Range(GameManager.Instance.minFireScaleGoal, GameManager.Instance.maxFireScaleGoal);
+        WaterScaleGoal = UnityEngine.Random.Range(GameManager.Instance.minWaterScaleGoal, GameManager.Instance.maxWaterScaleGoal);
         StartCoroutine(QueueRoutine());
     }
 
@@ -110,7 +83,7 @@ public class DayManager : MonoBehaviour
 
     public void SetCurrentClient(Dragon dragon)
     {
-        // It's best to avoid defensive programming like this.. but just in case :)
+        // Shouldn't happen but in case (not much testing)
         if (currentDragon)
         {
             FinishCurrentClient();
@@ -178,25 +151,6 @@ public class DayManager : MonoBehaviour
         currentDragon = null;
     }
 
-    private int CoinsForScales(int collected, int goal, int coinsAtGoal, int coinsPerBonus)
-    {
-        if (collected >= goal)
-        {
-            return coinsAtGoal + coinsPerBonus * (collected - goal);
-        }
-        else
-        {
-            return 0;
-        }
-    }
-
-    private bool IsGoalMet()
-    {
-        return RegularScalesCollected >= RegularScaleGoal &&
-                FireScalesCollected >= FireScaleGoal &&
-                WaterScalesCollected >= WaterScaleGoal;
-    }
-
     public void DragonFeelsCleanChanged(Dragon dragon, bool feelsClean)
     {
         // TODO: Present this to the player somehow. Maybe shouldn't even be here and all done in dragon?
@@ -232,14 +186,38 @@ public class DayManager : MonoBehaviour
 
         // TODO: Player can use golden scales, then click 'cash out' button when ready
         // Earn some coins when using a golden scale for fun
-            // CoinsCollected += coinsPerGoldenScale;
+            // CoinsCollected += GameManager.Instance.coinsPerGoldenScale;
             // GoldenScalesCollected--;
 
         // Earn some coins for goals met
-        CoinsCollected += GoldenScalesCollected * coinsPerGoldenScale; // These get reduced if spent on goals
-        CoinsCollected += CoinsForScales(RegularScalesCollected, RegularScaleGoal, coinsAtRegularScaleGoal, coinsPerBonusRegularScale);
-        CoinsCollected += CoinsForScales(FireScalesCollected, FireScaleGoal, coinsAtFireScaleGoal, coinsPerBonusFireScale);
-        CoinsCollected += CoinsForScales(WaterScalesCollected, WaterScaleGoal, coinsAtWaterScaleGoal, coinsPerBonusWaterScale);
+        CoinsCollected += GoldenScalesCollected * GameManager.Instance.coinsPerGoldenScale; // These get reduced if spent on goals
+        CoinsCollected += CoinsForScales(RegularScalesCollected, RegularScaleGoal, GameManager.Instance.coinsAtRegularScaleGoal, GameManager.Instance.coinsPerBonusRegularScale);
+        CoinsCollected += CoinsForScales(FireScalesCollected, FireScaleGoal, GameManager.Instance.coinsAtFireScaleGoal, GameManager.Instance.coinsPerBonusFireScale);
+        CoinsCollected += CoinsForScales(WaterScalesCollected, WaterScaleGoal, GameManager.Instance.coinsAtWaterScaleGoal, GameManager.Instance.coinsPerBonusWaterScale);
+
+        // TODO: Let the player look at their final earnings, then click 'Done' button when ready
+
+        // Start the next day
+        GameManager.Instance.StartNextDay(CoinsCollected);
+    }
+
+    private int CoinsForScales(int collected, int goal, int coinsAtGoal, int coinsPerBonus)
+    {
+        if (collected >= goal)
+        {
+            return coinsAtGoal + coinsPerBonus * (collected - goal);
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
+    private bool IsGoalMet()
+    {
+        return RegularScalesCollected >= RegularScaleGoal &&
+                FireScalesCollected >= FireScaleGoal &&
+                WaterScalesCollected >= WaterScaleGoal;
     }
 
     ///////////////////////////////////////////////
@@ -250,7 +228,7 @@ public class DayManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(UnityEngine.Random.Range(minArrivalTime, maxArrivalTime));
+            yield return new WaitForSeconds(UnityEngine.Random.Range(GameManager.Instance.minArrivalTime, GameManager.Instance.maxArrivalTime));
 
             // Instantiate and queue a dragon
             GameObject dragonObject = Instantiate(dragonPrefab, new Vector3(0, 0, 0), Quaternion.identity);
