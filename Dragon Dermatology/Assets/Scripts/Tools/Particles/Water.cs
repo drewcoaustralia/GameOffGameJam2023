@@ -15,7 +15,7 @@ public class Water : MonoBehaviour
     public float shrinkSpeed = 1f;
     public float shrinkThreshold = 0.2f;
     public float fadeTime = 0.5f;
-    private float alpha = 1f;
+    [Range(0f,1f)] public float alpha = 1f;
     private bool fading = false;
 
 
@@ -26,6 +26,7 @@ public class Water : MonoBehaviour
         float scale = Random.Range(minSize, maxSize);
         transform.localScale = new Vector3(scale, scale, 1f);
         transform.eulerAngles = new Vector3(0, 0, Random.Range(0f, 360f));
+        _rend.color = new Color(1f, 1f, 1f, alpha);
     }
 
     public void Spray()

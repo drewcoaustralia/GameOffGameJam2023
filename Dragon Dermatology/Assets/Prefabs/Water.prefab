@@ -146,3 +146,4 @@ MonoBehaviour:
   shrinkSpeed: 1.25
   shrinkThreshold: 0.25
   fadeTime: 0.5
+  alpha: 0.35
