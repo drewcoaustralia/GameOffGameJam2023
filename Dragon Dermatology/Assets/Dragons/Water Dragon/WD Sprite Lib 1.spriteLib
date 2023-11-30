@@ -16,111 +16,381 @@ MonoBehaviour:
   - m_Name: B Foot
     m_Hash: 980053105
     m_CategoryList: []
-    m_OverrideEntries: []
+    m_OverrideEntries:
+    - m_Name: WD B Foot
+      m_Hash: 435683400
+      m_Sprite: {fileID: 9074350016101059132, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 9074350016101059132, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD B Foot Dirty
+      m_Hash: 729319607
+      m_Sprite: {fileID: -8924206762174960442, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -8924206762174960442, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD B Foot Dirt w/Trans
+      m_Hash: 990608096
+      m_Sprite: {fileID: -5110891055001591856, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5110891055001591856, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 0
+    m_EntryOverrideCount: 3
   - m_Name: B Ankle
     m_Hash: 120380012
     m_CategoryList: []
-    m_OverrideEntries: []
+    m_OverrideEntries:
+    - m_Name: WD B Ankle
+      m_Hash: 403357704
+      m_Sprite: {fileID: 2805004557385162108, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2805004557385162108, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD B Ankle Dirty
+      m_Hash: 268587995
+      m_Sprite: {fileID: 2558626692426209226, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2558626692426209226, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD B Ankle Dirt w/Trans
+      m_Hash: 922059112
+      m_Sprite: {fileID: 9094968291806895000, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 9094968291806895000, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 0
+    m_EntryOverrideCount: 3
   - m_Name: B Hip
     m_Hash: 512765600
     m_CategoryList: []
-    m_OverrideEntries: []
+    m_OverrideEntries:
+    - m_Name: 'WD B Hip '
+      m_Hash: 485920954
+      m_Sprite: {fileID: 4483281843868796046, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 4483281843868796046, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD B Hip Dirty
+      m_Hash: 680123239
+      m_Sprite: {fileID: 4874611044196116740, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 4874611044196116740, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD B Hip Dirt w/Trans
+      m_Hash: 1026807295
+      m_Sprite: {fileID: -570817060080065551, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -570817060080065551, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 0
+    m_EntryOverrideCount: 3
   - m_Name: B Hand
     m_Hash: 344397677
     m_CategoryList: []
-    m_OverrideEntries: []
+    m_OverrideEntries:
+    - m_Name: WD B Hand
+      m_Hash: 924154708
+      m_Sprite: {fileID: -2841285924217935918, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2841285924217935918, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD B Hand Dirty
+      m_Hash: 369622982
+      m_Sprite: {fileID: -2689251669161431242, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2689251669161431242, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD B Hand Dirt w/Trans
+      m_Hash: 98866009
+      m_Sprite: {fileID: 767849122014350264, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 767849122014350264, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 0
+    m_EntryOverrideCount: 3
   - m_Name: B Forearm
     m_Hash: 429372333
     m_CategoryList: []
-    m_OverrideEntries: []
+    m_OverrideEntries:
+    - m_Name: WD B Forearm
+      m_Hash: 627358546
+      m_Sprite: {fileID: 5012734815616127159, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 5012734815616127159, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD B Forearm Dirty
+      m_Hash: 73359207
+      m_Sprite: {fileID: 7236848140137715066, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 7236848140137715066, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD B Forearm Dirt w/Trans
+      m_Hash: 257376627
+      m_Sprite: {fileID: 8876129804742873856, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 8876129804742873856, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 0
+    m_EntryOverrideCount: 3
   - m_Name: B Sholder
     m_Hash: 441214797
     m_CategoryList: []
-    m_OverrideEntries: []
+    m_OverrideEntries:
+    - m_Name: WD B Sholder
+      m_Hash: 650080178
+      m_Sprite: {fileID: 8904956906657330912, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 8904956906657330912, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD B Sholder Dirty
+      m_Hash: 770150525
+      m_Sprite: {fileID: 4304784030067522740, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 4304784030067522740, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD B Sholder Dirt w/Trans
+      m_Hash: 663184373
+      m_Sprite: {fileID: 2947376208584885780, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2947376208584885780, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 0
-  - m_Name: B Wing
-    m_Hash: 199708838
-    m_CategoryList: []
-    m_OverrideEntries: []
-    m_FromMain: 0
-    m_EntryOverrideCount: 0
+    m_EntryOverrideCount: 3
   - m_Name: Tail
     m_Hash: 470096739
     m_CategoryList: []
-    m_OverrideEntries: []
+    m_OverrideEntries:
+    - m_Name: WD Tail
+      m_Hash: 324512582
+      m_Sprite: {fileID: 759862895216616981, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 759862895216616981, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD Tail Dirty
+      m_Hash: 791662661
+      m_Sprite: {fileID: 1563770911041887417, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1563770911041887417, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD Tail Dirt w/Trans
+      m_Hash: 455848192
+      m_Sprite: {fileID: 2845255528601666227, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2845255528601666227, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 0
+    m_EntryOverrideCount: 3
   - m_Name: Torso
     m_Hash: 647926657
     m_CategoryList: []
-    m_OverrideEntries: []
+    m_OverrideEntries:
+    - m_Name: WD Torso
+      m_Hash: 764745078
+      m_Sprite: {fileID: 7532874213660009890, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 7532874213660009890, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD Torso Dirty
+      m_Hash: 109642314
+      m_Sprite: {fileID: 2162516246185764791, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2162516246185764791, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD Torso Dirt w/Trans
+      m_Hash: 281605711
+      m_Sprite: {fileID: -6444751424958031037, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -6444751424958031037, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 0
+    m_EntryOverrideCount: 3
   - m_Name: Neck
     m_Hash: 2324845
     m_CategoryList: []
-    m_OverrideEntries: []
+    m_OverrideEntries:
+    - m_Name: WD Neck
+      m_Hash: 259115336
+      m_Sprite: {fileID: 7526232340905268826, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 7526232340905268826, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD Neck Dirty
+      m_Hash: 371765806
+      m_Sprite: {fileID: 6073205204076492544, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6073205204076492544, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD Neck Dirty w/Trans
+      m_Hash: 857321728
+      m_Sprite: {fileID: 940609041084224978, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 940609041084224978, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 0
-  - m_Name: Jaw
-    m_Hash: 818638717
-    m_CategoryList: []
-    m_OverrideEntries: []
-    m_FromMain: 0
-    m_EntryOverrideCount: 0
+    m_EntryOverrideCount: 3
   - m_Name: Head
     m_Hash: 130111906
     m_CategoryList: []
-    m_OverrideEntries: []
+    m_OverrideEntries:
+    - m_Name: WD Head
+      m_Hash: 143911303
+      m_Sprite: {fileID: 6503413154423610358, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6503413154423610358, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD Head Dirty
+      m_Hash: 794539517
+      m_Sprite: {fileID: -3748195778485959026, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3748195778485959026, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD Head Dirt w/Trans
+      m_Hash: 830725658
+      m_Sprite: {fileID: 6475189121950832414, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6475189121950832414, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 0
+    m_EntryOverrideCount: 3
+  - m_Name: Wing
+    m_Hash: 405842554
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: WD Wing
+      m_Hash: 392305247
+      m_Sprite: {fileID: -8203904050539884907, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -8203904050539884907, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD Wing Dirty
+      m_Hash: 922916029
+      m_Sprite: {fileID: 5833016500510712354, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 5833016500510712354, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD Wing Dirt w/Trans
+      m_Hash: 798703932
+      m_Sprite: {fileID: 1202294716652370673, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1202294716652370673, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 3
   - m_Name: F Foot
     m_Hash: 570109543
     m_CategoryList: []
-    m_OverrideEntries: []
+    m_OverrideEntries:
+    - m_Name: WD F Foot
+      m_Hash: 40452702
+      m_Sprite: {fileID: -3885968070759429155, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3885968070759429155, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: 'WD F Foot Dirty '
+      m_Hash: 1014758260
+      m_Sprite: {fileID: -8297386309614681606, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -8297386309614681606, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD F Foot Dirt w/Trans
+      m_Hash: 308508418
+      m_Sprite: {fileID: 6917020156742080981, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6917020156742080981, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 0
+    m_EntryOverrideCount: 3
   - m_Name: F Ankle
     m_Hash: 862191231
     m_CategoryList: []
-    m_OverrideEntries: []
+    m_OverrideEntries:
+    - m_Name: WD F Ankle
+      m_Hash: 742777883
+      m_Sprite: {fileID: -2314039068605879250, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2314039068605879250, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD F Ankle Dirty
+      m_Hash: 280705357
+      m_Sprite: {fileID: -7039155843192877044, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7039155843192877044, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD F Ankle Dirt w/Trans
+      m_Hash: 941124145
+      m_Sprite: {fileID: 4815696370927305735, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 4815696370927305735, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 0
+    m_EntryOverrideCount: 3
   - m_Name: F Hip
     m_Hash: 722503776
     m_CategoryList: []
-    m_OverrideEntries: []
+    m_OverrideEntries:
+    - m_Name: WD F Hip
+      m_Hash: 538644119
+      m_Sprite: {fileID: 2459241557257691583, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2459241557257691583, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD F Hip Dirty
+      m_Hash: 407939301
+      m_Sprite: {fileID: 3453776716408682697, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 3453776716408682697, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD F Hip Dirt w/Trans
+      m_Hash: 916128505
+      m_Sprite: {fileID: 412591804012211360, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 412591804012211360, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 0
+    m_EntryOverrideCount: 3
   - m_Name: F Hand
     m_Hash: 253121915
     m_CategoryList: []
-    m_OverrideEntries: []
+    m_OverrideEntries:
+    - m_Name: WD F Hand
+      m_Hash: 746862914
+      m_Sprite: {fileID: 4351945810006484836, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 4351945810006484836, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD F Hand Dirty
+      m_Hash: 352437433
+      m_Sprite: {fileID: 7695874430528357444, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 7695874430528357444, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD F Hand Dirt w/Trans
+      m_Hash: 747413179
+      m_Sprite: {fileID: -8965495156762416178, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -8965495156762416178, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 0
+    m_EntryOverrideCount: 3
   - m_Name: F Forearm
     m_Hash: 75227809
     m_CategoryList: []
-    m_OverrideEntries: []
+    m_OverrideEntries:
+    - m_Name: WD F Forearm
+      m_Hash: 948496990
+      m_Sprite: {fileID: 6477062059769935300, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6477062059769935300, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD F Forearm Dirty
+      m_Hash: 237189636
+      m_Sprite: {fileID: 984212385355845857, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 984212385355845857, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD F Forearm Dirt w/Trans
+      m_Hash: 334942835
+      m_Sprite: {fileID: 8709820422962893481, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 8709820422962893481, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 0
+    m_EntryOverrideCount: 3
   - m_Name: F Sholder
     m_Hash: 127940161
     m_CategoryList: []
-    m_OverrideEntries: []
+    m_OverrideEntries:
+    - m_Name: WD F Sholder
+      m_Hash: 995311294
+      m_Sprite: {fileID: -258151850565518658, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -258151850565518658, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD F Sholder Dirty
+      m_Hash: 664532254
+      m_Sprite: {fileID: 4003968129537980133, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 4003968129537980133, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD F Sholder Dirt w/Trans
+      m_Hash: 992407797
+      m_Sprite: {fileID: 3399876751903430704, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 3399876751903430704, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 0
+    m_EntryOverrideCount: 3
+  - m_Name: Expressions
+    m_Hash: 709705756
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: WD Nutral Expression
+      m_Hash: 817087679
+      m_Sprite: {fileID: -4440161161542848831, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -4440161161542848831, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD Mad Expression
+      m_Hash: 770282730
+      m_Sprite: {fileID: 4142317101713207548, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 4142317101713207548, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD Happy Expression
+      m_Hash: 743518704
+      m_Sprite: {fileID: -7318055012811677110, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7318055012811677110, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 3
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638369005938543683
+  m_ModificationHash: 638369539686598996
   m_Version: 1
