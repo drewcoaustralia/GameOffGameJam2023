@@ -35,6 +35,13 @@ public class DayManager : MonoBehaviour
     [Tooltip("The most water scales goal for a day.")]
     public int maxWaterScaleGoal;
 
+    public int coinsAtRegularScaleGoal;
+    public int coinsPerBonusRegularScale;
+    public int coinsAtFireScaleGoal;
+    public int coinsPerBonusFireScale;
+    public int coinsAtWaterScaleGoal;
+    public int coinsPerBonusWaterScale;
+
     ///////////////////////////////////////////////
     // State
     ///////////////////////////////////////////////
@@ -43,7 +50,8 @@ public class DayManager : MonoBehaviour
     private Dragon currentDragon = null;
     private List<QueuedDragon> queue = new List<QueuedDragon>();
     private List<QueuedDragon> unseen = new List<QueuedDragon>();
-    private List<Dragon> seenHappy = new List<Dragon>();
+    private List<Dragon> seenProud = new List<Dragon>();
+    private List<Dragon> seenClean = new List<Dragon>();
     private List<Dragon> seenUnhappy = new List<Dragon>();
 
     // Daily goal
@@ -58,11 +66,12 @@ public class DayManager : MonoBehaviour
     public int WaterScalesCollected { get; private set; } = 0;
     public int GoldenScalesCollected { get; private set; } = 0;
     public int UnseenDragons { get { return unseen.Count; } }
-    public int SeenHappyDragons { get { return seenHappy.Count; } }
+    public int SeenProudDragons { get { return seenProud.Count; } }
+    public int SeenCleanDragons { get { return seenClean.Count; } }
     public int SeenUnhappyDragons { get { return seenUnhappy.Count; } }
 
     ///////////////////////////////////////////////
-    // Behaviour
+    // Component Lifecycle
     ///////////////////////////////////////////////
 
     private void Awake() 
@@ -97,6 +106,10 @@ public class DayManager : MonoBehaviour
         }
     }
 
+    ///////////////////////////////////////////////
+    // Salon
+    ///////////////////////////////////////////////
+
     public void SetCurrentClient(Dragon dragon)
     {
         // It's best to avoid defensive programming like this.. but just in case :)
@@ -118,6 +131,34 @@ public class DayManager : MonoBehaviour
         return currentDragon;
     }
 
+    public void RegularScaleCollected()
+    {
+        RegularScalesCollected++;
+
+        // TODO: Dragon looks annoyed
+    }
+
+    public void FireScaleCollected()
+    {
+        FireScalesCollected++;
+
+        // TODO: Dragon looks annoyed
+    }
+
+    public void WaterScaleCollected()
+    {
+        WaterScalesCollected++;
+
+        // TODO: Dragon looks annoyed
+    }
+
+    public void GoldenScaleCollected()
+    {
+        GoldenScalesCollected++;
+
+        // TODO: Dragon looks annoyed
+    }
+
     public void FinishCurrentClient()
     {
         if (currentDragon == null) {
@@ -126,33 +167,80 @@ public class DayManager : MonoBehaviour
         }
 
         // Place in completion list
-        if (currentDragon.IsSatisfied) {
-            seenHappy.Add(currentDragon);
+        if (currentDragon.IsFeelingProud) {
+            seenProud.Add(currentDragon);
+        } else if (currentDragon.IsFeelingClean) {
+            seenClean.Add(currentDragon);
         } else {
             seenUnhappy.Add(currentDragon);
         }
 
+        // TODO: Show Summary Splash. Can contain:
+        //         IsGoalMet() -- if not, player can use golden scale (GoldenScalesCollected)
+        //         RegularScalesCollected / RegularScaleGoal
+        //         FireScalesCollected / FireScaleGoal
+        //         WaterScalesCollected / WaterScaleGoal
+        //         CoinsCollected
+        //         SeenProudDragons
+        //         SeenCleanDragons
+        //         SeenUnhappyDragons
+        //         UnseenDragons
+
+        // TODO: Player can use golden scales, then click 'cash out' button when ready
+
+        // Earn some coins
+        CoinsCollected += CoinsForScales(RegularScalesCollected, RegularScaleGoal, coinsAtRegularScaleGoal, coinsPerBonusRegularScale);
+        CoinsCollected += CoinsForScales(FireScalesCollected, FireScaleGoal, coinsAtFireScaleGoal, coinsPerBonusFireScale);
+        CoinsCollected += CoinsForScales(WaterScalesCollected, WaterScaleGoal, coinsAtWaterScaleGoal, coinsPerBonusWaterScale);
+
         currentDragon = null;
     }
+
+    private int CoinsForScales(int collected, int goal, int coinsAtGoal, int coinsPerBonus)
+    {
+        if (collected >= goal)
+        {
+            return coinsAtGoal + coinsPerBonus * (collected - goal);
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
+    private bool IsGoalMet()
+    {
+        return RegularScalesCollected >= RegularScaleGoal &&
+                FireScalesCollected >= FireScaleGoal &&
+                WaterScalesCollected >= WaterScaleGoal;
+    }
+
+    public void DragonFeelsCleanChanged(Dragon dragon, bool feelsClean)
+    {
+        // TODO: Present this to the player somehow. Maybe shouldn't even be here and all done in dragon?
+    }
+
+    public void DragonFeelsProudChanged(Dragon dragon, bool feelsProud)
+    {
+        // TODO: Present this to the player somehow. Maybe shouldn't even be here and all done in dragon?
+    }
+
+    ///////////////////////////////////////////////
+    // Scoring
+    ///////////////////////////////////////////////
 
     public void FinishDay()
     {
         // Any dragons in the queue will leave unhappily
         while (queue.Count > 0)
         {
-            MakeDragonLeaveQueue(queue[0]);
+            DragonGaveUpQueueing(queue[0]);
         }
     }
 
-    public void DragonGaveUp(QueuedDragon dragon)
-    {
-        MakeDragonLeaveQueue(dragon);
-    }
-
-    public void DragonBecameSatisfied(Dragon dragon)
-    {
-        // TODO: Present this to the player somehow
-    }
+    ///////////////////////////////////////////////
+    // Queue
+    ///////////////////////////////////////////////
 
     private IEnumerator QueueRoutine()
     {
@@ -167,7 +255,8 @@ public class DayManager : MonoBehaviour
         }
     }
 
-    private void MakeDragonLeaveQueue(QueuedDragon d) {
+    public void DragonGaveUpQueueing(QueuedDragon d)
+    {
         queue.Remove(d);
         d.NoLongerWaiting = true;
 
