@@ -43,6 +43,22 @@ public class DayManager : MonoBehaviour
     public int SeenProudDragons { get { return seenProud.Count; } }
     public int SeenCleanDragons { get { return seenClean.Count; } }
     public int SeenUnhappyDragons { get { return seenUnhappy.Count; } }
+    public Score Score { get {
+        return new Score(
+            CoinsCollected,
+            RegularScalesCollected,
+            FireScalesCollected,
+            WaterScalesCollected,
+            SeenProudDragons,
+            SeenCleanDragons,
+            SeenUnhappyDragons,
+            UnseenDragons
+        );
+    }}
+
+    // Timer progress bar step
+    private double timeProgressPercent = 0;
+    private double timeProgressStepPerSecond;
 
     ///////////////////////////////////////////////
     // Component Lifecycle
@@ -65,6 +81,17 @@ public class DayManager : MonoBehaviour
         RegularScaleGoal = UnityEngine.Random.Range(GameManager.Instance.minRegularScaleGoal, GameManager.Instance.maxRegularScaleGoal);
         FireScaleGoal = UnityEngine.Random.Range(GameManager.Instance.minFireScaleGoal, GameManager.Instance.maxFireScaleGoal);
         WaterScaleGoal = UnityEngine.Random.Range(GameManager.Instance.minWaterScaleGoal, GameManager.Instance.maxWaterScaleGoal);
+
+        // You'll hit a divide by zero error so just inform the dev that things aren't set up
+        if (GameManager.Instance.hoursInDay == 0) {
+            Debug.Log("ERROR: GameManager is not configured (hoursInDay)");
+            return;
+        }
+        var secondsInDay = GameManager.Instance.hoursInDay * 3600;
+        var stepPerSecond = 1.0 / secondsInDay;
+        timeProgressStepPerSecond = stepPerSecond * GameManager.Instance.timeRatio;
+        StartCoroutine(ClockRoutine());
+
         StartCoroutine(QueueRoutine());
     }
 
@@ -150,6 +177,7 @@ public class DayManager : MonoBehaviour
         }
 
         CoinsCollected += currentDragon.AskForPayment();
+        Debug.Log($"Finished client. {Score}");
 
         currentDragon = null;
     }
@@ -175,17 +203,11 @@ public class DayManager : MonoBehaviour
         {
             DragonGaveUpQueueing(queue[0]);
         }
-
         // TODO: Show Summary Splash. Can contain:
         //         IsGoalMet() -- if not, player can use golden scale (GoldenScalesCollected)
         //         RegularScalesCollected / RegularScaleGoal
         //         FireScalesCollected / FireScaleGoal
         //         WaterScalesCollected / WaterScaleGoal
-        //         CoinsCollected
-        //         SeenProudDragons
-        //         SeenCleanDragons
-        //         SeenUnhappyDragons
-        //         UnseenDragons
 
         // TODO: Player can use golden scales, then click 'cash out' button when ready
         // Earn some coins when using a golden scale for fun
@@ -194,21 +216,25 @@ public class DayManager : MonoBehaviour
 
         // Earn some coins for goals met
         CoinsCollected += GoldenScalesCollected * GameManager.Instance.coinsPerGoldenScale; // These get reduced if spent on goals
-        CoinsCollected += CoinsForScales(RegularScalesCollected, RegularScaleGoal, GameManager.Instance.coinsAtRegularScaleGoal, GameManager.Instance.coinsPerBonusRegularScale);
-        CoinsCollected += CoinsForScales(FireScalesCollected, FireScaleGoal, GameManager.Instance.coinsAtFireScaleGoal, GameManager.Instance.coinsPerBonusFireScale);
-        CoinsCollected += CoinsForScales(WaterScalesCollected, WaterScaleGoal, GameManager.Instance.coinsAtWaterScaleGoal, GameManager.Instance.coinsPerBonusWaterScale);
+        CoinsCollected += CoinsForScales(RegularScalesCollected, RegularScaleGoal, GameManager.Instance.coinsPerBonusRegularScale);
+        CoinsCollected += CoinsForScales(FireScalesCollected, FireScaleGoal, GameManager.Instance.coinsPerBonusFireScale);
+        CoinsCollected += CoinsForScales(WaterScalesCollected, WaterScaleGoal, GameManager.Instance.coinsPerBonusWaterScale);
+
+        // Lose coins for dragons that didn't get seen
+        CoinsCollected -= Mathf.Max(0, CoinsCollected - UnseenDragons * GameManager.Instance.coinsLostPerUnseenDragon);
 
         // TODO: Let the player look at their final earnings, then click 'Done' button when ready
 
         // Start the next day
-        GameManager.Instance.StartNextDay(CoinsCollected);
+        Debug.Log($"Finished day: {Score}");
+        GameManager.Instance.StartNextDay(Score);
     }
 
-    private int CoinsForScales(int collected, int goal, int coinsAtGoal, int coinsPerBonus)
+    private int CoinsForScales(int collected, int goal, int coinsPerBonus)
     {
-        if (collected >= goal)
+        if (collected > goal)
         {
-            return coinsAtGoal + coinsPerBonus * (collected - goal);
+            return coinsPerBonus * (collected - goal);
         }
         else
         {
@@ -221,6 +247,21 @@ public class DayManager : MonoBehaviour
         return RegularScalesCollected >= RegularScaleGoal &&
                 FireScalesCollected >= FireScaleGoal &&
                 WaterScalesCollected >= WaterScaleGoal;
+    }
+
+    ///////////////////////////////////////////////
+    // Clock
+    ///////////////////////////////////////////////
+
+    private IEnumerator ClockRoutine()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1);
+
+            timeProgressPercent+= timeProgressStepPerSecond;
+            Debug.Log($"Time progress: {timeProgressPercent}");
+        }
     }
 
     ///////////////////////////////////////////////
@@ -237,6 +278,7 @@ public class DayManager : MonoBehaviour
             GameObject dragonObject = Instantiate(dragonPrefab, new Vector3(0, 0, 0), Quaternion.identity);
             QueuedDragon dragon = dragonObject.GetComponent<QueuedDragon>();
             queue.Add(dragon);
+            Debug.Log($"Dragon queued.");
         }
     }
 
@@ -249,5 +291,6 @@ public class DayManager : MonoBehaviour
 
         Dragon dragon = d.gameObject.GetComponentsInChildren<Dragon>()[0];
         dragon.SetMode(Mode.Left);
+        Debug.Log("Dragon gave up queuing.");
     }
 }

@@ -20,6 +20,10 @@ public class GameManager : MonoBehaviour
     [Tooltip("Each day dragons arrive a bit faster. This gets subtracted from min/maxArrivalTime.")]
     public float arrivalTimeDecreasePerDay;
 
+    [Tooltip("How many seconds pass in the salon for one of our seconds.")]
+    public int timeRatio;
+    public int hoursInDay;
+
     [Tooltip("The lowest amount of time it might take for a dragon to show up.")]
     public float minArrivalTime;
     [Tooltip("The highest amount of time it might take for a dragon to show up.")]
@@ -38,13 +42,11 @@ public class GameManager : MonoBehaviour
     [Tooltip("The most water scales goal for a day.")]
     public int maxWaterScaleGoal;
 
-    public int coinsAtRegularScaleGoal;
     public int coinsPerBonusRegularScale;
-    public int coinsAtFireScaleGoal;
     public int coinsPerBonusFireScale;
-    public int coinsAtWaterScaleGoal;
     public int coinsPerBonusWaterScale;
     public int coinsPerGoldenScale;
+    public int coinsLostPerUnseenDragon;
 
     ///////////////////////////////////////////////
     // State
@@ -52,7 +54,7 @@ public class GameManager : MonoBehaviour
 
     public int CurrentDay { get; private set; } = 1;
 
-    public int CoinsCollected { get; private set; } = 0;
+    public Score Score { get; private set; }
 
     ///////////////////////////////////////////////
     // Component Lifecycle
@@ -71,17 +73,9 @@ public class GameManager : MonoBehaviour
         } 
     }
 
-    private void Update()
+    public void StartNextDay(Score previousDayScore)
     {
-        if (Input.GetKeyDown("c")) // temporary debugging key
-        {
-            StartNextDay(0);
-        }
-    }
-
-    public void StartNextDay(int previousDayCoins)
-    {
-        CoinsCollected += previousDayCoins;
+        Score = Score.Add(previousDayScore);
         CurrentDay++;
 
         if (CurrentDay >= daysToComplete) {
