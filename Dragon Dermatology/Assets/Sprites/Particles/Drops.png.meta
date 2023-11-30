@@ -1,31 +1,25 @@
 fileFormatVersion: 2
-guid: 07c6b6bcedb342344ad5c35d34dda0a8
+guid: 46c5a2a9fecb71e45b8c08ea54d08d4b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5932285704242461526
-    second: Tool_Tweezers_0
+      213: 4564899823668317575
+    second: Drops_0
   - first:
-      213: 8169602458001341386
-    second: Tool_Tweezers_1
+      213: 6749907094918187561
+    second: Drops_1
   - first:
-      213: 1042254948888747973
-    second: Tool_Tweezers_2
+      213: -2040057753640575754
+    second: Drops_2
   - first:
-      213: -27375982685139568
-    second: Tool_Tweezers_3
+      213: 5622005364771165601
+    second: Drops_3
   - first:
-      213: -8153908778714432169
-    second: Tool_Tweezers_4
+      213: 2932976599428820663
+    second: Drops_4
   - first:
-      213: 434863031560947045
-    second: Tool_Tweezers_5
-  - first:
-      213: -1679450626684221400
-    second: Tool_Tweezers_6
-  - first:
-      213: 9143154229640158794
-    second: Tool_Tweezers_7
+      213: -9079316033098101434
+    second: Drops_5
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -104,7 +98,31 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -119,64 +137,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tool_Tweezers_0
+      name: Drops_0
       rect:
         serializedVersion: 2
-        x: 58
-        y: 1379
-        width: 389
-        height: 487
+        x: 70
+        y: 103
+        width: 37
+        height: 54
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aa4008425994cada0800000000000000
-      internalID: -5932285704242461526
+      spriteID: 78d4ef82438c95f30800000000000000
+      internalID: 4564899823668317575
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tool_Tweezers_1
+      name: Drops_1
       rect:
         serializedVersion: 2
-        x: 101
-        y: 708
-        width: 362
-        height: 489
+        x: 213
+        y: 87
+        width: 49
+        height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: acbf351b622406170800000000000000
-      internalID: 8169602458001341386
+      spriteID: 92acc738dbc7cad50800000000000000
+      internalID: 6749907094918187561
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tool_Tweezers_4
+      name: Drops_2
       rect:
         serializedVersion: 2
-        x: 93
-        y: 65
-        width: 414
-        height: 552
+        x: 417
+        y: 112
+        width: 45
+        height: 33
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 75d79c1ca2f77de80800000000000000
-      internalID: -8153908778714432169
+      spriteID: 6fcd8f0284240b3e0800000000000000
+      internalID: -2040057753640575754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drops_3
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 94
+        width: 71
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a59684b710650e40800000000000000
+      internalID: 5622005364771165601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drops_4
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 72
+        width: 78
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7beec777da604b820800000000000000
+      internalID: 2932976599428820663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drops_5
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 100
+        width: 69
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64dcda31c2acff180800000000000000
+      internalID: -9079316033098101434
       vertices: []
       indices: 
       edges: []
@@ -184,17 +265,14 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 67c3e53077be5024c953b3259ddced85
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Tool_Tweezers_0: -5932285704242461526
-      Tool_Tweezers_1: 8169602458001341386
-      Tool_Tweezers_4: -8153908778714432169
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

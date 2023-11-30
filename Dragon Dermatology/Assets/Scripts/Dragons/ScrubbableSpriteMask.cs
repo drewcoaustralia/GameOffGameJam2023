@@ -5,10 +5,9 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 [RequireComponent(typeof(SpriteMask))]
-[RequireComponent(typeof(BoxCollider2D))] // TODO Change to shape and copy from sprite
+[RequireComponent(typeof(PolygonCollider2D))]
 public class ScrubbableSpriteMask : MonoBehaviour
 {
-     // collection of sprites may need to change when we have rigged skeletons
     public SpriteRenderer target;
     private SpriteMask mask;
     private Color[] maskColors;
@@ -31,11 +30,11 @@ public class ScrubbableSpriteMask : MonoBehaviour
 
         Sprite dirtySprite = target.sprite;
 
-        Texture2D newTexture = new Texture2D((int)dirtySprite.textureRect.width, (int)dirtySprite.textureRect.height);
+        Texture2D maskTexture = new Texture2D((int)dirtySprite.textureRect.width, (int)dirtySprite.textureRect.height);
         Vector2 pivot = new Vector2(0.5f, 0.5f); // to get centre of image
-        Rect newRect = new Rect(0f, 0f, newTexture.width, newTexture.height);
+        Rect newRect = new Rect(0f, 0f, maskTexture.width, maskTexture.height);
 
-        Sprite newMask = Sprite.Create(newTexture, newRect, pivot);
+        Sprite newMask = Sprite.Create(maskTexture, newRect, pivot);
         mask.sprite = newMask;
 
         //Extract color data once
@@ -47,7 +46,10 @@ public class ScrubbableSpriteMask : MonoBehaviour
     
         ClearMask();       
 
-        GetComponent<BoxCollider2D>().size = new Vector2(maskWidth / target.sprite.pixelsPerUnit, maskHeight / target.sprite.pixelsPerUnit);
+        // GetComponent<BoxCollider2D>().size = new Vector2(maskWidth / target.sprite.pixelsPerUnit, maskHeight / target.sprite.pixelsPerUnit);
+        transform.position = target.transform.position;
+        GetComponent<PolygonCollider2D>().points = target.gameObject.GetComponent<PolygonCollider2D>().points;
+        Destroy(target.gameObject.GetComponent<PolygonCollider2D>());
         // copy transform into local space
     }
 
