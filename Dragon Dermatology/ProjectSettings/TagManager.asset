@@ -8,6 +8,11 @@ TagManager:
   - mainMenu
   - scale
   - tool
+  - table
+  - soap
+  - register
+  - water
+  - wound
   layers:
   - Default
   - TransparentFX

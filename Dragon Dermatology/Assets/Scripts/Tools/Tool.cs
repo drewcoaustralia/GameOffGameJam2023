@@ -13,6 +13,7 @@ public abstract class Tool : MonoBehaviour
     public List<AudioClip> sfx;
     protected SFXObject loopingSound;
     public Sprite tableSprite;
+    public Sprite hoverSprite;
     public Sprite idleSprite;
     public Sprite inUseSprite;
 
@@ -44,9 +45,18 @@ public abstract class Tool : MonoBehaviour
 
         if (Input.GetKeyDown("mouse 1"))
         {
-            Debug.Log("RClick");
-            ToolManager.Instance.DropHeldTool();
-            return;
+            RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.zero);
+            if (hits != null && hits.Length != 0)
+            {
+                foreach (RaycastHit2D hit in hits)
+                {
+                    if (hit.collider.gameObject.tag == "table")
+                    {
+                        ToolManager.Instance.DropHeldTool();
+                        return;
+                    }
+                }
+            }
         }
 
         if (Input.GetKeyDown("mouse 0"))
@@ -62,6 +72,11 @@ public abstract class Tool : MonoBehaviour
         visualsRenderer.sprite = inUse ? inUseSprite : idleSprite;
 
         if (inUse) OngoingAction();
+    }
+
+    public virtual void SetHover(bool hover)
+    {
+        visualsRenderer.sprite = hover ? hoverSprite : tableSprite;
     }
 
     public void Pickup()

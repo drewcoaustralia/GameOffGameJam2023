@@ -13,6 +13,9 @@ public class DayManager : MonoBehaviour
 
     public GameObject dragonPrefab;
 
+    [Tooltip("Toggles the queue on or off.")]
+    public bool queueActive = true;
+
     ///////////////////////////////////////////////
     // State
     ///////////////////////////////////////////////
@@ -226,7 +229,7 @@ public class DayManager : MonoBehaviour
 
     private IEnumerator QueueRoutine()
     {
-        while (true)
+        while (queueActive)
         {
             yield return new WaitForSeconds(UnityEngine.Random.Range(GameManager.Instance.minArrivalTime, GameManager.Instance.maxArrivalTime));
 
