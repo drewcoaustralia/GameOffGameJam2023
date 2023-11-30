@@ -1426,18 +1426,11 @@ MonoBehaviour:
   onTable: 1
   inUse: 0
   sfx:
-  - {fileID: 8300000, guid: 304afbf60f84fac489128dad2ad7a6b3, type: 3}
-  - {fileID: 8300000, guid: ab741b60ca5bd79409d68469af6fa064, type: 3}
-  - {fileID: 8300000, guid: b9232b2db92cecf419751fda45ffa622, type: 3}
-  - {fileID: 8300000, guid: 7e68549fa0f187e44a497adb56526294, type: 3}
-  - {fileID: 8300000, guid: e348b9b845aa768438ec0e4ee87431a5, type: 3}
-  - {fileID: 8300000, guid: 6ef80fd5e9eae164b92858d90b51e240, type: 3}
-  - {fileID: 8300000, guid: 0e2cbbd6a6aab064abbc9d1c31d58568, type: 3}
-  - {fileID: 8300000, guid: f8c00c953dfc60e4e94c8995fc54aba3, type: 3}
-  - {fileID: 8300000, guid: 522033680edd8aa4d90a2e175b7fd454, type: 3}
-  - {fileID: 8300000, guid: 68899dbc5a4734448b7893c44b1e5bc7, type: 3}
-  - {fileID: 8300000, guid: 0cb3e4f418e3bcf4482a59e154d3d0e0, type: 3}
-  - {fileID: 8300000, guid: ae7b800ce4fc2774d9eb0b8c58c245d0, type: 3}
+  - {fileID: 8300000, guid: 6729bb95529ffb64fb91ff0762593891, type: 3}
+  - {fileID: 8300000, guid: a4137eb9d24580e40a230b9d662d25a4, type: 3}
+  - {fileID: 8300000, guid: f80837876e4b8b549801c028388165eb, type: 3}
+  - {fileID: 8300000, guid: 49eacbdece2471b43aa1f28b14503346, type: 3}
+  - {fileID: 8300000, guid: 2f28796763fddae4f8b23f9e880fc507, type: 3}
   tableSprite: {fileID: 1302723820812287101, guid: 775cd52dbc5ea484a9c067bda4cbc3c2, type: 3}
   hoverSprite: {fileID: -3230746050120292139, guid: e2b8056e677e0dc4f9a0290fecc680c5, type: 3}
   idleSprite: {fileID: 1216942374392441859, guid: e2b8056e677e0dc4f9a0290fecc680c5, type: 3}
@@ -2266,14 +2259,12 @@ MonoBehaviour:
   onTable: 1
   inUse: 0
   sfx:
-  - {fileID: 8300000, guid: 5c56db9b147039e4697f869012b5400f, type: 3}
-  - {fileID: 8300000, guid: e2186405e50a0cf4a85077b3548ecf9e, type: 3}
-  - {fileID: 8300000, guid: aa4f48c1531e3784cb8b617bd427e3b5, type: 3}
-  - {fileID: 8300000, guid: 5fc3506237e19914fa57392e7ddb53b5, type: 3}
-  - {fileID: 8300000, guid: cb77e46e107f3934a8891fe401654c1b, type: 3}
-  - {fileID: 8300000, guid: c39564a6ba21c484399cb641afa8d8f9, type: 3}
-  - {fileID: 8300000, guid: e5b5decfd3babf74cbd5a408082fd522, type: 3}
-  - {fileID: 8300000, guid: 6b3072d497c7f7141974ff14dfbce22c, type: 3}
+  - {fileID: 8300000, guid: 104b8414a062bb7478926122cc9481fe, type: 3}
+  - {fileID: 8300000, guid: 6b03ca053798c53458a16b693a34b464, type: 3}
+  - {fileID: 8300000, guid: 70aba14ae82dd2a4c997c9096f601b9e, type: 3}
+  - {fileID: 8300000, guid: 8021a7b5a48673e4988f6d3a02e6c7ca, type: 3}
+  - {fileID: 8300000, guid: 2a90bee914382b14c9ae348a8950b357, type: 3}
+  - {fileID: 8300000, guid: fa5faebb5a80e4143b1adcd4fea91bc4, type: 3}
   tableSprite: {fileID: 3766885766661273901, guid: 775cd52dbc5ea484a9c067bda4cbc3c2, type: 3}
   hoverSprite: {fileID: 1760757270083144338, guid: 7e74ee14c59f68446bc1c5b54513ae44, type: 3}
   idleSprite: {fileID: 7798421715531490834, guid: 7e74ee14c59f68446bc1c5b54513ae44, type: 3}
@@ -5841,9 +5832,9 @@ MonoBehaviour:
   activatedSprite: {fileID: -3692952175297496176, guid: 3c9e01b5dfc4b8a4db972edd92bb87cd, type: 3}
   activationTime: 2
   sfx:
-  - {fileID: 8300000, guid: 4c9fa85a713983d4ba18abe64a44337a, type: 3}
-  - {fileID: 8300000, guid: 3b7ab6a773f7e2844b94581c1cb3c695, type: 3}
-  - {fileID: 8300000, guid: 111c46f59a92ec84da5ae9338e6d9ccc, type: 3}
+  - {fileID: 8300000, guid: 8f1b03dde56695b4ebd64ea94de39411, type: 3}
+  - {fileID: 8300000, guid: f7e2bf7026ddeef4e88b0289ba917ce7, type: 3}
+  - {fileID: 8300000, guid: 830e30be2a99e364c88d2a7a43b3714a, type: 3}
 --- !u!60 &1366416412
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6146,12 +6137,9 @@ MonoBehaviour:
   onTable: 1
   inUse: 0
   sfx:
-  - {fileID: 8300000, guid: 7abd0c694aae4e54e8d5b5ffd88776e5, type: 3}
-  - {fileID: 8300000, guid: b9e7ae559dafc0c45b74275dcc9d29f4, type: 3}
-  - {fileID: 8300000, guid: ac38ecce10c19314cb0d79511ff102c7, type: 3}
-  - {fileID: 8300000, guid: bc469590da5a8e2408bbbb4f40a35d6f, type: 3}
-  - {fileID: 8300000, guid: 5190ae4aa43dc9048a3a46c40d0b47ad, type: 3}
-  - {fileID: 8300000, guid: 63a6a5c1c0909b846bf7ab27b0c7b3c7, type: 3}
+  - {fileID: 8300000, guid: f4b484678b874d442a8e597cd11b78a7, type: 3}
+  - {fileID: 8300000, guid: 9af7f19f79f811b4290727f84d014674, type: 3}
+  - {fileID: 8300000, guid: 3115a8973e124e44ca7123d457f429c3, type: 3}
   tableSprite: {fileID: 6146782616825927046, guid: 775cd52dbc5ea484a9c067bda4cbc3c2, type: 3}
   hoverSprite: {fileID: 5197594916356836234, guid: f51c1bae708983b408835cd7792ebbc5, type: 3}
   idleSprite: {fileID: -7119481432558669884, guid: 161e48f123ae90947ad7fe95d37e1140, type: 3}
@@ -6402,12 +6390,19 @@ MonoBehaviour:
   emptyHand: {fileID: 24206566}
   heldTool: {fileID: 0}
   pickupSounds:
-  - {fileID: 8300000, guid: bab8eee7b2ca878469c0f9aa18659425, type: 3}
-  - {fileID: 8300000, guid: 4646dfe3365510f499345250f1ea9955, type: 3}
-  - {fileID: 8300000, guid: 14189f8f33bbb6b4aae2d7a5f7cfd042, type: 3}
-  - {fileID: 8300000, guid: de889d032e249394b9458062341fd182, type: 3}
-  - {fileID: 8300000, guid: b0e8dfa237d0fdd458a1f78fefda1572, type: 3}
-  - {fileID: 8300000, guid: d750470313e5172499facc225e6ca021, type: 3}
+  - {fileID: 8300000, guid: d596500caf8f6df49a0eddd2e3ec9779, type: 3}
+  - {fileID: 8300000, guid: af87032965b91664bac544b2bef032c1, type: 3}
+  - {fileID: 8300000, guid: 94cee90ae72129c4ba8e762a59d1432d, type: 3}
+  - {fileID: 8300000, guid: 065769fd6789a004a80057f7e6ae017a, type: 3}
+  - {fileID: 8300000, guid: f79759093361f20428b379865c2f7fec, type: 3}
+  - {fileID: 8300000, guid: 0b5072116359dff4ba1d0c7eaedbd28e, type: 3}
+  dropSounds:
+  - {fileID: 8300000, guid: b48064929e54b3f4d92dd38032dc98c9, type: 3}
+  - {fileID: 8300000, guid: 0b55fe54feb6c75499ccfb1f8550532a, type: 3}
+  - {fileID: 8300000, guid: 2d3c5d21409d36646abe89210b1895da, type: 3}
+  - {fileID: 8300000, guid: 438340192b09e774da0a453cb1403663, type: 3}
+  - {fileID: 8300000, guid: 57a8fc8c56d186844816207c10074670, type: 3}
+  - {fileID: 8300000, guid: c9c01950b78134c4a8fab56767e75ef9, type: 3}
 --- !u!4 &1591265555
 Transform:
   m_ObjectHideFlags: 0
