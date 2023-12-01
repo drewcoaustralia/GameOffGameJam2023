@@ -5,18 +5,29 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 [RequireComponent(typeof(SpriteMask))]
-[RequireComponent(typeof(PolygonCollider2D))]
+[RequireComponent(typeof(BoxCollider2D))]
 public class ScrubbableSpriteMask : MonoBehaviour
 {
     public SpriteRenderer target;
+    [Range(0f, 1f)]public float transparency = 0.7f;
     private SpriteMask mask;
     private Color[] maskColors;
     private float maskWidth;
     private float maskHeight;
 
+    private bool[] originalPixels;
+    private int originalPixelCount = 0;
+    private int currentPixelCount = 0;
+    public float cleanliness { get {return currentPixelCount / originalPixelCount;}}
+
     void Start()
     {
         SetupMask();
+    }
+
+    void Update()
+    {
+        Debug.Log("cleanliness percent: " + cleanliness);
     }
 
     void SetupMask()
@@ -29,16 +40,21 @@ public class ScrubbableSpriteMask : MonoBehaviour
         mask.backSortingOrder = target.sortingOrder - 1;
 
         Sprite dirtySprite = target.sprite;
+        target.color = new Color(1f, 1f, 1f, transparency);
+        target.maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
 
         Texture2D maskTexture = new Texture2D((int)dirtySprite.textureRect.width, (int)dirtySprite.textureRect.height);
         Vector2 pivot = new Vector2(0.5f, 0.5f); // to get centre of image
         Rect newRect = new Rect(0f, 0f, maskTexture.width, maskTexture.height);
 
-        Sprite newMask = Sprite.Create(maskTexture, newRect, pivot);
+        Sprite newMask = Sprite.Create(maskTexture, newRect, pivot, dirtySprite.pixelsPerUnit);
         mask.sprite = newMask;
 
         //Extract color data once
         maskColors = mask.sprite.texture.GetPixels();
+        // will need read access to og sprite
+        // maskColors = target.sprite.texture.GetPixels();
+        originalPixels = new bool[maskColors.Length];
     
         //Store mask dimensions
         maskWidth = target.sprite.bounds.size.x * target.sprite.pixelsPerUnit;
@@ -48,7 +64,9 @@ public class ScrubbableSpriteMask : MonoBehaviour
 
         // GetComponent<BoxCollider2D>().size = new Vector2(maskWidth / target.sprite.pixelsPerUnit, maskHeight / target.sprite.pixelsPerUnit);
         transform.position = target.transform.position;
-        GetComponent<PolygonCollider2D>().points = target.gameObject.GetComponent<PolygonCollider2D>().points;
+        // transform.rotation = target.transform.rotation;
+        // transform.localScale = target.transform.localScale;
+        GetComponent<BoxCollider2D>().size = target.gameObject.GetComponent<BoxCollider2D>().size;
         Destroy(target.gameObject.GetComponent<PolygonCollider2D>());
         // copy transform into local space
     }
@@ -60,8 +78,10 @@ public class ScrubbableSpriteMask : MonoBehaviour
         for (int i = 0; i < maskColors.Length; ++i)
         {
             maskColors[i] = new Color(1, 1, 1, 0);
+            originalPixels[i] = (maskColors[i].a != 0);
+            originalPixelCount++;
         }
-    
+
         mask.sprite.texture.SetPixels(maskColors);
         mask.sprite.texture.Apply(false);
     }
@@ -76,6 +96,18 @@ public class ScrubbableSpriteMask : MonoBehaviour
         DrawOnMask((int)texturePos.x, (int)texturePos.y, radius);
     }
 
+    private void Draw(int index, Color color)
+    {
+        if (index >= 0 && index < maskColors.Length)
+        {
+            maskColors[index] = new Color(1, 0, 0, 1);
+            if (originalPixels[index])
+            {
+                currentPixelCount++;
+                originalPixels[index] = false; // to avoid double counting
+            }
+        }
+    }
     private void DrawOnMask(int cx, int cy, int r)
     {
         int px, nx, py, ny, d;
@@ -98,25 +130,16 @@ public class ScrubbableSpriteMask : MonoBehaviour
                 if (py >= maskHeight) continue;
     
                 // each direction will draw in a new colour for debugging purposes
-                if ((py * (int)maskWidth + px) >= 0 && (py * (int)maskWidth + px) < maskColors.Length)
-                {
-                    maskColors[py * (int)maskWidth + px] = new Color(1, 0, 0, 1);
-                }
+                int index;
 
-                if ((py * (int)maskWidth + nx) >= 0 && (py * (int)maskWidth + nx) < maskColors.Length)
-                {
-                    maskColors[py * (int)maskWidth + nx] = new Color(0, 1, 0, 1);
-                }
-
-                if ((ny * (int)maskWidth + px) >= 0 && (ny * (int)maskWidth + px) < maskColors.Length)
-                {
-                    maskColors[ny * (int)maskWidth + px] = new Color(0, 0, 1, 1);
-                }
-
-                if ((ny * (int)maskWidth + nx) >= 0 && (ny * (int)maskWidth + nx) < maskColors.Length)
-                {
-                    maskColors[ny * (int)maskWidth + nx] = new Color(1, 1, 1, 1);
-                }
+                index = py * (int)maskWidth + px;
+                Draw(index, Color.red);
+                index = py * (int)maskWidth + nx;
+                Draw(index, Color.green);
+                index = ny * (int)maskWidth + px;
+                Draw(index, Color.blue);
+                index = ny * (int)maskWidth + nx;
+                Draw(index, Color.white);
             }
         }
     
