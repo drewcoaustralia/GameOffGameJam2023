@@ -64,7 +64,8 @@ public class GameManager : MonoBehaviour
     {
         if (Instance == null) 
         { 
-            Instance = this; 
+            Instance = this;
+            transform.parent = null;
             DontDestroyOnLoad(gameObject);
         } 
         else 

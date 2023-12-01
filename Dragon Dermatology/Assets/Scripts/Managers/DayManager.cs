@@ -56,8 +56,9 @@ public class DayManager : MonoBehaviour
         );
     }}
 
-    private double timeProgressPercent = 0;
-    private double timeProgressStepPerSecond;
+    // Timer progress bar step
+    private float timeProgressPercent = 0;
+    private float timeProgressStepPerSecond;
     private int[] spawnWeights = DailyRules.SpawnWeights(1);
 
     ///////////////////////////////////////////////
@@ -87,14 +88,12 @@ public class DayManager : MonoBehaviour
             Debug.Log("ERROR: GameManager is not configured (hoursInDay)");
             return;
         }
-        var secondsInDay = GameManager.Instance.hoursInDay * 3600;
-        var stepPerSecond = 1.0 / secondsInDay;
+        float secondsInDay = GameManager.Instance.hoursInDay * 3600;
+        float stepPerSecond = 1f / secondsInDay;
         timeProgressStepPerSecond = stepPerSecond * GameManager.Instance.timeRatio;
 
         // Get the dragon spawn weights for this day, or else make them equally weighted
         this.spawnWeights = DailyRules.SpawnWeights(GameManager.Instance.CurrentDay);
-
-        StartCoroutine(ClockRoutine());
 
         StartCoroutine(QueueRoutine());
     }
@@ -105,10 +104,31 @@ public class DayManager : MonoBehaviour
         {
             FinishCurrentClient();
         }
-        else if (Input.GetKeyDown("x")) // temporary debugging key
+        if (Input.GetKeyDown("c")) // temporary debugging key
+        {
+            AddCoins(UnityEngine.Random.Range(1, 101));
+        }
+        if (Input.GetKeyDown("1")) // temporary debugging key
+        {
+            AddRegularScale();
+        }
+        if (Input.GetKeyDown("2")) // temporary debugging key
+        {
+            AddFireScale();
+        }
+        if (Input.GetKeyDown("3")) // temporary debugging key
+        {
+            AddWaterScale();
+        }
+        if (Input.GetKeyDown("4")) // temporary debugging key
+        {
+            AddGoldenScale();
+        }
+        if (Input.GetKeyDown("x")) // temporary debugging key
         {
             FinishDay();
         }
+        ClockTick(Time.deltaTime);
     }
 
     ///////////////////////////////////////////////
@@ -136,32 +156,38 @@ public class DayManager : MonoBehaviour
         return currentDragon;
     }
 
-    public void RegularScaleCollected()
+    public void AddRegularScale()
     {
-        RegularScalesCollected++;
+        UIManager.Instance.SetScalesRegular(++RegularScalesCollected);
 
         // TODO: Dragon looks annoyed
     }
 
-    public void FireScaleCollected()
+    public void AddFireScale()
     {
-        FireScalesCollected++;
+        UIManager.Instance.SetScalesFire(++FireScalesCollected);
 
         // TODO: Dragon looks annoyed
     }
 
-    public void WaterScaleCollected()
+    public void AddWaterScale()
     {
-        WaterScalesCollected++;
+        UIManager.Instance.SetScalesWater(++WaterScalesCollected);
 
         // TODO: Dragon looks annoyed
     }
 
-    public void GoldenScaleCollected()
+    public void AddGoldenScale()
     {
-        GoldenScalesCollected++;
+        UIManager.Instance.SetScalesGolden(++GoldenScalesCollected);
 
         // TODO: Dragon looks annoyed
+    }
+
+    public void AddCoins(int coins)
+    {
+        CoinsCollected += coins;
+        UIManager.Instance.SetCoins(CoinsCollected);
     }
 
     public void FinishCurrentClient()
@@ -180,7 +206,7 @@ public class DayManager : MonoBehaviour
             seenUnhappy.Add(currentDragon);
         }
 
-        CoinsCollected += currentDragon.AskForPayment();
+        AddCoins(currentDragon.AskForPayment());
         Debug.Log($"Finished client. {Score}");
 
         currentDragon = null;
@@ -215,17 +241,17 @@ public class DayManager : MonoBehaviour
 
         // TODO: Player can use golden scales, then click 'cash out' button when ready
         // Earn some coins when using a golden scale for fun
-            // CoinsCollected += GameManager.Instance.coinsPerGoldenScale;
+            // AddCoins(GameManager.Instance.coinsPerGoldenScale);
             // GoldenScalesCollected--;
 
         // Earn some coins for goals met
-        CoinsCollected += GoldenScalesCollected * GameManager.Instance.coinsPerGoldenScale; // These get reduced if spent on goals
-        CoinsCollected += CoinsForScales(RegularScalesCollected, RegularScaleGoal, GameManager.Instance.coinsPerBonusRegularScale);
-        CoinsCollected += CoinsForScales(FireScalesCollected, FireScaleGoal, GameManager.Instance.coinsPerBonusFireScale);
-        CoinsCollected += CoinsForScales(WaterScalesCollected, WaterScaleGoal, GameManager.Instance.coinsPerBonusWaterScale);
+        AddCoins(GoldenScalesCollected * GameManager.Instance.coinsPerGoldenScale); // These get reduced if spent on goals
+        AddCoins(CoinsForScales(RegularScalesCollected, RegularScaleGoal, GameManager.Instance.coinsPerBonusRegularScale));
+        AddCoins(CoinsForScales(FireScalesCollected, FireScaleGoal, GameManager.Instance.coinsPerBonusFireScale));
+        AddCoins(CoinsForScales(WaterScalesCollected, WaterScaleGoal, GameManager.Instance.coinsPerBonusWaterScale));
 
         // Lose coins for dragons that didn't get seen
-        CoinsCollected -= Mathf.Max(0, CoinsCollected - UnseenDragons * GameManager.Instance.coinsLostPerUnseenDragon);
+        AddCoins(-1 * Mathf.Max(0, CoinsCollected - UnseenDragons * GameManager.Instance.coinsLostPerUnseenDragon));
 
         // TODO: Let the player look at their final earnings, then click 'Done' button when ready
 
@@ -257,15 +283,11 @@ public class DayManager : MonoBehaviour
     // Clock
     ///////////////////////////////////////////////
 
-    private IEnumerator ClockRoutine()
+    private void ClockTick(float timeDelta)
     {
-        while (true)
-        {
-            yield return new WaitForSeconds(1);
-
-            timeProgressPercent+= timeProgressStepPerSecond;
-            Debug.Log($"Time progress: {timeProgressPercent}");
-        }
+        timeProgressPercent+= timeProgressStepPerSecond * timeDelta;
+        Debug.Log($"Time progress: {timeProgressPercent}");
+        UIManager.Instance.SetTimer(timeProgressPercent);
     }
 
     ///////////////////////////////////////////////
@@ -302,6 +324,7 @@ public class DayManager : MonoBehaviour
 
             // Add to queue
             queue.Add(qd);
+            UIManager.Instance.SetQueue(queue);
 
             Debug.Log($"Dragon queued: {species}.");
         }

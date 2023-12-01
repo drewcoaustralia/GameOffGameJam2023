@@ -9,6 +9,7 @@ public class Register : MonoBehaviour
     public Sprite hoverSprite;
     public Sprite activatedSprite;
 
+    private bool hovering = false;
     private bool activating = false;
     public float activationTime = 2f;
 
@@ -21,6 +22,7 @@ public class Register : MonoBehaviour
 
     public void SetHover(bool hover)
     {
+        hovering = hover;
         if (activating) return;
         _rend.sprite = hover ? hoverSprite : idleSprite;
     }
@@ -38,7 +40,7 @@ public class Register : MonoBehaviour
         activating = true;
         _rend.sprite = activatedSprite;
         yield return new WaitForSeconds(activationTime);
-        _rend.sprite = idleSprite;
         activating = false;
+        SetHover(hovering);
     }
 }
