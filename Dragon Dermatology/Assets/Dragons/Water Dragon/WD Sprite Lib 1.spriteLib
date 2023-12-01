@@ -391,6 +391,27 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: -7318055012811677110, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 3
+  - m_Name: Bubbles
+    m_Hash: 931246553
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: WD Bubbles
+      m_Hash: 682077117
+      m_Sprite: {fileID: -4786179111458833297, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -4786179111458833297, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD Bubbles Dirty
+      m_Hash: 246982793
+      m_Sprite: {fileID: 112700196846387159, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 112700196846387159, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    - m_Name: WD Bubbles Dirt w/Trans
+      m_Hash: 555109939
+      m_Sprite: {fileID: 7420036957085249185, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 7420036957085249185, guid: 6fc95aa1d16f9134388332655f19f065, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 3
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638369539686598996
+  m_ModificationHash: 638370755514742538
   m_Version: 1
