@@ -59,6 +59,7 @@ public class DayManager : MonoBehaviour
     // Timer progress bar step
     private float timeProgressPercent = 0;
     private float timeProgressStepPerSecond;
+    private int[] spawnWeights = DailyRules.SpawnWeights(1);
 
     ///////////////////////////////////////////////
     // Component Lifecycle
@@ -90,6 +91,9 @@ public class DayManager : MonoBehaviour
         float secondsInDay = GameManager.Instance.hoursInDay * 3600;
         float stepPerSecond = 1f / secondsInDay;
         timeProgressStepPerSecond = stepPerSecond * GameManager.Instance.timeRatio;
+
+        // Get the dragon spawn weights for this day, or else make them equally weighted
+        this.spawnWeights = DailyRules.SpawnWeights(GameManager.Instance.CurrentDay);
 
         StartCoroutine(QueueRoutine());
     }
@@ -296,12 +300,33 @@ public class DayManager : MonoBehaviour
         {
             yield return new WaitForSeconds(UnityEngine.Random.Range(GameManager.Instance.minArrivalTime, GameManager.Instance.maxArrivalTime));
 
-            // Instantiate and queue a dragon
             GameObject dragonObject = Instantiate(dragonPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-            QueuedDragon dragon = dragonObject.GetComponent<QueuedDragon>();
-            queue.Add(dragon);
-            Debug.Log($"Dragon queued.");
+            Dragon d = dragonObject.GetComponent<Dragon>();
+            QueuedDragon qd = dragonObject.GetComponent<QueuedDragon>();
+
+            // Pick a species
+            Species species;
+            int idx = WeightedRandom.Index(spawnWeights);
+            switch (idx) {
+                case 0:
+                    species = Species.Regular;
+                    break;
+                case 1:
+                    species = Species.Water;
+                    break;
+                case 2:
+                    species = Species.Fire;
+                    break;
+                default:
+                    throw new Exception($"Unexpected dragon species index: {idx}");
+            };
+            d.Species = species;
+
+            // Add to queue
+            queue.Add(qd);
             UIManager.Instance.SetQueue(queue);
+
+            Debug.Log($"Dragon queued: {species}.");
         }
     }
 

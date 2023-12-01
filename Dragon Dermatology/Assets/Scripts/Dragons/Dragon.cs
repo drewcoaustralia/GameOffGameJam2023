@@ -23,31 +23,17 @@ public class Dragon : MonoBehaviour
     // Settings
     ///////////////////////////////////////////////
 
-    [Tooltip("The kind of dragon.")]
-    public Species species;
-
-    [Tooltip("Indicates where the dragon is within the salon building.")]
-    public Mode initialMode;
-
-    [Range(0, 1)]
-    [Tooltip("The desired cleanliness as a percentage between 0-1.")]
-    public float desiredCleanliness;
-
-    [Range(0, 1)]
-    [Tooltip("The desired polish as a percentage between 0-1.")]
-    public float desiredPolish;
-
-    public int minCoinsIfClean;
-    public int maxCoinsIfClean;
-    public int minCoinsIfProud;
-    public int maxCoinsIfProud;
-
-
     [Tooltip("Reference to the child object which renders the queued dragon.")]
     public GameObject queueRenderObject;
 
     [Tooltip("Reference to the child object which renders the in-salon dragon.")]
     public GameObject salonRenderObject;
+
+    ///////////////////////////////////////////////
+    // Init
+    ///////////////////////////////////////////////
+
+    public Species Species { get; set; }
 
     ///////////////////////////////////////////////
     // State
@@ -60,11 +46,8 @@ public class Dragon : MonoBehaviour
     private float polishPercent;
     private int numSuds;
 
-    // Unused - placeholders
-    //private List<DragonScale> scales;
-    //private float happiness;
-    //private float stealth;
-    //private int coins;
+    private float desiredCleanliness = 1f;
+    private float desiredPolish = 1f;
 
     ///////////////////////////////////////////////
     // Behaviour
@@ -72,7 +55,7 @@ public class Dragon : MonoBehaviour
 
     void Start()
     {
-        SetMode(initialMode);
+        SetMode(Mode.Queued);
     }
 
     public void SetMode(Mode mode)
@@ -95,8 +78,8 @@ public class Dragon : MonoBehaviour
 
     public int AskForPayment()
     {
-        return (IsFeelingClean ? UnityEngine.Random.Range(minCoinsIfClean, maxCoinsIfClean) : 0) +
-                (IsFeelingProud ? UnityEngine.Random.Range(minCoinsIfProud, maxCoinsIfProud) : 0);
+        return (IsFeelingClean ? DragonTraits.CoinsIfClean[Species] : 0) +
+                (IsFeelingProud ? DragonTraits.CoinsIfPolished[Species] : 0);
     }
 
     public void SetCleanlinessPercent(float percent) {
