@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class PolisherTool : Tool
 {
-    public int scrubRadius = 25;
-
-    public float minSoapTime = 0.5f;
-    public float maxSoapTime = 1.5f;
-    private float currentSoapTime = 0f;
-
     public override void Start()
     {
         base.Start();
