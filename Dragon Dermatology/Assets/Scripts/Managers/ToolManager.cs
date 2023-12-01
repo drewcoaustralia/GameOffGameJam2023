@@ -12,6 +12,7 @@ public class ToolManager : MonoBehaviour
     [SerializeField]private Tool heldTool = null;
 
     public List<AudioClip> pickupSounds;
+    public List<AudioClip> dropSounds;
 
     private void Awake() 
     {
@@ -25,22 +26,27 @@ public class ToolManager : MonoBehaviour
         } 
     }
 
-    public void SetHeldTool(Tool tool)
+    void Start()
     {
-        if (tool == null) return;
-        // if (heldTool != null) DropHeldTool();
-        if (heldTool != null) return;
+        Cursor.visible = false;
+    }
+
+    public bool SetHeldTool(Tool tool)
+    {
+        if (tool == null) return false;
+        if (heldTool != null) return false;
         heldTool = tool;
         tool.Pickup();
         AudioManager.Instance.PlayRandomSFXAtPoint(pickupSounds, Vector3.zero);
         emptyHand.gameObject.SetActive(false);
+        return true;
     }
 
     public void DropHeldTool()
     {
         if (heldTool == null) return;
         heldTool.Drop();
-        AudioManager.Instance.PlayRandomSFXAtPoint(pickupSounds, Vector3.zero); // TODO CHANGE SOUNDS
+        AudioManager.Instance.PlayRandomSFXAtPoint(dropSounds, Vector3.zero);
         heldTool = null;
         emptyHand.gameObject.SetActive(true);
     }
@@ -49,28 +55,7 @@ public class ToolManager : MonoBehaviour
     {
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = Camera.main.nearClipPlane;
-        emptyHand.transform.position = Camera.main.ScreenToWorldPoint(mousePos); // plus offset
-        if (heldTool != null) heldTool.transform.position = Camera.main.ScreenToWorldPoint(mousePos); // plus offset
+        emptyHand.transform.position = Camera.main.ScreenToWorldPoint(mousePos);
+        if (heldTool != null) heldTool.transform.position = Camera.main.ScreenToWorldPoint(mousePos);
     }
-
-    // public void SetHover(bool hover)
-    // {
-    //     emptyHand.SetHover(hover);
-    //     if (hover)
-    //     {
-    //         if (heldTool != null)
-    //         {
-    //             heldTool.gameObject.SetActive(false);
-    //             emptyHand.gameObject.SetActive(true);
-    //         }
-    //     }
-    //     else
-    //     {
-    //         if (heldTool != null)
-    //         {
-    //             heldTool.gameObject.SetActive(true);
-    //             emptyHand.gameObject.SetActive(false);
-    //         }
-    //     }
-    // }
 }

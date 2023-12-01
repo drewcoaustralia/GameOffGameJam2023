@@ -36,7 +36,7 @@ public class QueuedDragon : MonoBehaviour
         yield return new WaitForSeconds(giveUpAfter);
 
         if (!NoLongerWaiting) {
-            DayManager.Instance.DragonGaveUp(this);
+            DayManager.Instance.DragonGaveUpQueueing(this);
         }
     }
 }
