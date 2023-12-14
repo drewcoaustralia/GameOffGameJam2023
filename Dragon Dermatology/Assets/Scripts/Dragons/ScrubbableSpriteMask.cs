@@ -27,7 +27,7 @@ public class ScrubbableSpriteMask : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("cleanliness percent: " + cleanliness);
+        //Debug.Log("cleanliness percent: " + cleanliness);
     }
 
     void SetupMask()
@@ -57,15 +57,17 @@ public class ScrubbableSpriteMask : MonoBehaviour
         originalPixels = new bool[maskColors.Length];
     
         //Store mask dimensions
-        maskWidth = target.sprite.bounds.size.x * target.sprite.pixelsPerUnit;
-        maskHeight = target.sprite.bounds.size.y * target.sprite.pixelsPerUnit;
+        // maskWidth = target.sprite.bounds.size.x * target.sprite.pixelsPerUnit;
+        // maskHeight = target.sprite.bounds.size.y * target.sprite.pixelsPerUnit;
+        maskWidth = dirtySprite.textureRect.width;
+        maskHeight = dirtySprite.textureRect.height;
     
         ClearMask();       
 
         // GetComponent<BoxCollider2D>().size = new Vector2(maskWidth / target.sprite.pixelsPerUnit, maskHeight / target.sprite.pixelsPerUnit);
         transform.position = target.transform.position;
-        // transform.rotation = target.transform.rotation;
-        // transform.localScale = target.transform.localScale;
+        transform.rotation = target.transform.rotation;
+        transform.localScale = target.transform.localScale;
         GetComponent<BoxCollider2D>().size = target.gameObject.GetComponent<BoxCollider2D>().size;
         Destroy(target.gameObject.GetComponent<PolygonCollider2D>());
         // copy transform into local space
